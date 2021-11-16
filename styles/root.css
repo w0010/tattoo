@@ -1,0 +1,461 @@
+@font-face{ 
+	font-family: 'BDR-mono';
+	src: url('fonts/BDR-mono/bdrmono-webfont.woff2') format('woff2'),
+		 url('fonts/BDR-mono/bdrmono-webfont.woff') format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'BDR-mono-light';
+	src: url('fonts/BDR-mono/bdrmono_light-webfont.woff2') format('woff2'),
+		 url('fonts/BDR-mono/bdrmono_light-webfont.woff') format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'BDR-mono-bold';
+	src: url('fonts/BDR-mono/bdrmono_bold-webfont.woff2') format('woff2'),
+		 url('fonts/BDR-mono/bdrmono_bold-webfont.woff') format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ambroise';
+	src: url('fonts/ambroise/ambroise_light-webfont.woff2') format('woff2'),
+		 url('fonts/ambroise/ambroise_light-webfont.woff') format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Voga';
+	src: url('fonts/Voga.otf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+:root {
+	--bdl: 'BDR-mono-light', 'Fira-Mono', monospace;
+	--bdr: 'BDR-mono', 'Fira-Mono', monospace;
+	--bdb: 'BDR-mono-bold', 'Fira-Mono', monospace;
+
+	--dark: hsla(0, 0%, 0%, 0.7);
+	--light: hsla(0, 0%, 100%, 0.8);
+	--smoke: hsl(0, 0%, 11%);
+	--mid: hsla(0, 0%, 50%, 1);
+	--lux: hsla(0, 0%, 75%, 1);
+	--luna: hsla(0, 0%, 100%, 1);
+
+	--clear: hsla(0, 0%, 0%, 0);
+
+	--shadowLux-off: 0 0 1em hsla(0, 0%, 70%, 0);
+	--shadowLux-on:  0 0 1em hsla(0, 0%, 90%, 0.5);
+
+	--ease: 400ms ease;
+	--ease-in: 300ms ease-in;
+	--ease-out: 300ms ease-out;
+	--ease-in-out: 400ms ease-in-out;
+	--long: 2000ms ease;
+	--linear: 300ms linear;
+
+	--mood: ;
+	--moodDim: ;
+	--moodFaint: ;
+}
+
+
+/* ANIMATION */
+
+@keyframes animatedCover {
+	from {background-position:top}
+	50% {background-position:bottom}
+	to {background-position:top}
+}
+
+/* THREE.js */
+
+canvas {
+	position: fixed;
+	top: 0;
+	z-index: -1;
+}
+#socket {
+	height: 120px;
+	width: 100vw;
+	z-index: 100;
+}
+
+
+
+
+/* Javascript */
+
+.hide {
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FONTS */
+
+
+* {
+	margin: 0;
+	padding: 0;/*for ul*/
+}
+html {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+a {
+	border-bottom: var(--clear) 1px solid;
+	color: var(--lux);
+	margin: 0.5em 0;
+	padding: 0.5em 0;
+	text-decoration: none;
+	transition: var(--ease);
+}
+a:hover {
+	border-bottom: 1px solid;
+	color: var(--luna);
+}
+blockquote {
+	background: var(--light);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 7%;
+}
+blockquote > p {
+	color: var(--smoke);
+	font-family: georgia, serif;
+	font-size: 1.25rem;
+	line-height: 1.8em;
+
+	max-width: 600px;
+	text-align: ;
+}
+blockquote > p:last-child {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	letter-spacing: 0.3em;
+	margin-top: 40px;
+	text-transform: uppercase;
+}
+blockquote > p:last-child:before {
+ content: '';
+ margin-left: ;
+}
+
+
+body {
+	background: var(--smoke);
+	color: var(--lux);
+	font-family: 'Fira Mono', arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 0.02em;
+	line-height: 1.5;
+	overflow-x: hidden;
+}
+body.invert {
+	color: black;
+}
+body.invert a {
+	color: black;
+}
+
+body > main > header {
+	margin-top: 5vh;
+	margin-bottom: 5vh;
+}	body.invert > main > header {
+}
+body > main > header {
+	background: linear-gradient(-45deg, var(--dark), var(--dark) 25%, var(--clear) 25.01%);
+
+}	body.invert > main > header {
+	background: linear-gradient(-45deg, var(--light), var(--light) 25%, var(--clear) 25.01%);
+}
+body > main > header > div {
+	box-sizing: border-box;
+	padding: 0 7%;
+	width: 50%;
+}
+
+body > main > header > nav {
+	flex-grow: 1;
+	margin: 0 25%;
+	position: absolute;
+	width: 50%;
+	z-index: 1;
+}
+body > main > header > nav > menu > li > a {
+	margin: 0 1.5em;
+	padding: 0.5em 0;
+	text-transform: ;
+}
+
+body > main > footer {
+	background: linear-gradient(135deg, var(--dark), var(--dark) 50%, var(--clear) 50.01%);
+	padding-top: 15vh;
+	padding-bottom: 10vh;
+}	body.invert > main > footer {
+	background: linear-gradient(135deg, var(--light), var(--light) 50%, var(--clear) 50.01%);
+}
+body > main > footer > main > nav > div {
+	border-top: 1px solid;
+	margin:0 50px 40px 0;
+	width: ;
+}
+body > main > footer > main > nav > div > p {
+	color: var(--mid);
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+body > main > footer > main > nav > div > ul > li > p > a {
+	text-transform: lowercase;
+}
+body > main > footer > main > nav > div > ul > li > p > a:hover {
+	border-bottom: var(--clear) 1px solid;
+}
+body > main > footer > main > div:last-child {
+	margin-top: 5vh;
+}
+body > main > footer > main > div:last-child > p {
+	font-size: 12px;
+}
+
+
+h1 {
+	border-bottom: none;
+	font-family: 'Ambroise', georgia, serif;
+	font-size: calc(2.5vw + 2.5vh);
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	line-height: 1.1em;
+	margin: 0.5em 0;
+	text-transform: uppercase;
+}
+h2 {
+	font-family: var(--bdr);
+	font-size: 1rem;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	margin: 1em 0;
+	text-transform: uppercase;
+}
+
+
+img {
+	display: block;
+	max-height: 100%;
+	max-width: 100%;
+}
+
+
+
+main main {
+	padding-left: 7%;
+	padding-right: 7%;
+}
+
+main > article > div:nth-child(1) {
+	margin-right: 50px;
+	min-width: 28%;
+	z-index: 1
+}
+main > article > div > h1 {
+	margin-top: ;
+}
+main > article img {
+	clip-path: polygon(
+		0 2em, 
+		2em 0, 
+		100% 0, 
+		100% 0,
+		100% calc(100% - 3em), 
+		calc(100% - 3em) 100%, 
+		0 100%, 
+		0 100%
+		);
+	max-height: 180vh;
+}
+main.alternator > article:nth-of-type(even) {
+	flex-direction: row-reverse;
+}
+main.alternator > article:nth-of-type(even) > div:nth-child(1) {
+	margin-left: 50px;
+	margin-right: 0
+}
+
+nav#portfolio {
+	align-items: normal;
+}
+nav .project > div > p,
+nav .project > div > h2 {
+	color: ;
+	transition: var(--ease);
+	margin: 0;
+}
+nav .project:hover > div > p,
+nav .project:hover > div > h2 {
+	color: var(--luna);
+} 
+nav .project > div > p {
+	opacity: 0.67;
+	text-transform: lowercase;
+}
+
+nav .project {
+	background-position: center;
+	background-size: cover ;
+	box-sizing: border-box;
+	border: initial; /* <a> border reset */
+	/*
+	clip-path: polygon(
+		0 4vw, 
+		4vw 0, 
+		100% 0, 
+		100% calc(100% - 4vw),
+		100% calc(100% - 4vw),
+		calc(100% - 0vw) 100%,
+		0 100%, 
+		0 4vw
+	);*/
+	height: calc(16vw + 70px);
+	margin: 2%/*calc(2vw + 10px)*/;
+	margin-left: auto;
+	margin-right: 0;
+	padding: 0; /*<a> reset*/
+	opacity: 1;
+	transition: var(--ease-in);
+	width: 66%;
+}
+nav .project:hover {
+	border: initial; /* <a> border reset */
+	/*
+	clip-path: polygon(
+		6vw 4vw, 
+		10vw 0, 
+		100% 0, 
+		100% calc(100% - 4vw),
+		100% calc(100% - 4vw), 
+		calc(100% - 0vw) 100%, 
+		0 100%, 
+		0 4vw
+	);*/
+	width: 100%;
+	opacity: 1;
+	transition: var(--ease-out);
+}
+nav .project > div {
+	background: var(--clear);
+	clip-path: polygon(
+		0 1vw, 
+		1vw 0, 
+		100% 0, 
+		100% 0,
+		100% calc(100% - 1vw), 
+		calc(100% - 1vw) 100%, 
+		0 100%, 
+		0 100%
+	);
+	margin: 1em;
+	padding: 1em 1em;
+	transition: var(--ease-in);
+}
+nav .project:hover > div {
+	background: hsla(0, 0%, 100%, 0.2);
+	clip-path: polygon(
+		0 1vw, 
+		1vw 0, 
+		100% 0, 
+		100% 0,
+		100% calc(100% - 3vw), 
+		calc(100% - 3vw) 100%, 
+		0 100%, 
+		0 100%
+	);
+	margin-left: calc( ( 100% - 75% ) / 2 - 3em);
+	padding: 1em 5em;
+	transition: var(--ease-out);
+}
+nav #canis { background-image: url('../images/dark/d-canis.jpg') }
+nav #seraph { background-image: url('../images/dark/d-seraph.jpg') }
+nav #wall { background-image: url('../images/dark/d-wall.jpg') }
+nav #spine { background-image: url('../images/dark/d-spine.jpg') }
+nav #misc { background-image: url('../images/dark/d-thruster.jpg') }
+
+
+
+
+menu {
+	list-style: none;
+}
+
+
+p {
+	font-size: 1rem;
+	margin: 1em 0;
+}
+
+
+ol {
+	padding-left: 40px;
+}
+
+ul {
+	list-style: none;
+}
+ul > li > p {
+	margin: 0;
+}
+
+ul > li > p > a {
+	margin-left:;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
