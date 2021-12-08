@@ -1,0 +1,13 @@
+
+#cover {
+	background-position: center !important;
+	background-size: cover !important;
+	/*-webkit-mask-image: SVG;
+	-webkit-mask-position: center;*/
+	min-height: 80vh;
+}
+#cover > div:nth-child(1) {
+}
+#cover > div:nth-child(1) > div:nth-child(1), #cover > div:nth-child(1) > div:nth-child(3) {
+	background: transparent;
+}

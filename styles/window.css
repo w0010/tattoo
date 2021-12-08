@@ -1,0 +1,20 @@
+/* window box */
+.window {
+	background: var(--shade);
+	border: var(--lux) 1px outset;
+	border-top: var(--fog) 10px outset;
+	color: var(--lux);
+	padding: calc(1vw + 1.5vh);
+	margin: 2em 0;
+	max-width: calc(22vh + 22vw);
+}
+/* arrow */
+.window:before {
+	background: linear-gradient(to bottom right, var(--fog), var(--fog) 50%, var(--clear) 50%);
+	content:'';
+	display: block;
+	height: 1em;
+	opacity: 0.8;
+	margin-right: 0.5em;
+	width: 1em;
+}

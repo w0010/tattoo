@@ -1,0 +1,33 @@
+/* GRID SYSTEM */
+
+/* Flex Box */
+[class*='flex-'] { align-items: center; display: flex; }
+/* row */
+.flex-between	{ justify-content: space-between; }
+.flex-center		{ justify-content: center; }
+.flex-end		{ justify-content: flex-end; }
+.flex-even		{ justify-content: space-evenly; }
+.flex-start		{ justify-content: flex-start; }
+.reverse			{ flex-direction: row-reverse; }
+/* column */
+.flex-column 	{ flex-direction: column; justify-content: center; }
+.c-reverse		{ flex-direction: column-reverse; justify-content: center; }
+/* extra */
+.align-start	{ align-items: flex-start; }
+.align-end		{ align-items: flex-end; }
+.wrap 			{ flex-wrap: wrap; }
+
+/* Width Controls */
+.column-33w { width: 33.33%; }
+.column-50w { width: 50%; }
+.column-66w { width: 66.67%; }
+.column-100w { width: 100%; }
+[class*='column-'] > img {
+	box-sizing: border-box;
+	padding: 4px;
+}
+
+/* extra */
+.spacer {
+	height: 20vh;
+}

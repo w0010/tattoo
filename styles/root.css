@@ -1,59 +1,36 @@
-@font-face{ 
+/* load fonts */
+
+@font-face {
 	font-family: 'BDR-mono';
 	src: url('fonts/BDR-mono/bdrmono-webfont.woff2') format('woff2'),
 		 url('fonts/BDR-mono/bdrmono-webfont.woff') format('woff');
 	font-weight: normal;
     font-style: normal;
 }
-
 @font-face {
-	font-family: 'BDR-mono-light';
-	src: url('fonts/BDR-mono/bdrmono_light-webfont.woff2') format('woff2'),
-		 url('fonts/BDR-mono/bdrmono_light-webfont.woff') format('woff');
-	font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'BDR-mono-bold';
-	src: url('fonts/BDR-mono/bdrmono_bold-webfont.woff2') format('woff2'),
-		 url('fonts/BDR-mono/bdrmono_bold-webfont.woff') format('woff');
-	font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'Ambroise';
-	src: url('fonts/ambroise/ambroise_light-webfont.woff2') format('woff2'),
-		 url('fonts/ambroise/ambroise_light-webfont.woff') format('woff');
-	font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-	font-family: 'Voga';
-	src: url('fonts/Voga.otf');
+	font-family: 'Idler-Pro-Inner';
+	src: url('');
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Proxima-Nova';
+	src: url('');
+	font-weight: normal;
+	font-style: normal;
+}	
 
+/* load variables */
 
 :root {
-	--bdl: 'BDR-mono-light', 'Fira-Mono', monospace;
-	--bdr: 'BDR-mono', 'Fira-Mono', monospace;
-	--bdb: 'BDR-mono-bold', 'Fira-Mono', monospace;
-
-	--dark: hsla(0, 0%, 0%, 0.7);
-	--light: hsla(0, 0%, 100%, 0.8);
-	--smoke: hsl(0, 0%, 11%);
-	--mid: hsla(0, 0%, 50%, 1);
-	--lux: hsla(0, 0%, 75%, 1);
-	--luna: hsla(0, 0%, 100%, 1);
-
-	--clear: hsla(0, 0%, 0%, 0);
-
-	--shadowLux-off: 0 0 1em hsla(0, 0%, 70%, 0);
-	--shadowLux-on:  0 0 1em hsla(0, 0%, 90%, 0.5);
+	--shade: hsla(0, 0%, 11%, 0.5);
+	--fog: hsla(0, 0%, 100%, 0.9);
+	--clear: sla(0, 0%, 100%, 0);
+	
+	--black: hsla(0, 0%, 0%, 1);
+	--fifty: hsla(0, 0%, 50%, 1);
+	--sevenfive: hsla(0, 0%, 75%, 1);
+	--white: hsla(0, 0%, 100%, 1);
 
 	--ease: 400ms ease;
 	--ease-in: 300ms ease-in;
@@ -64,16 +41,6 @@
 
 	--mood: ;
 	--moodDim: ;
-	--moodFaint: ;
-}
-
-
-/* ANIMATION */
-
-@keyframes animatedCover {
-	from {background-position:top}
-	50% {background-position:bottom}
-	to {background-position:top}
 }
 
 /* THREE.js */
@@ -89,34 +56,7 @@ canvas {
 	z-index: 100;
 }
 
-
-
-
-/* Javascript */
-
-.hide {
-	opacity: 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FONTS */
-
+/* Main Controls */
 
 * {
 	margin: 0;
@@ -129,18 +69,18 @@ html {
 
 a {
 	border-bottom: var(--clear) 1px solid;
-	color: var(--lux);
+	color: var(--fog);
 	margin: 0.5em 0;
 	padding: 0.5em 0;
 	text-decoration: none;
 	transition: var(--ease);
 }
 a:hover {
-	border-bottom: 1px solid;
-	color: var(--luna);
+	border-bottom: var(--fog) 1px solid;
+	color: var(--white);
 }
 blockquote {
-	background: var(--light);
+	background: var(--fog);
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
@@ -149,7 +89,7 @@ blockquote {
 	padding: 7%;
 }
 blockquote > p {
-	color: var(--smoke);
+	color: var(--dark);
 	font-family: georgia, serif;
 	font-size: 1.25rem;
 	line-height: 1.8em;
@@ -170,6 +110,7 @@ blockquote > p:last-child:before {
  margin-left: ;
 }
 
+/* body */
 
 body {
 	background: var(--smoke);
@@ -191,12 +132,14 @@ body.invert a {
 body > main > header {
 	margin-top: 5vh;
 	margin-bottom: 5vh;
-}	body.invert > main > header {
+}
+body.invert > main > header {
 }
 body > main > header {
 	background: linear-gradient(-45deg, var(--dark), var(--dark) 25%, var(--clear) 25.01%);
 
-}	body.invert > main > header {
+}
+body.invert > main > header {
 	background: linear-gradient(-45deg, var(--light), var(--light) 25%, var(--clear) 25.01%);
 }
 body > main > header > div {
@@ -248,6 +191,7 @@ body > main > footer > main > div:last-child > p {
 	font-size: 12px;
 }
 
+/* headers */
 
 h1 {
 	border-bottom: none;
@@ -275,7 +219,7 @@ img {
 	max-width: 100%;
 }
 
-
+/* main */
 
 main main {
 	padding-left: 7%;

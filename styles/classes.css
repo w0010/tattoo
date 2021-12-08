@@ -2,27 +2,7 @@
 
 /* HTML Stylers */
 
-.bdl { font-family: var(--bdl); letter-spacing: 0.1em; }
 .bdr { font-family: var(--bdr); letter-spacing: 0.1em; }
-.bdb { font-family: var(--bdb); letter-spacing: 0.1em; }
-
-[class*='flex-'] { align-items: center; display: flex; }
-
-/* Row */
-.flex-between	{ justify-content: space-between; }
-.flex-center	{ justify-content: center; }
-.flex-end		{ justify-content: flex-end; }
-.flex-even		{ justify-content: space-evenly; }
-.flex-start		{ justify-content: flex-start; }
-.reverse		{ flex-direction: row-reverse; }
-
-/* Column */
-.flex-column 	{ flex-direction: column; justify-content: center; }
-.c-reverse		{ flex-direction: column-reverse; justify-content: center; }
-
-.align-start	{ align-items: flex-start; }
-.align-end		{ align-items: flex-end; }
-.wrap 			{ flex-wrap: wrap; }
 
 
 .angle {
@@ -123,36 +103,9 @@
 }
 
 
-#cover {
-	background-position: center !important;
-	background-size: cover !important;
-	/*-webkit-mask-image: SVG;
-	-webkit-mask-position: center;*/
-	min-height: 80vh;
-}
-#cover > div:nth-child(1) {
-}
-#cover > div:nth-child(1) > div:nth-child(1), #cover > div:nth-child(1) > div:nth-child(3) {
-	background: transparent;
-}
-
 .solid {
 	background: hsla(0, 0%, 8%, 1);
 }
-.spacer {
-	height: 20vh;
-}
-
-
-.column-33 { width: 33.33%; }
-.column-50 { width: 50%; }
-.column-66 { width: 66.67%; }
-.column-100 { width: 100%; }
-[class*='column-'] > img {
-	box-sizing: border-box;
-	padding: 4px;
-}
-
 
 [class*='common-'] {
 	letter-spacing: -0.1em;
@@ -202,9 +155,9 @@ body.invert [class*='common-'] {
 }
 
 .glass {
-	background: linear-gradient(45deg, var(--clear), var(--clear) 20%, var(--dark) 20%, var(--dark) 90%, var(--clear) 90%);
+	background: linear-gradient(45deg, var(--clear), var(--clear) 20%, var(--glass) 20%, var(--glass) 90%, var(--clear) 90%);
 	border: none;
-	color: var(--lux);
+	color: var(--white);
 	padding: 2em 6em 6vh;
 }
 .box {
@@ -274,24 +227,6 @@ body.invert [class*='common-'] {
 }
 .vh {
 	min-height: 100vh;
-}
-.window {
-	background: var(--dark);
-	border: var(--light) 1px outset;
-	border-top: var(--light) 10px outset;
-	color: var(--lux);
-	padding: calc(1vw + 1.5vh);
-	margin: 2em 0;
-	max-width: calc(22vh + 22vw);
-}
-.window:before {
-	background: linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.9) 50%, hsla(0, 0%, 100%, 0) 50%);
-	content:'';
-	display: block;
-	height: 1em;
-	opacity: 0.8;
-	margin-right: 0.5em;
-	width: 1em;
 }
 #workflow {
 	background: linear-gradient(45deg, var(--clear), var(--clear) 33.3%, var(--dark) 33.4%, var(--dark) 66.7%, var(--clear) 66.8%);
