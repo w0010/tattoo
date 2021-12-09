@@ -8,23 +8,6 @@
 .angle {
 	background: linear-gradient( -135deg, hsla(0, 0%, 8%, 1), hsla(0, 0%, 8%, 1) 25%, hsla(0, 0%, 8%, 0) 25% );
 }
-#avatar {
-	border-radius: 50%;
-	/*
-	clip-path: polygon(
-		0 5px,
-		5px 0,
-		calc(100% - 5px) 0,
-		100% 5px,
-		100% calc(100% - 5px),
-		calc(100% - 5px) 100%,
-		5px 100%,
-		0 calc(100% - 5px)
-	);*/
-	height:40px;
-	width:40px
-}
-
 [id*='banner-'] {
 	background-blend-mode: multiply;
 	background-position: center;
