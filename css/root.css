@@ -113,18 +113,18 @@ body {
 	overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	text-transform: uppercase
-}	h1, h2 {
+/* header */
+h1, h2, h3 {
 	font-family: georgia, serif
-}	h1 {
+	text-transform: uppercase
+}	h2 {
 	border-bottom: none;
 	font-size: calc(2.5vw + 2.5vh);
 	font-weight: 800;
 	letter-spacing: 0.05em;
 	line-height: 1.1em;
 	margin: 0.5em 0
-}	h2 {
+}	h3 {
 	font-size: 1rem;
 	font-weight: 600;
 	letter-spacing: 0.1em;
@@ -149,12 +149,15 @@ main {
 	padding: 70px;
 }
 
-nav {
+nav > a {
 	border-bottom: var(--clear) 1px solid;
 	color: var(--fog);
 	font-family: Georgia, serif;
+	font-size: 1rem;
 	font-weight: 600;
-}	nav:hover {
+	line-height: initial;
+	padding: 3em, 1em;
+}	nav > a:hover {
 	border-bottom: var(--fog) 1px solid;
 	color: var(--white);
 }
