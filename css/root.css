@@ -1,5 +1,7 @@
 /* load fonts */
 
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 @font-face {
 	font-family: 'BDR-mono';
 	src: url('fonts/BDR-mono/bdrmono-webfont.woff2') format('woff2'),
@@ -64,7 +66,7 @@ canvas {
 	padding: 0;/*for ul*/
 }
 html {
-	font-family: "Proxima-Nova";
+	font-family: 'Source Code Pro', monospace;
 	font-size: 16px;
 	font-weight: 400;
 }
@@ -126,116 +128,47 @@ body {
 	line-height: 1.5;
 	overflow-x: hidden;
 }
-body.invert {
-	color: black;
-}
-body.invert a {
-	color: black;
-}
 
-body > main > header {
-	margin-top: 5vh;
-	margin-bottom: 5vh;
-}
-body.invert > main > header {
-}
-body > main > header {
-	background: linear-gradient(-45deg, var(--dark), var(--dark) 25%, var(--clear) 25.01%);
+/* header */
 
+h1, h2 {
+	font-family: georgia, serif
+}	h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase
 }
-body.invert > main > header {
-	background: linear-gradient(-45deg, var(--light), var(--light) 25%, var(--clear) 25.01%);
-}
-body > main > header > div {
-	box-sizing: border-box;
-	padding: 0 7%;
-	width: 50%;
-}
-
-body > main > header > nav {
-	flex-grow: 1;
-	margin: 0 25%;
-	position: absolute;
-	width: 50%;
-	z-index: 1;
-}
-body > main > header > nav > menu > li > a {
-	margin: 0 1.5em;
-	padding: 0.5em 0;
-	text-transform: ;
-}
-
-body > main > footer {
-	background: linear-gradient(135deg, var(--dark), var(--dark) 50%, var(--clear) 50.01%);
-	padding-top: 15vh;
-	padding-bottom: 10vh;
-}	body.invert > main > footer {
-	background: linear-gradient(135deg, var(--light), var(--light) 50%, var(--clear) 50.01%);
-}
-body > main > footer > main > nav > div {
-	border-top: 1px solid;
-	margin:0 50px 40px 0;
-	width: ;
-}
-body > main > footer > main > nav > div > p {
-	color: var(--mid);
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-}
-body > main > footer > main > nav > div > ul > li > p > a {
-	text-transform: lowercase;
-}
-body > main > footer > main > nav > div > ul > li > p > a:hover {
-	border-bottom: var(--clear) 1px solid;
-}
-body > main > footer > main > div:last-child {
-	margin-top: 5vh;
-}
-body > main > footer > main > div:last-child > p {
-	font-size: 12px;
-}
-
-/* headers */
 
 h1 {
 	border-bottom: none;
-	font-family: 'Ambroise', georgia, serif;
 	font-size: calc(2.5vw + 2.5vh);
-	font-weight: 400;
+	font-weight: 800;
 	letter-spacing: 0.05em;
 	line-height: 1.1em;
-	margin: 0.5em 0;
-	text-transform: uppercase;
+	margin: 0.5em 0
 }
 h2 {
-	font-family: var(--bdr);
 	font-size: 1rem;
-	font-weight: 400;
+	font-weight: 600;
 	letter-spacing: 0.1em;
-	margin: 1em 0;
-	text-transform: uppercase;
-}
-h3 {
-	font-family: "Proxima-Nova";
+	margin: 1em 0
 }
 
 header {
 	background: var(--shade);
 	height: 100px;
 	padding: 22px;
-	width: 100vw;
+	width: 100vw
 }
 
 img {
 	display: block;
 	max-height: 100%;
-	max-width: 100%;
+	max-width: 100%
 }
 
 /* main */
 
 main {
-	max-width: 1700px;	
+	max-width: 1700px
 }
 
 nav {
