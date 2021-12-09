@@ -235,159 +235,27 @@ img {
 /* main */
 
 main {
-	max-width: 1700px;
-	
-}
-
-
-main main {
-	padding-left: 7%;
-	padding-right: 7%;
-}
-
-main > article > div:nth-child(1) {
-	margin-right: 50px;
-	min-width: 28%;
-	z-index: 1
-}
-main > article > div > h1 {
-	margin-top: ;
-}
-main > article img {
-	clip-path: polygon(
-		0 2em, 
-		2em 0, 
-		100% 0, 
-		100% 0,
-		100% calc(100% - 3em), 
-		calc(100% - 3em) 100%, 
-		0 100%, 
-		0 100%
-		);
-	max-height: 180vh;
-}
-main.alternator > article:nth-of-type(even) {
-	flex-direction: row-reverse;
-}
-main.alternator > article:nth-of-type(even) > div:nth-child(1) {
-	margin-left: 50px;
-	margin-right: 0
+	max-width: 1700px;	
 }
 
 nav {
 	border-bottom: var(--clear) 1px solid;
 	color: var(--fog);
-	font-family: Georgia;
+	font-family: Georgia, serif;
 	font-weight: 600;
 }	nav:hover {
 	border-bottom: var(--fog) 1px solid;
 	color: var(--white);
 }
 
-
-nav#portfolio {
-	align-items: normal;
-}
-nav .project > div > p,
-nav .project > div > h2 {
-	color: ;
-	transition: var(--ease);
-	margin: 0;
-}
-nav .project:hover > div > p,
-nav .project:hover > div > h2 {
-	color: var(--luna);
-} 
-nav .project > div > p {
-	opacity: 0.67;
-	text-transform: lowercase;
-}
-
-nav .project {
-	background-position: center;
-	background-size: cover ;
-	box-sizing: border-box;
-	border: initial; /* <a> border reset */
-	/*
-	clip-path: polygon(
-		0 4vw, 
-		4vw 0, 
-		100% 0, 
-		100% calc(100% - 4vw),
-		100% calc(100% - 4vw),
-		calc(100% - 0vw) 100%,
-		0 100%, 
-		0 4vw
-	);*/
-	height: calc(16vw + 70px);
-	margin: 2%/*calc(2vw + 10px)*/;
-	margin-left: auto;
-	margin-right: 0;
-	padding: 0; /*<a> reset*/
-	opacity: 1;
-	transition: var(--ease-in);
-	width: 66%;
-}
-nav .project:hover {
-	border: initial; /* <a> border reset */
-	/*
-	clip-path: polygon(
-		6vw 4vw, 
-		10vw 0, 
-		100% 0, 
-		100% calc(100% - 4vw),
-		100% calc(100% - 4vw), 
-		calc(100% - 0vw) 100%, 
-		0 100%, 
-		0 4vw
-	);*/
-	width: 100%;
-	opacity: 1;
-	transition: var(--ease-out);
-}
-nav .project > div {
-	background: var(--clear);
-	clip-path: polygon(
-		0 1vw, 
-		1vw 0, 
-		100% 0, 
-		100% 0,
-		100% calc(100% - 1vw), 
-		calc(100% - 1vw) 100%, 
-		0 100%, 
-		0 100%
-	);
-	margin: 1em;
-	padding: 1em 1em;
-	transition: var(--ease-in);
-}
-nav .project:hover > div {
-	background: hsla(0, 0%, 100%, 0.2);
-	clip-path: polygon(
-		0 1vw, 
-		1vw 0, 
-		100% 0, 
-		100% 0,
-		100% calc(100% - 3vw), 
-		calc(100% - 3vw) 100%, 
-		0 100%, 
-		0 100%
-	);
-	margin-left: calc( ( 100% - 75% ) / 2 - 3em);
-	padding: 1em 5em;
-	transition: var(--ease-out);
-}
-
 menu {
 	list-style: none;
 }
-
 
 p {
 	font-size: 1rem;
 	margin: 1em 0;
 }
-
 
 ol {
 	padding-left: 40px;
@@ -396,9 +264,11 @@ ol {
 ul {
 	list-style: none;
 }
+
+/*
 ul > li > p {
 	margin: 0;
-}
+}*/
 
 ul > li > p > a {
 	margin-left:;
