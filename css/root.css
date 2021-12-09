@@ -28,8 +28,9 @@
 	--clear: sla(0, 0%, 100%, 0);
 	
 	--black: hsla(0, 0%, 0%, 1);
-	--fifty: hsla(0, 0%, 50%, 1);
-	--sevenfive: hsla(0, 0%, 75%, 1);
+	--dark: hsla(0, 0%, 11%, 1);
+	--grey: hsla(0, 0%, 50%, 1);
+	--light: hsla(0, 0%, 75%, 1);
 	--white: hsla(0, 0%, 100%, 1);
 
 	--ease: 400ms ease;
@@ -56,16 +57,19 @@ canvas {
 	z-index: 100;
 }
 
-/* Main Controls */
+/* Global Controls */
 
 * {
 	margin: 0;
 	padding: 0;/*for ul*/
 }
 html {
-	font-size: 14px;
+	font-family: "Proxima-Nova";
+	font-size: 16px;
 	font-weight: 400;
 }
+
+/* Alphabetical */
 
 a {
 	border-bottom: var(--clear) 1px solid;
@@ -113,9 +117,9 @@ blockquote > p:last-child:before {
 /* body */
 
 body {
-	background: var(--smoke);
-	color: var(--lux);
-	font-family: 'Fira Mono', arial, sans-serif;
+	background: var(--dark);
+	color: var(--white);
+	font-family: Georgia, serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: 0.02em;
@@ -211,7 +215,16 @@ h2 {
 	margin: 1em 0;
 	text-transform: uppercase;
 }
+h3 {
+	font-family: "Proxima-Nova";
+}
 
+header {
+	background: var(--shade);
+	height: 100px;
+	padding: 22px;
+	width: 100vw;
+}
 
 img {
 	display: block;
@@ -220,6 +233,12 @@ img {
 }
 
 /* main */
+
+main {
+	max-width: 1700px;
+	
+}
+
 
 main main {
 	padding-left: 7%;
@@ -254,6 +273,17 @@ main.alternator > article:nth-of-type(even) > div:nth-child(1) {
 	margin-left: 50px;
 	margin-right: 0
 }
+
+nav {
+	border-bottom: var(--clear) 1px solid;
+	color: var(--fog);
+	font-family: Georgia;
+	font-weight: 600;
+}	nav:hover {
+	border-bottom: var(--fog) 1px solid;
+	color: var(--white);
+}
+
 
 nav#portfolio {
 	align-items: normal;
@@ -347,14 +377,6 @@ nav .project:hover > div {
 	padding: 1em 5em;
 	transition: var(--ease-out);
 }
-nav #canis { background-image: url('../images/dark/d-canis.jpg') }
-nav #seraph { background-image: url('../images/dark/d-seraph.jpg') }
-nav #wall { background-image: url('../images/dark/d-wall.jpg') }
-nav #spine { background-image: url('../images/dark/d-spine.jpg') }
-nav #misc { background-image: url('../images/dark/d-thruster.jpg') }
-
-
-
 
 menu {
 	list-style: none;

@@ -102,8 +102,7 @@
 	background-size: cover;
 }
 
-
-.solid {
+.dark {
 	background: hsla(0, 0%, 8%, 1);
 }
 
@@ -186,7 +185,7 @@ body.invert [class*='common-'] {
 	position: absolute;
 }
 .shade {
-	background: var(--glass);
+	background: var(--shade);
 }
 .shokunin {
 	font-size: 16px;
@@ -218,6 +217,8 @@ body.invert [class*='common-'] {
 	padding: inherit;
 }
 .text-reset {
+	font-family: initial;
+	font-size: inherit;
 	border: none;
 	letter-spacing: inherit;
 	text-transform: none;
