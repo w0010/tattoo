@@ -146,6 +146,7 @@ img {
 
 main {
 	max-width: 1700px
+	padding: 70px;
 }
 
 nav {
@@ -163,6 +164,9 @@ p { font-size: 1rem; margin: 1em 0 }
 ol { padding-left: 40px }
 ul { list-style: none }
 
+section {
+	padding: 0, 30px;
+}
 /*
 ul > li > p {
 	margin: 0;
