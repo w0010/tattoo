@@ -22,8 +22,6 @@
 	font-style: normal;
 }	
 
-/* load variables */
-
 :root {
 	--shade: hsla(0, 0%, 11%, 0.5);
 	--fog: hsla(0, 0%, 100%, 0.9);
@@ -47,7 +45,6 @@
 }
 
 /* THREE.js */
-
 canvas {
 	position: fixed;
 	top: 0;
@@ -60,8 +57,7 @@ canvas {
 }
 
 /* Global Controls */
-
-* {
+*	{
 	margin: 0;
 	padding: 0;/*for ul*/
 }
@@ -71,8 +67,7 @@ html {
 	font-weight: 400;
 }
 
-/* Alphabetical */
-
+/* main tag controls in alphabetical order */
 a {
 	border-bottom: var(--clear) 1px solid;
 	color: var(--fog);
@@ -80,11 +75,11 @@ a {
 	padding: 0.5em 0;
 	text-decoration: none;
 	transition: var(--ease);
-}
-a:hover {
+}	a:hover {
 	border-bottom: var(--fog) 1px solid;
 	color: var(--white);
 }
+/*
 blockquote {
 	background: var(--fog);
 	box-sizing: border-box;
@@ -114,9 +109,7 @@ blockquote > p:last-child {
 blockquote > p:last-child:before {
  content: '';
  margin-left: ;
-}
-
-/* body */
+}*/
 
 body {
 	background: var(--dark);
@@ -129,22 +122,18 @@ body {
 	overflow-x: hidden;
 }
 
-/* header */
 h1, h2, h3, h4, h5, h6 {
 	text-transform: uppercase
 }	h1, h2 {
 	font-family: georgia, serif
-}	
-
-h1 {
+}	h1 {
 	border-bottom: none;
 	font-size: calc(2.5vw + 2.5vh);
 	font-weight: 800;
 	letter-spacing: 0.05em;
 	line-height: 1.1em;
 	margin: 0.5em 0
-}
-h2 {
+}	h2 {
 	font-size: 1rem;
 	font-weight: 600;
 	letter-spacing: 0.1em;
@@ -164,8 +153,6 @@ img {
 	max-width: 100%
 }
 
-/* main */
-
 main {
 	max-width: 1700px
 }
@@ -180,22 +167,10 @@ nav {
 	color: var(--white);
 }
 
-menu {
-	list-style: none;
-}
-
-p {
-	font-size: 1rem;
-	margin: 1em 0;
-}
-
-ol {
-	padding-left: 40px;
-}
-
-ul {
-	list-style: none;
-}
+menu { list-style: none }
+p { font-size: 1rem; margin: 1em 0 }
+ol { padding-left: 40px }
+ul { list-style: none }
 
 /*
 ul > li > p {
