@@ -111,8 +111,8 @@ h1, h2, h3 {
 
 header {
 	background: var(--shade);
-	height: 100px;
-	padding: 0 8vw;
+	height: 125px;
+	padding: 0 100px;
 	width: 100%
 }
 
@@ -145,9 +145,7 @@ p { font-size: 1rem; margin: 1em 0 }
 ol { padding-left: 40px }
 ul { list-style: none }
 
-section {
-	padding: 80px 8vw;
-}
+section { padding: 80px 100px }
 /*
 ul > li > p {
 	margin: 0;
