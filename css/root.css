@@ -112,7 +112,7 @@ h1, h2, h3 {
 header {
 	background: var(--shade);
 	height: 125px;
-	padding: 0 100px;
+	padding: 20px;
 	width: 100%
 }
 
