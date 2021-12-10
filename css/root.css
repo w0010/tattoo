@@ -103,7 +103,7 @@ header {
 	background: var(--shade);
 	height: 100px;
 	padding: 22px;
-	width: 100vw
+	width: 100%
 }
 
 img {
@@ -113,8 +113,7 @@ img {
 }
 
 main {
-	max-width: 1700px
-	padding: 70px;
+	max-width: 1700px;
 }
 
 nav {
@@ -128,7 +127,7 @@ nav {
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;
-	padding: 30px 7px;
+	padding: 7px 30px;
 }	nav > a:hover {
 	border-bottom: var(--fog) 1px solid;
 	color: var(--white)
