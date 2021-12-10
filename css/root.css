@@ -15,7 +15,7 @@
 :root {
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.5);
-	--fog:		hsla(0, 0%, 100%, 0.8);
+	--fog:		hsla(0, 0%, 100%, 0.78);
 	--clear:	hsla(0, 0%, 100%, 0);
 	
 	--black:	hsla(0, 0%, 0%, 1);
@@ -121,7 +121,7 @@ nav > a {
 	border-bottom: var(--clear) 1px solid;
 	color: var(--fog);
 	font-family: Georgia, serif;
-	font-size: 2rem;
+	font-size: 2em;
 	font-weight: 600;
 	padding: 20px;
 	text-transform: uppercase;
