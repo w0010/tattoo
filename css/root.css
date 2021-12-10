@@ -78,6 +78,7 @@ a {
 }
 
 /* headings */
+/* note: h1 is only for header title. all other headers are h2 or below. */
 
 h1, h2, h3 {
 	font-family: georgia, serif;
@@ -105,7 +106,7 @@ header {
 	background: var(--shade);
 	height: 100px;
 	padding: 20px;
-	width: 100%;
+	width: 100%
 }
 
 img {
