@@ -101,7 +101,6 @@ h1, h2, h3 {
 
 header {
 	background: var(--shade);
-	font-size: 20px;
 	height: 100px;
 	padding: 22px;
 	width: 100vw
@@ -118,12 +117,14 @@ main {
 	padding: 70px;
 }
 
+nav {
+	font-size: 20px;
+	font-weight: 600
+}
 nav > h1, nav > a {
 	border-bottom: var(--clear) 1px solid;
 	color: var(--fog);
 	font-family: Georgia, serif;
-	font-size: 1em;
-	font-weight: 600;
 	padding: 30px, 7px;
 	text-transform: uppercase;
 }	nav > a:hover {
