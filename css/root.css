@@ -79,8 +79,8 @@ a {
 
 footer {
 	background: var(--shade);
-	height: 300px;
-	padding: 0 8vw;
+	height: 250px;
+	padding: 0 100px;
 	width: 100%
 }
 
@@ -111,8 +111,8 @@ h1, h2, h3 {
 
 header {
 	background: var(--shade);
-	height: 125px;
-	padding: 20px;
+	height: 130px;
+	padding: 0 100px;
 	width: 100%
 }
 
@@ -132,7 +132,7 @@ nav > a {
 	font-size: 1.2rem;
 	font-weight: 600;
 	margin: 0 1em;
-	padding: 0.3em 0.8em;
+	padding: 0.2em 0.6em;
 	text-transform: uppercase
 }	nav > a:hover {
 	border-bottom: var(--fog) 1px solid;
@@ -145,7 +145,10 @@ p { font-size: 1rem; margin: 1em 0 }
 ol { padding-left: 40px }
 ul { list-style: none }
 
-section { padding: 80px 100px }
+section {
+	padding: 80px 100px;
+	width: 100%
+}
 /*
 ul > li > p {
 	margin: 0;
