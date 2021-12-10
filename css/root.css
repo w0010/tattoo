@@ -118,18 +118,20 @@ main {
 }
 
 nav {
-	font-size: 20px;
-	font-weight: 600
-}
-nav > h1, nav > a {
+	font-family: Georgia, serif;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: uppercase
+}	nav > h1, nav > a {
 	border-bottom: var(--clear) 1px solid;
 	color: var(--fog);
-	font-family: Georgia, serif;
-	padding: 30px, 7px;
-	text-transform: uppercase;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	padding: 30px 7px;
 }	nav > a:hover {
 	border-bottom: var(--fog) 1px solid;
-	color: var(--white);
+	color: var(--white)
 }
 
 menu { list-style: none }
