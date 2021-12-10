@@ -58,7 +58,6 @@ html {
 	font-weight: 400;
 }
 
-/* main tag controls in alphabetical order */
 a {
 	border-bottom: var(--clear) 1px solid;
 	color: var(--fog);
@@ -70,37 +69,6 @@ a {
 	border-bottom: var(--fog) 1px solid;
 	color: var(--white);
 }
-/*
-blockquote {
-	background: var(--fog);
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	min-height: 100vh;
-	padding: 7%;
-}
-blockquote > p {
-	color: var(--dark);
-	font-family: georgia, serif;
-	font-size: 1.25rem;
-	line-height: 1.8em;
-
-	max-width: 600px;
-	text-align: ;
-}
-blockquote > p:last-child {
-	font-family: inherit;
-	font-size: inherit;
-	font-style: inherit;
-	letter-spacing: 0.3em;
-	margin-top: 40px;
-	text-transform: uppercase;
-}
-blockquote > p:last-child:before {
- content: '';
- margin-left: ;
-}*/
 
 body {
 	background: var(--dark);
@@ -153,10 +121,9 @@ nav > a {
 	border-bottom: var(--clear) 1px solid;
 	color: var(--fog);
 	font-family: Georgia, serif;
-	font-size: 1rem;
+	font-size: 2rem;
 	font-weight: 600;
-	line-height: initial;
-	padding: 3rem, 1rem;
+	padding: 20px;
 	text-transform: uppercase;
 }	nav > a:hover {
 	border-bottom: var(--fog) 1px solid;
