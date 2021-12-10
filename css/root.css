@@ -77,6 +77,13 @@ a {
 	color: var(--white);
 }
 
+footer {
+	background: var(--shade);
+	height: 300px;
+	padding: 0 8vw;
+	width: 100%
+}
+
 /* headings */
 /* note: h1 is only for header title. all other headers are h2 or below. */
 
@@ -105,7 +112,7 @@ h1, h2, h3 {
 header {
 	background: var(--shade);
 	height: 100px;
-	padding: 100px 20px;
+	padding: 0 8vw;
 	width: 100%
 }
 
@@ -139,7 +146,7 @@ ol { padding-left: 40px }
 ul { list-style: none }
 
 section {
-	padding: 100px 80px;
+	padding: 80px 8vw;
 }
 /*
 ul > li > p {
