@@ -1,24 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 	<meta charset="UTF-8">
-	<title>Brad Wooten</title>
+	<title>Tech-Noir Biomechanica</title>
 	<meta name="keywords" content="cyberpunk, tattoo">
 	<meta name="description" content="Modern Tattooer">
 	<meta name="author" content="Brad Wooten">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/root.css">
-	<link rel="stylesheet" href="css/flexbox.css">
-	<link rel="stylesheet" href="css/class.css">
-	<link rel="stylesheet" href="css/id.css">
+	<style>.js body>main{display:none} .js body>#polyspace{display:none}</style>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+		var mood = 'hsl(0, 0%, 0%)';
+	</script>
+	<link rel="stylesheet" href="css/master.css">
 	<link rel="script" href="js/jquery.js">
 	<link rel="script" href="js/three.min.js">
+	<link rel="script" href="js/mood.js">
 	<link rel="script" href="js/polyspace.js">
+	<!-- <link rel="script" href="js/fade.js"> -->
+	<script>
+		$(document).ready(function() {
+			$('#polyspace').fadeIn(500);
+			setTimeout(function(){
+				$('main').fadeIn(250);
+			}, 500);
+			
+			$('a').click(function(event) {
+				event.preventDefault();
+				newLocation = this.href;
+				$('body').fadeOut(250, newpage);
+			});
+			function newpage() {
+				window.location = newLocation;
+			}
+		});
+	</script>
 	<base href="https://wooten.eth" target="_blank">
 </head>
 
 <body>
-	<main>
+<main>
+		<!--
 		<header class="flex-even">
 			<nav class="flex-start column-50w">
 				<img id="avatar" src="img/self.jpg">
@@ -29,21 +51,38 @@
 				<a href="#portfolio">NFT</a>
 			</nav>
 		</header>
-		
-		<section>
-			<h2 class="flex-center">Wooten</h2>
-			<h3 class="flex-center">Tech-Noir Biomachanica</h3>
-			<p>Hello World!</p>
-		</section>
+		-->
+	<header class="flex-between">
+		<div class="flex-start">
+			<img src="img/self.jpg" id="avatar">
+			<a href="index.html"><h1>Brad Wooten</h1></a>
+		</div>
+		<nav>
+			<menu class="flex-center wrap">
+				<li><a class="fade" href='tattoo.html'>Tattoo</a></li>
+				<li><a class="fade" href='designs.html'></a></li>
+				<li><a class="fade" href='readme.html'>Readme</a></li>
+				<li><a class="fade" href='contact.html'>Contact</a></li>
+				<p>Connect Wallet</p>
+			</menu>
+		</nav>
+		<div class='flex-end'>
+			<p class='shokunin'>職人気質</p>
+		</div>
+	</header>
+	<section>
+		<h2 class="flex-center">Wooten</h2>
+		<h3 class="flex-center">Tech-Noir Biomachanica</h3>
+		<p>Hello World!</p>
+	</section>
 	
-		<footer class="flex-center">
-			<nav class="flex-even">
-				<a href="#portfolio">Workflow</a>
-				<a href="#portfolio">Store</a>
-			</nav>
-		</footer>
-	</main>
-	<div id="polyspace"></div>
-	<canvas>x</canvas>
+	<footer class="flex-center">
+		<nav class="flex-even">
+			<a href="#portfolio">Workflow</a>
+			<a href="#portfolio">Store</a>
+		</nav>
+	</footer>
+</main>
+<div id="polyspace"></div>
 </body>
 </html>

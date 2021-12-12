@@ -1,0 +1,11 @@
+/* THREE.js */
+canvas {
+	position: fixed;
+	top: 0;
+	z-index: -1;
+}
+#socket {
+	height: 120px;
+	width: 100vw;
+	z-index: 100;
+}

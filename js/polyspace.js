@@ -1,17 +1,13 @@
-var moods = ['hsla(353,85%,55%,']
-var moodFrag = moods[Math.floor(Math.random() * moods.length)];
-var mood = moodFrag + '1)';
-
 $(document).ready(function() {
 
 var ZOOM = 350;
 var scene, camera, renderer, spotLight;
 var mesh;
-var mouseX = 0, mouseY = 0;
+var mouseX = 0, mouseY = 0, scroll = 0;
 	
 	var scene = new THREE.Scene();
-	scene.background = new THREE.Color('hsl(220, 12%, 8%)');
-	scene.fog = new THREE.Fog( mood, 1, 3500 );
+	scene.background = new THREE.Color('hsl(0, 0%, 11%)');
+	scene.fog = new THREE.Fog( mood, 1, 1000 );
 	var camera = new THREE.PerspectiveCamera(150, window.innerWidth / window.innerHeight, 0.01, 10000);
 	camera.position.z = ZOOM;
 	var renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -26,6 +22,7 @@ var mouseX = 0, mouseY = 0;
 		camera.updateProjectionMatrix();
 	});
 	spotLight = new THREE.SpotLight( {
+		color: mood,
 		penumbra: 1,
 	} );
 	spotLight.position.set( 0, -10000, 10000 ); //SpotLight.target defaults to 0, 0, 0
@@ -35,13 +32,16 @@ var mouseX = 0, mouseY = 0;
 
 
 // geometry
-	var geometry = new THREE.TetrahedronBufferGeometry( 3500, 0 );
+	var geometry = new THREE.TetrahedronBufferGeometry( 1000, 0 );
 	var material = new THREE.MeshPhongMaterial( {
 		color: mood,
 		flatShading: true,
 		transparent: true,
 		opacity: 0.1,
-		shininess: 10, //default is 30
+		shininess: 20, //default is 30
+		polygonOffset: true,
+		polygonOffsetFactor: 300,
+		polygonOffsetUnits: 1,
 		side: THREE.BackSide
 	} );
 	var mesh = new THREE.Mesh( geometry, material );
@@ -50,6 +50,8 @@ var mouseX = 0, mouseY = 0;
 	var geo = new THREE.EdgesGeometry( mesh.geometry );
 	var mat = new THREE.LineBasicMaterial( {
 		color: mood,
+		transparent: true,
+		opacity: 1,
 	} );
 	var wireframe = new THREE.LineSegments( geo, mat );
 	mesh.add( wireframe );
@@ -59,7 +61,11 @@ var mouseX = 0, mouseY = 0;
 
 
 //movement
-
+$(window).scroll(function() { //smooth this out next
+	var scroll = $(window).scrollTop();
+	var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+	mesh.rotation.x = scroll * 0.002;
+} );
 function MouseMove(event) {
 	mouseX = event.clientX - window.innerWidth / 2;
 	mouseY = event.clientY - window.innerHeight / 2;
@@ -79,10 +85,10 @@ document.addEventListener( 'mousemove', MouseMove );
 
 // render and animation
 function update() {
-	mesh.rotation.x += 0.002;
-	mesh.rotation.y += 0.002;
-	camera.position.x += ( mouseX - camera.position.x ) * 0.15;
-	camera.position.y += ( - ( mouseY ) - camera.position.y ) * 0.15;
+	mesh.rotation.x += 0.001;
+	mesh.rotation.y += 0.001;
+	camera.position.x += ( mouseX - camera.position.x ) * 0.2;
+	camera.position.y += ( - ( mouseY ) - camera.position.y ) * 0.2;
 };
 function render() {
 	renderer.render(scene, camera);
@@ -95,3 +101,6 @@ function animate() {
 animate();
 
 });
+
+
+

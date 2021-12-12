@@ -4,8 +4,6 @@
    "command": "",
    "publicDir": "",
    "baseDir": "",
-   "environment": {
-     "SOME_ENV": ""
-   }
+   "environment": { "SOME_ENV": "" }
  }
 }
