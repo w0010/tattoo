@@ -28,3 +28,11 @@
 	background: transparent;
 }
 
+
+#socket {
+	height: 120px;
+	position: absolute;
+	width: 100vw;
+	z-index: 100;
+	transform: translateY(-60px);
+}
