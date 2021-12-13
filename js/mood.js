@@ -1,10 +1,5 @@
-
-//var moods = ['hsla(0, 0%, 0%,', 'hsla(20, 20%, 50%,', 'hsla(30, 100%, 50%,', 'hsla(50, 80%, 40%,', 'hsla(170, 60%, 60%,', 'hsla(335,80%,60%,' ]
-// 'hsla(50,80%,40%,', 
-
-
-var moods = ['hsla(345,90%,60%,' ]
-var moodFrag = moods[Math.floor(Math.random() * moods.length)];
+var moods = [ 'hsla(55, 100%, 60%,', 'hsla(170, 100%, 60%,', 'hsla(240, 100%, 70%,', 'hsla(345,100%,60%,' ]
+var moodFrag = moods [ Math.floor ( Math.random() * moods.length ) ];
 var mood = moodFrag + '1)';
 
 
@@ -12,28 +7,27 @@ var mood = moodFrag + '1)';
 
 $(document).ready(function() {
 
-//var moodAlt;
-//if (mood = 'hsla(50, 80%, 40%, 1)') {
-//	moodAlt = 'hsla(345, 90%, 60%, 1)'
-//} else {
-//
-//};
-//if (mood = 'hsla(195, 80%, 40%, 1)') {
-//	moodAlt = 'hsla(345, 90%, 60%, 1)'
-//} else {
-//
-//};
-//if (mood = 'hsla(345, 90%, 60%, 1)') {
-//	moodAlt = 'hsla(50, 80%, 40%, 1)'
-//} else {
-//
-//};
-//
+var moodAlt;
+if (mood = 'hsla(50, 80%, 40%, 1)') {
+	moodAlt = 'hsla(345, 90%, 60%, 1)'
+} else {
+
+};
+if (mood = 'hsla(195, 80%, 40%, 1)') {
+	moodAlt = 'hsla(345, 90%, 60%, 1)'
+} else {
+
+};
+if (mood = 'hsla(345, 90%, 60%, 1)') {
+	moodAlt = 'hsla(50, 80%, 40%, 1)'
+} else {
+
+};
 
 document.documentElement.style.setProperty('--mood', mood);
 document.documentElement.style.setProperty('--moodDim', moodFrag + '0.6)');
-document.documentElement.style.setProperty('--moodFaint', moodFrag + '0.2)');
-//document.documentElement.style.setProperty('--moodAlt', moodAlt);
+document.documentElement.style.setProperty('--moodDark', moodFrag + '0.2)');
+document.documentElement.style.setProperty('--moodAlt', moodAlt);
 
 
 /*
