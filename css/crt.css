@@ -166,15 +166,16 @@
 /* scanline */
 @keyframes scanline {
   0% { bottom: 100%; }
-  60% { bottom: 100%; }
-  100% { bottom: -20%; } }
+  20% { bottom: 100%; }
+  100% { bottom: -100%; } }
 .scanline {
-  animation: scanline 15s linear infinite;
+  animation: scanline 20s linear infinite;
   background: -webkit-linear-gradient(
     90deg,
     var(--nomood) 0%,
-    var(--fademood) 10%,
+    var(--fademood) 3%,
     var(--nomood) 100% );
+  background-blend-mode: soft-light;
   bottom: 100%;
   content: '';
   height: 50vh;
