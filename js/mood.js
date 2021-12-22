@@ -1,4 +1,4 @@
-var moods = [ 'hsla(60,100%,70%', 'hsla(190,100%,50%', 'hsla(353,100%,80%' ];
+var moods = [ 'hsla(60,100%,60%', 'hsla(190,100%,38%', 'hsla(353,100%,50%' ];
 var tone = moods [ Math.floor ( Math.random() * moods.length ) ];
 var mood = tone + ',0.9)';
 
