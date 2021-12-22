@@ -9,7 +9,7 @@
 .flex-start		{ justify-content: flex-start }
 .reverse		{ flex-direction: row-reverse }
 .flex-column 	{ flex-direction: column; justify-content: center }
-.c-reverse		{ flex-direction: column-reverse; justify-content: center }
+.flex-column-r	{ flex-direction: column-reverse; justify-content: center }
 .align-start	{ align-items: flex-start }
 .align-end		{ align-items: flex-end }
 .wrap 			{ flex-wrap: wrap }
