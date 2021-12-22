@@ -41,7 +41,7 @@ html {
 body {
 	color: var(--mood);
 	font: var(--type);
-	letter-spacing: 07em;
+	letter-spacing: 0.07em;
 	overflow-x: hidden }
 
 a 	{
