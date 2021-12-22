@@ -55,7 +55,7 @@ a:hover {
 	background-color: var(--mood);
 	color: var(--black) }
 
-div { box-shadow: 0 0 12em var(--mood) }
+div { box-shadow: 0 0 8em var(--fademood) }
 
 footer { height: 2em }
 
@@ -75,12 +75,10 @@ img {
 	max-height: 100%;
 	max-width: 100% }
 
-main { padding: calc(1vw + 1vh) }
-
 menu, ul { list-style: none } ol { padding-left: 1em }
 
-nav > a { padding: 0 0.25em}
-nav > a:before { content:"x " }
+nav > a { display: block }
+nav > a:before { content:"[] " }
 
 
 
