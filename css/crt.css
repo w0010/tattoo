@@ -143,7 +143,7 @@
   right: 0;
   background: rgba(18, 16, 16, 0.1);
   opacity: 0;
-  z-index: 2;
+  z-index: 6;
   pointer-events: none; /* negates z-index blockage */
   animation: flicker 0.15s infinite }
 /* flicker */
@@ -156,7 +156,7 @@
   bottom: 0;
   right: 0;
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
+  z-index: 6;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none } /* negates z-index blockage */ 
 
@@ -179,4 +179,4 @@
   pointer-events: none; /* negates z-index blockage */
   position: absolute;
   width: 100%;
-  z-index: 8}
+  z-index: 4}
