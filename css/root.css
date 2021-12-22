@@ -54,8 +54,6 @@ a 	{
 	background-color: var(--mood);
 	color: var(--black) }
 
-footer { height: 2em }
-
 h1, h2, h3 {
 	font: var(--type);
 	font-weight: 700;
