@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 /* create variables */
 :root {
-	--font:		400 100%/1.5em larabiefont, monospace;
+	--font:		400 100%/1.33em larabiefont, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
@@ -57,7 +57,7 @@ h1, h2, h3 {
 	font-weight: 700;
 	letter-spacing: 0em;
 	text-transform: uppercase }
-	h2 { font-size: calc(2.5vw + 2.5vh) }
+h2 { font-size: calc(2.5vw + 2.5vh) }
 
 header {
 	background: var(--mood);
@@ -67,9 +67,9 @@ img {
 	display: block;
 	max-height: 100%;
 	max-width: 100% }
-	
-menu, ul { list-style: none }
-	ol { padding-left: 1em }
+
+/* list styles */
+menu, ul { list-style: none } ol { padding-left: 1em }
 
 nav > a {
 	margin: 0 0.75em;
