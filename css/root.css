@@ -40,7 +40,7 @@ body {
 	font: var(--type);
 	letter-spacing: 0em;
 	overflow-x: hidden;
-	text-shadow: 0 0 0.25em var(--mood) }
+	/* text-shadow: 0 0 0.5em var(--fademood)*/ }
 
 a 	{
 	background-color: var(--empty);
