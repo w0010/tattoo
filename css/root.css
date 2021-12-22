@@ -62,8 +62,8 @@ h1, h2, h3 {
 	letter-spacing: 0;
 	line-height: 1.25em;
 	text-transform: uppercase }
-	
-h2 { /* font-size: 2em */ }
+	h2 { font-size: 2em }
+	h3 { font-weight: 400; text-transform: none }
 
 header {
 	background-color: var(--mood);
@@ -86,14 +86,20 @@ menu, ul { list-style:none }
 	ol { padding-left:1em }
 
 nav { padding: 1em 0 }
-	nav:before { content:"---" }
+	nav:before { 
+		background: linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
+		content:'';
+		display: block;
+		height: 1em;
+		margin-right: 0.5em;
+		width: 1em }
 	nav > a {
 		display: block;
 		font-weight: 700 }
 	nav > a:before {
-		content:"/";
+		content:'/';
 		font-weight: 400 }
 	nav > a:after {
-		content:".html";
+		content:'.html';
 		font-weight: 400;
 		text-transform:lowercase }
