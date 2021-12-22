@@ -102,5 +102,6 @@ nav { padding: 1em 0 }
 		font-weight: 400 }
 	nav > a:after {
 		content:'.html';
+		font-size: 0.5em;
 		font-weight: 400;
 		text-transform:lowercase }
