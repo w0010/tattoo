@@ -2,7 +2,7 @@
 	background: var(--dimmood);
 	border: var(--mood) 1px outset;
 	border-top: var(--mood) 10px outset;
-	box-shadow: 0 0 8em var(--fademood);
+	box-shadow: 0 0 20em var(--fademood);
 	color: var(--mood);
 	font-size: 0.8em;
 	padding: calc(1vw + 1.5vh);

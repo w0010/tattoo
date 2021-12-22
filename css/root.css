@@ -86,7 +86,14 @@ menu, ul { list-style:none }
 	ol { padding-left:1em }
 
 nav { padding: 1em 0 }
-	nav:before { content:"..." }
-	nav > a { display: block; font-weight: 700 }
-	nav > a:before { content:"/" }
-	nav > a:after { content:".html"; text-transform:lowercase }
+	nav:before { content:"---" }
+	nav > a {
+		display: block;
+		font-weight: 700 }
+	nav > a:before {
+		content:"/";
+		font-weight: 400 }
+	nav > a:after {
+		content:".html";
+		font-weight: 400;
+		text-transform:lowercase }
