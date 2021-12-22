@@ -3,7 +3,8 @@
 
 /* create variables */
 :root {
-	--font:		400 100%/1.33em larabiefont, monospace;
+	--type:		400 100%/1.25em larabiefont, monospace;
+	--bold:		700 100%/1.25em larabiefont, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
@@ -37,27 +38,28 @@ html {
 
 body {
 	color: var(--mood);
-	font: var(--font);
+	font: var(--type);
 	letter-spacing: 0em;
 	overflow-x: hidden }
 
+body > * { padding: calc(2.5vw + 2.5vh) }
+
 a 	{
-	background-color: var(--mood);
-	color: var(--black);
+	background-color: var(--empty);
+	color: var(--mood);
 	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: var(--linear) }
 	
 a:hover {
-	background: var(--empty);
-	color: var(--mood) }
+	background-color: var(--mood);
+	color: var(--empty) }
 
 footer { height: 2em }
 
 h1, h2, h3 {
-	font: var(--font);
-	font-weight: 700;
+	font: var(--bold);
 	letter-spacing: 0em;
 	text-transform: uppercase }
 	
@@ -74,8 +76,8 @@ img {
 
 menu, ul { list-style: none } ol { padding-left: 1em }
 
-nav > a { }
-	nav > a:before { content:"x " }
+nav > a { padding: 0 0.25em}
+nav > a:before { content:"x " }
 
 
 
