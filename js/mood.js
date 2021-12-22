@@ -29,7 +29,7 @@ if (mood = 'hsla(345, 90%, 60%, 1)') {
 document.documentElement.style.setProperty('--mood', mood);
 document.documentElement.style.setProperty('--fadeMood', moodFrag + '0.74)');
 document.documentElement.style.setProperty('--dimMood', moodFrag + '0.12)');
-document.documentElement.style.setProperty('--altMood', moodAlt);
+document.documentElement.style.setProperty('--altMood', altMood);
 
 });
 

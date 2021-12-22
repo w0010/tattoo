@@ -18,7 +18,7 @@ html, body {
 
 a 
 	{background: var(--dimMood);
-	color: /*var(--mood)*/;
+	color: var(--mood);
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: var(--ease)
@@ -41,7 +41,7 @@ h1, h2, h3 {
 	font-family: initial;
 	font-size: initial;
 	font-style: initial;
-	font-weight: initial;
+	font-weight: 700;
 	letter-spacing: initial;
 	line-height: initial;
 	text-transform: uppercase
@@ -68,12 +68,14 @@ img {
 }
 
 main {
+	background:
+		linear-gradient(90deg, var(--bgcolor) calc( var(--dotspace) - var(--dotsize) ), transparent 1%) center,
+		linear-gradient(var(--bgcolor) calc( var(--dotspace) - var(--dotsize) ), transparent 1%) center,
+		var(--dotcolor);
+	background-size: var(--dotspace) var(--dotspace)
 }
 
-nav > a {
-	margin: 0 1rem;
-	padding: 0.1rem 0.7rem;
-}
+nav > a { margin: 0 1rem; padding: 0.1rem 0.7rem }
 
 menu { list-style: none }
 p { margin: 1rem 0 }
