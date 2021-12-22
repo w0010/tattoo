@@ -26,11 +26,10 @@ footer {
 
 h1, h2, h3 {
 	font: inherit 700 inherit/inherit inherit;
-	letter-spacing: 0.25em;
+	letter-spacing: 0em;
 	text-transform: uppercase }
 h2 { /* true h1 */
-	font-size: calc(2.5vw + 2.5vh);
-	line-height: 1.5em }
+	font-size: calc(2.5vw + 2.5vh) }
 
 header {
 	background: var(--mood);
