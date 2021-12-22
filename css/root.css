@@ -3,7 +3,7 @@
 
 /* create variables */
 :root {
-	--type:		700 100%/1.25em Source Code Pro, monospace;
+	--type:		700 100%/1.25em monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
@@ -59,10 +59,14 @@ footer { height: 2em }
 
 h1, h2, h3 {
 	font: var(--type);
-	letter-spacing: 1.25rem;
+	letter-spacing: 0.5em;
+	line-height: 1.5em;
 	text-transform: uppercase }
 	
-h2 { font-size: 2em }
+h2 {
+	font-size: 2em;
+	letter-spacign: 0em;
+	line-height: 0em }
 
 header {
 	background-color: var(--mood);
@@ -78,7 +82,7 @@ menu, ul { list-style:none } ol { padding-left:1em }
 nav:after { content:"." }
 nav:before { content:"." }
 nav > a { display: block }
-nav > a:before { content:"-- " }
+nav > a:before { content:"- " }
 
 
 
