@@ -4,6 +4,7 @@
 	border-top: var(--mood) 10px outset;
 	box-shadow: 0 0 8em var(--dimmood);
 	color: var(--mood);
+	font-size: 0.8em;
 	padding: calc(1vw + 1.5vh);
 	margin: 2em 0;
 	max-width: calc(22vh + 22vw) }
