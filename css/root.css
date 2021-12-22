@@ -38,14 +38,14 @@ html {
 	font-size: 18px }
 
 body {
-	color: var(--white);
+	color: var(--mood);
 	font: var(--type);
 	letter-spacing: 0em;
 	overflow-x: hidden }
 
 a 	{
 	background-color: var(--empty);
-	color: var(--white);
+	color: var(--mood);
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: var(--linear) }
@@ -82,9 +82,3 @@ nav { padding: var(--pad) 0 }
 nav:before { content:"." }
 nav > a { display: block }
 nav > a:before { content:"/ " }
-
-
-
-
-
-
