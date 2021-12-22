@@ -171,13 +171,13 @@
 .scanline {
   animation: scanline 15s linear infinite;
   background: -webkit-linear-gradient(
-    0deg,
+    90deg,
     var(--nomood) 0%,
     var(--fademood) 10%,
     var(--nomood) 100% );
   bottom: 100%;
   content: '';
-  height: 200px;
+  height: 50vh;
   position: absolute;
   width: 100%;
   z-index: 10 }  
