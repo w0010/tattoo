@@ -24,7 +24,9 @@
 	--ease-io:	100ms ease-in-out;
 	--ease-o:	100ms ease-out;
 	--long:		2000ms ease;
-	--linear:	100ms linear }
+	--linear:	100ms linear;
+	
+	--pad:		calc(1vw + 1vh) }
 	
 /* selectors */
 *	{
@@ -33,15 +35,15 @@
 
 html {
 	background-color: #000000;
-	font-size: 20px }
+	font-size: 18px }
 
 body {
-	color: var(--mood);
+	color: var(--white);
 	font: var(--type);
 	letter-spacing: 0em;
 	overflow-x: hidden;
-	/* text-shadow: 0 0 0.5em var(--fademood)*/ }
-
+	padding: var(--pad) }
+	
 a 	{
 	background-color: var(--empty);
 	color: var(--mood);
@@ -60,7 +62,7 @@ h1, h2, h3 {
 	letter-spacing: 0em;
 	text-transform: uppercase }
 	
-/* h2 { font-size: calc(2.5vw + 2.5vh) } */
+h2 { font-size: 2em }
 
 header {
 	background-color: var(--mood);
