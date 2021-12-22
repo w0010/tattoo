@@ -41,19 +41,21 @@ body {
 	font: var(--type);
 	letter-spacing: 0em;
 	overflow-x: hidden;
-	text-shadow: 0 0 1em var(--fademood) }
+	text-shadow: 0 0 1em var(--mood) }
 
 a 	{
 	background-color: var(--empty);
 	color: var(--mood);
-	font-weight: 700;
+	font: var(--bold);
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: var(--linear) }
 	
 a:hover {
 	background-color: var(--mood);
-	color: var(--empty) }
+	color: var(--black) }
+
+div { box-shadow: 0 0 12em var(--mood) }
 
 footer { height: 2em }
 
@@ -62,17 +64,18 @@ h1, h2, h3 {
 	letter-spacing: 0em;
 	text-transform: uppercase }
 	
-h2 { font-size: calc(2.5vw + 2.5vh) }
+/* h2 { font-size: calc(2.5vw + 2.5vh) } */
 
 header {
 	background-color: var(--mood);
-	box-shadow: 0 0 5em var(--dimmood);
 	color: var(--black) }
 
 img {
 	display: block;
 	max-height: 100%;
 	max-width: 100% }
+
+main { padding: calc(1vw + 1vh) }
 
 menu, ul { list-style: none } ol { padding-left: 1em }
 
