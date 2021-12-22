@@ -19,20 +19,20 @@
 	--fademood:	hsla(0, 0%, 100%, 0.8);
 	--dimmood:	hsla(0, 0%, 100%, 0.2);
 	
-	--crtB:		0 1px rgba(0,30,255,0.5);
-	--crtR:		0 1px rgba(255,0,80,0.3), 0 0 3px;
+	--crt-blue:	0 1px rgba(0,30,255,0.5);
+	--crt-red:	0 1px rgba(255,0,80,0.3);
 
-	--ease:		100ms ease;
-	--ease-i:	100ms ease-in;
-	--ease-io:	100ms ease-in-out;
-	--ease-o:	100ms ease-out;
+	--ease:		300ms ease;
+	--ease-i:	300ms ease-in;
+	--ease-io:	300ms ease-in-out;
+	--ease-o:	300ms ease-out;
 	--long:		2000ms ease;
 	--linear:	200ms linear;
 	
 	--sml:		calc(1vw + 1vh);
 	--lrg:		calc(2vw + 2vh) }
 	
-/* selectors */
+/* elements */
 *	{
 	margin: 0;
 	padding: 0 }
@@ -47,7 +47,7 @@ body {
 	letter-spacing: 0.07em;
 	overflow-x: hidden }
 
-a 	{
+a {
 	background-color: var(--empty);
 	color: var(--mood);
 	text-decoration: none;
@@ -78,7 +78,7 @@ img {
 	max-width: 100% }
 
 main {
-	background: var(--shade);
+	background:;
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
 	padding: var(--sml) }
@@ -105,3 +105,23 @@ nav { padding: 1em 0 }
 		font-size: 0.5em;
 		font-weight: 400;
 		text-transform:lowercase }
+		
+/* classes */
+.window {
+	background: var(--dimmood);
+	border: var(--mood) 1px outset;
+	border-top: var(--mood) 10px outset;
+	box-shadow: 0 0 20em var(--fademood);
+	color: var(--mood);
+	font-size: 0.8em;
+	padding: calc(1vw + 1.5vh);
+	margin: 2em 0;
+	max-width: calc(22vh + 22vw) }
+	.window:before {
+		background:
+		linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
+		content:'';
+		display: block;
+		height: 1em;
+		margin-right: 0.5em;
+		width: 1em }

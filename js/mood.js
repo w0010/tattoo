@@ -7,5 +7,6 @@ $(document).ready(function() {
 document.documentElement.style.setProperty('--mood', mood);
 document.documentElement.style.setProperty('--fademood', tone + ',0.6)');
 document.documentElement.style.setProperty('--dimmood', tone + ',0.15)');
+document.documentElement.style.setProperty('--nomood', tone + ',0)');
 
 });
