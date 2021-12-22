@@ -27,7 +27,7 @@
 	--ease-io:	100ms ease-in-out;
 	--ease-o:	100ms ease-out;
 	--long:		2000ms ease;
-	--linear:	100ms linear;
+	--linear:	200ms linear;
 	
 	--sml:		calc(1vw + 1vh);
 	--lrg:		calc(2vw + 2vh) }
