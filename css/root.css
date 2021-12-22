@@ -73,7 +73,8 @@ img {
 
 menu, ul { list-style:none } ol { padding-left:1em }
 
-nav:before { content:"nav" }
+nav:after { content:"." }
+nav:before { content:"." }
 nav > a { display: block }
 nav > a:before { content:"-- " }
 
