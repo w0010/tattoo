@@ -1,14 +1,14 @@
 *	{
 	margin: 0;
 	padding: 0;/*for ul*/
-}
-html, body {
-	background: var(--black);
-	color: var(--mood);
 	font-family: larabiefont, monospace;
 	font-size: 16pt;
 	font-weight: 400;
 	font-style: normal;
+}
+html, body {
+	background: var(--black);
+	color: var(--mood);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: 0.02em;
@@ -65,14 +65,6 @@ img {
 	display: block;
 	max-height: 100%;
 	max-width: 100%
-}
-
-main {
-	background:
-		linear-gradient(90deg, var(--bgcolor) calc( var(--dotspace) - var(--dotsize) ), transparent 1%) center,
-		linear-gradient(var(--bgcolor) calc( var(--dotspace) - var(--dotsize) ), transparent 1%) center,
-		var(--dotcolor);
-	background-size: var(--dotspace) var(--dotspace)
 }
 
 nav > a { margin: 0 1rem; padding: 0.1rem 0.7rem }
