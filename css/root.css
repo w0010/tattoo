@@ -1,5 +1,6 @@
 /* load fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
 /* create variables */
 :root {
 	--font:		400 100%/1.33em larabiefont, monospace;
@@ -24,13 +25,14 @@
 	--ease-o:	300ms ease-out;
 	--long:		2000ms ease;
 	--linear:	300ms linear }
-
+	
+/* selectors */
 *	{
 	margin: 0;
 	padding: 0 }
 
 html {
-	background-color: #333333;=
+	background-color: #000000;
 	font-size: 16px }
 
 body {
@@ -40,7 +42,7 @@ body {
 	overflow-x: hidden }
 
 a 	{
-	background: var(--mood);
+	background-color: var(--mood);
 	color: var(--black);
 	font-weight: 700;
 	text-decoration: none;
@@ -52,16 +54,16 @@ a 	{
 
 footer { height: 2em }
 
-/* headings */
 h1, h2, h3 {
 	font: var(--font);
 	font-weight: 700;
 	letter-spacing: 0em;
 	text-transform: uppercase }
+	
 h2 { font-size: calc(2.5vw + 2.5vh) }
 
 header {
-	background: var(--mood);
+	background-color: var(--mood);
 	color: var(--black) }
 
 img {
@@ -69,7 +71,6 @@ img {
 	max-height: 100%;
 	max-width: 100% }
 
-/* list styles */
 menu, ul { list-style: none } ol { padding-left: 1em }
 
 nav > a {

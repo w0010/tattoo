@@ -1,11 +1,11 @@
-var moods = [ 'hsla(55, 100%, 60%,', 'hsla(170, 100%, 60%,', 'hsla(240, 100%, 70%,', 'hsla(345,100%,60%,' ];
+var moods = [ 'hsla(55,100%,60%', 'hsla(170,100%,60%', 'hsla(240,100%,70%', 'hsla(345,100%,60%' ];
 var tone = moods [ Math.floor ( Math.random() * moods.length ) ];
-var mood = tone + '1)';
+var mood = tone + ',0.9)';
 
 $(document).ready(function() {
 
 document.documentElement.style.setProperty('--mood', mood);
-document.documentElement.style.setProperty('--fademood', tone + '0.74)');
-document.documentElement.style.setProperty('--dimmood', tone + '0.12)');
+document.documentElement.style.setProperty('--fademood', tone + ',0.6)');
+document.documentElement.style.setProperty('--dimmood', tone + ',0.15)');
 
 });
