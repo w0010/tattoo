@@ -1,76 +1,67 @@
 *	{
+	border: 0 none;
 	margin: 0;
-}
-html, body {
-	background: var(--black);
+	padding: 0 }
+
+html {
+	background-color: #A1A1A1;	
+	font-size: 16px }
+	
+body {
 	color: var(--mood);
-	font-family: larabiefont, monospace;
-	font-size: 16pt;
-	font-weight: 400;
-	font-style: normal;
+	font: 400 100%/1.5em larabiefont, monospace;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: 0.02em;
-	line-height: 1.25em;
-	overflow-x: hidden;
-}
+	line-height: 1.33em;
+	overflow-x: hidden }
 
-a 
-	{background: var(--dimMood);
+a 	{
+	background: var(--dimMood);
 	color: var(--mood);
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: var(--ease)
-}	a:hover {
+	transition: var(--ease) }
+	a:hover {
 	background: var(--fadeMood);
-	color: var(--black)
-}
+	color: var(--black) }
 
 footer {
 	height: 2em;
-	width: 100%
-}
+	width: 100% }
 
 /* headings */
 /* note h1 is only for header title */
 
 h1, h2, h3 {
-	font-family: initial;
-	font-size: initial;
-	font-style: initial;
-	font-weight: 700;
-	letter-spacing: initial;
-	line-height: initial;
-	text-transform: uppercase
-}	h2 { /* true h1 */
+	font: inherit 700 inherit/inherit inherit;
+	letter-spacing: 0.5em;
+	text-transform: uppercase }
+h2 { /* true h1 */
 	font-size: calc(2.5vw + 2.5vh);
-	line-height: 1.75rem;
-}
+	line-height: 1.75rem }
 
 header {
 	background: var(--mood);
 	color: var(--black);
 	height: 2em;
-	width: 100%
-}
+	width: 100% }
 
 img {
 	display: block;
 	max-height: 100%;
-	max-width: 100%
-}
+	max-width: 100% }
+	
+menu, ul { list-style: none }
+	ol { padding-left: 1em }
 
-nav > a { margin: 0 1em; padding: 0.1em 0.7em }
+nav > a { margin: 0 1em; padding: 0em 0.5em }
 
-menu { list-style: none }
 p { margin: 1em 0 }
-ol { padding-left: 1em }
-ul { list-style: none }
 
 section {
-	padding: 80px 100px;
-	width: 100%
-}
+	padding: calc(1vw + 1vh);
+	width: 100% }
 
 
 
