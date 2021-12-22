@@ -143,7 +143,7 @@
   right: 0;
   background: rgba(18, 16, 16, 0.1);
   opacity: 0;
-  z-index: 6;
+  z-index: 8;
   pointer-events: none; /* negates z-index blockage */
   animation: flicker 0.15s infinite }
 /* flicker */
@@ -164,7 +164,7 @@
   bottom: 0;
   right: 0;
   
-  z-index: 6;
+  z-index: 8;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none } /* negates z-index blockage */ 
 
