@@ -37,11 +37,11 @@ html {
 	font-size: 16px }
 
 body {
-	box-shadow: 0 0 5em var(--mood);
 	color: var(--mood);
 	font: var(--type);
 	letter-spacing: 0em;
-	overflow-x: hidden }
+	overflow-x: hidden;
+	text-shadow: 0 0 1em var(--fademood) }
 
 a 	{
 	background-color: var(--empty);
@@ -66,6 +66,7 @@ h2 { font-size: calc(2.5vw + 2.5vh) }
 
 header {
 	background-color: var(--mood);
+	box-shadow: 0 0 5em var(--dimmood);
 	color: var(--black) }
 
 img {
