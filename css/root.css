@@ -18,11 +18,4 @@
 	--ease-o:	300ms ease-out;
 	--long:		2000ms ease;
 	--linear:	300ms linear;
-	
-	/* dot colors */
-	--bgcolor: 	hsla(0, 0%, 0%, 0);
-	--dotcolor:	hsla(0, 0%, 70%, 7);
-	/* dot dimensions */
-	--dotsize:	1px;
-	--dotspace:	4rem;
 }

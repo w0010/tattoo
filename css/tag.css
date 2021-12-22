@@ -1,14 +1,14 @@
 *	{
 	margin: 0;
 	padding: 0;/*for ul*/
-	font-family: larabiefont, monospace;
-	font-size: 16pt;
-	font-weight: 400;
-	font-style: normal;
 }
 html, body {
 	background: var(--black);
 	color: var(--mood);
+	font-family: larabiefont, monospace;
+	font-size: 16pt;
+	font-weight: 400;
+	font-style: normal;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: 0.02em;
