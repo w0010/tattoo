@@ -1,6 +1,3 @@
-/* load fonts */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-
 /* create variables */
 :root {
 	--type:		400 100%/1.25em bdr-mono, monospace;
@@ -33,6 +30,7 @@
 	--lrg:		calc(2vw + 2vh) }
 	
 /* elements */
+
 *	{
 	margin: 0;
 	padding: 0 }
@@ -78,11 +76,10 @@ img {
 	max-width: 100% }
 
 main {
-	background:;
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
-	min-width: calc(99vh - 1vw - 1.25em);
-	min-height: calc(99vh - 1vw - 1.25em);
+	min-width: ;
+	min-height: ;
 	padding: var(--sml) }
 
 menu, ul { list-style:none }
@@ -109,6 +106,9 @@ nav { padding: 1em 0 }
 		text-transform:lowercase }
 		
 /* classes */
+
+.shokunin { font: 900 100%/1.25em vdl-logojrblack, monospace }
+
 .window {
 	background: var(--lowmood);
 	border: var(--mood) 1px outset;
