@@ -41,7 +41,7 @@ html {
 body {
 	color: var(--mood);
 	font: var(--type);
-	letter-spacing: 1.07em;
+	letter-spacing: 07em;
 	overflow-x: hidden }
 
 a 	{
@@ -77,7 +77,7 @@ img {
 	max-width: 100% }
 
 main {
-	background: var(--dimmood);
+	background: var(--shade);
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
 	padding: var(--sml) }
