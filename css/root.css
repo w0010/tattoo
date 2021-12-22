@@ -41,7 +41,7 @@ html {
 body {
 	color: var(--mood);
 	font: var(--type);
-	letter-spacing: 0em;
+	letter-spacing: 1.07em;
 	overflow-x: hidden }
 
 a 	{
@@ -50,8 +50,7 @@ a 	{
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: var(--linear) }
-	
-a:hover {
+	a:hover {
 	background-color: var(--mood);
 	color: var(--black) }
 
@@ -59,6 +58,7 @@ footer { height: 2em }
 
 h1, h2, h3 {
 	font: var(--type);
+	font-weight: 700;
 	letter-spacing: 0;
 	line-height: 1.25em;
 	text-transform: uppercase }
@@ -76,15 +76,17 @@ img {
 	max-height: 100%;
 	max-width: 100% }
 
-main { 
+main {
+	background: var(--dimmood);
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
 	padding: var(--sml) }
 
-menu, ul { list-style:none } ol { padding-left:1em }
+menu, ul { list-style:none }
+	ol { padding-left:1em }
 
-nav { padding: var(--sml) 0 }
-nav:before { content:"..." }
-nav > a { display: block }
-nav > a:before { content:"/" }
-nav > a:before { content:".html"; text-transform:lowercase }
+nav { padding: 1em 0 }
+	nav:before { content:"..." }
+	nav > a { display: block; font-weight: 700 }
+	nav > a:before { content:"/" }
+	nav > a:after { content:".html"; text-transform:lowercase }
