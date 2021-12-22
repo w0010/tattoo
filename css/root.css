@@ -44,7 +44,7 @@ a 	{
 	color: var(--black);
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: var(--ease-o) }
+	transition: var(--ease) }
 	a:hover {
 	background: var(--dimMood);
 	color: var(--mood) }
@@ -54,6 +54,7 @@ footer { height: 2em }
 /* headings */
 h1, h2, h3 {
 	font: var(--font);
+	font-weight: 700;
 	letter-spacing: 0em;
 	text-transform: uppercase }
 	h2 { font-size: calc(2.5vw + 2.5vh) }
@@ -73,9 +74,7 @@ menu, ul { list-style: none }
 nav > a {
 	margin: 0 0.75em;
 	padding: 0.25em }
-	nav > a:before {
-	background: var(--shade);
-	content:"[] " }
+	nav > a:before { content:"x " }
 
 p { margin: 1em 0 }
 
