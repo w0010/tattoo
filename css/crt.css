@@ -180,10 +180,10 @@
 /* scanline */
 @keyframes scanline {
   0% { bottom: 100%; }
-  20% { bottom: 100%; }
+  5% { bottom: 100%; }
   100% { bottom: -100%; } }
 .scanline {
-  animation: scanline 20s linear infinite;
+  animation: scanline 15s linear infinite;
   background: -webkit-linear-gradient(
     90deg,
     var(--nomood) 0%,
