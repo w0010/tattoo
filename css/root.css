@@ -3,7 +3,7 @@
 
 /* create variables */
 :root {
-	--type:		400 100%/1.25em larabiefont, monospace;
+	--type:		400 100%/1.25em bdr-mono, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
