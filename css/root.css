@@ -41,9 +41,8 @@ body {
 	color: var(--white);
 	font: var(--type);
 	letter-spacing: 0em;
-	overflow-x: hidden;
-	padding: var(--pad) }
-	
+	overflow-x: hidden }
+
 a 	{
 	background-color: var(--empty);
 	color: var(--white);
@@ -59,26 +58,28 @@ footer { height: 2em }
 
 h1, h2, h3 {
 	font: var(--type);
-	letter-spacing: 0.5em;
-	line-height: 1.5em;
+	letter-spacing: 0;
+	line-height: 1.25em;
 	text-transform: uppercase }
 	
 h2 {
-	font-size: 2em;
-	letter-spacign: 0em;
-	line-height: 0em }
+	/* font-size: 2em */ }
 
 header {
 	background-color: var(--mood);
-	color: var(--black) }
+	color: var(--black);
+	padding: 0 var(--pad) }
 
 img {
 	display: block;
 	max-height: 100%;
 	max-width: 100% }
 
+main { padding: var(--pad) }
+
 menu, ul { list-style:none } ol { padding-left:1em }
 
+nav { padding: var(--pad) }
 nav:after { content:"." }
 nav:before { content:"." }
 nav > a { display: block }

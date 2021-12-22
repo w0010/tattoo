@@ -34,6 +34,7 @@
 
 .fixed { position: fixed }
 
+.wrapper { padding: var(--pad) }
 .z-index { z-index: 1 }
 
 
