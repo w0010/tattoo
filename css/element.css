@@ -1,31 +1,28 @@
 body {
 	color: var(--mood);
-	font: 400 100%/1.5em larabiefont, monospace;
+	font: var(--font);
 	/* -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale; */
 	letter-spacing: 0em;
-	overflow-x: hidden;
-	padding: calc(1vw + 1vh) }
+	overflow-x: hidden }
 
 a 	{
-	background: var(--dimMood);
-	color: var(--mood);
+	background: var(--fadeMood);
+	color: var(--black);
 	text-decoration: none;
 	text-transform: uppercase;
-	transition: var(--ease) }
+	transition: var(--ease-o) }
 	a:hover {
-	background: var(--fadeMood);
-	color: var(--black) }
+	background: var(--dimMood);
+	color: var(--mood) }
 
-footer {
-	height: 2em;
-	width: 100% }
+footer { height: 2em }
 
 /* headings */
 /* note h1 is only for header title */
 
 h1, h2, h3 {
-	font: inherit 700 inherit/inherit inherit;
+	font: var(--font);
 	letter-spacing: 0em;
 	text-transform: uppercase }
 h2 { /* true h1 */
@@ -46,7 +43,9 @@ menu, ul { list-style: none }
 nav > a {
 	margin: 0 0.75em;
 	padding: 0.25em }
-	nav > a:before { content:"X" }
+	nav > a:before {
+	background: var(--shade);
+	content:"[] " }
 
 p { margin: 1em 0 }
 

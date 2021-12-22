@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 /* create variables */
 :root {
+	--font:		400 100%/1.5em larabiefont, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
@@ -31,3 +32,55 @@
 html {
 	background-color: #333333;=
 	font-size: 16px }
+
+body {
+	color: var(--mood);
+	font: var(--font);
+	letter-spacing: 0em;
+	overflow-x: hidden }
+
+a 	{
+	background: var(--fadeMood);
+	color: var(--black);
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: var(--ease-o) }
+	a:hover {
+	background: var(--dimMood);
+	color: var(--mood) }
+
+footer { height: 2em }
+
+/* headings */
+h1, h2, h3 {
+	font: var(--font);
+	letter-spacing: 0em;
+	text-transform: uppercase }
+	h2 { font-size: calc(2.5vw + 2.5vh) }
+
+header {
+	background: var(--mood);
+	color: var(--black) }
+
+img {
+	display: block;
+	max-height: 100%;
+	max-width: 100% }
+	
+menu, ul { list-style: none }
+	ol { padding-left: 1em }
+
+nav > a {
+	margin: 0 0.75em;
+	padding: 0.25em }
+	nav > a:before {
+	background: var(--shade);
+	content:"[] " }
+
+p { margin: 1em 0 }
+
+
+
+
+
+
