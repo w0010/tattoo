@@ -3,7 +3,7 @@
 
 /* create variables */
 :root {
-	--type:		400 100%/1.25em larabiefont, monospace;
+	--type:		700 100%/1.25em larabiefont, monospace;
 	--bold:		700 100%/1.25em larabiefont, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
@@ -55,7 +55,7 @@ a:hover {
 	background-color: var(--mood);
 	color: var(--black) }
 
-div { box-shadow: 0 0 8em var(--fademood) }
+div { box-shadow: 0 0 8em var(--dimmood) }
 
 footer { height: 2em }
 
@@ -75,10 +75,11 @@ img {
 	max-height: 100%;
 	max-width: 100% }
 
-menu, ul { list-style: none } ol { padding-left: 1em }
+menu, ul { list-style:none } ol { padding-left:1em }
 
-nav > a { display: block }
-nav > a:before { content:"[] " }
+nav:before { { content:"nav: " }
+nav > a { display: block; width: auto }
+nav > a:before { content:"/: " }
 
 
 
