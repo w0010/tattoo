@@ -11,6 +11,10 @@
 	--grey:		hsla(0, 0%, 38%, 1);
 	--light:	hsla(0, 0%, 82%, 1);
 	--white:	hsla(0, 0%, 100%, 1);
+	
+	--mood:		hsla(0, 0%, 100%, 1);
+	--fadeMood:	hsla(0, 0%, 100%, 0.8);
+	--dimMood:	hsla(0, 0%, 100%, 0.2);
 
 	--ease:		400ms ease;
 	--ease-i:	300ms ease-in;

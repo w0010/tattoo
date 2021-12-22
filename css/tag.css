@@ -1,6 +1,5 @@
 *	{
 	margin: 0;
-	padding: 0;/*for ul*/
 }
 html, body {
 	background: var(--black);
@@ -12,7 +11,7 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	letter-spacing: 0.02em;
-	line-height: 1.2em;
+	line-height: 1.25em;
 	overflow-x: hidden;
 }
 
@@ -28,9 +27,7 @@ a
 }
 
 footer {
-	background: var(--shade);
-	height: 250px;
-	padding: 0 100px;
+	height: 2em;
 	width: 100%
 }
 
@@ -45,19 +42,15 @@ h1, h2, h3 {
 	letter-spacing: initial;
 	line-height: initial;
 	text-transform: uppercase
-}	h1 { /* header only */
-	margin: 0 1rem;
-	padding: 0 1rem;
 }	h2 { /* true h1 */
 	font-size: calc(2.5vw + 2.5vh);
-	line-height: 2em;
-}	h3 { /* h2 */
+	line-height: 1.75rem;
 }
 
 header {
-	background: var(--shade);
-	height: 130px;
-	padding: 0 100px;
+	background: var(--mood);
+	color: var(--black);
+	height: 2em;
 	width: 100%
 }
 
@@ -67,11 +60,11 @@ img {
 	max-width: 100%
 }
 
-nav > a { margin: 0 1rem; padding: 0.1rem 0.7rem }
+nav > a { margin: 0 1em; padding: 0.1em 0.7em }
 
 menu { list-style: none }
-p { margin: 1rem 0 }
-ol { padding-left: 1rem }
+p { margin: 1em 0 }
+ol { padding-left: 1em }
 ul { list-style: none }
 
 section {
