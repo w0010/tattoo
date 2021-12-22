@@ -1,19 +1,9 @@
-*	{
-	border: 0 none;
-	margin: 0;
-	padding: 0 }
-
-html {
-	background-color: #A1A1A1;	
-	font-size: 16px }
-	
 body {
 	color: var(--mood);
 	font: 400 100%/1.5em larabiefont, monospace;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	letter-spacing: 0.02em;
-	line-height: 1.33em;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
+	letter-spacing: 0em;
 	overflow-x: hidden }
 
 a 	{
@@ -35,11 +25,11 @@ footer {
 
 h1, h2, h3 {
 	font: inherit 700 inherit/inherit inherit;
-	letter-spacing: 0.5em;
+	letter-spacing: 0.25em;
 	text-transform: uppercase }
 h2 { /* true h1 */
 	font-size: calc(2.5vw + 2.5vh);
-	line-height: 1.75rem }
+	line-height: 1.5em }
 
 header {
 	background: var(--mood);
@@ -55,7 +45,7 @@ img {
 menu, ul { list-style: none }
 	ol { padding-left: 1em }
 
-nav > a { margin: 0 1em; padding: 0em 0.5em }
+nav > a {padding: 1.5em 0.5em 0.5em 0.5em }
 
 p { margin: 1em 0 }
 

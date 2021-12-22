@@ -1,34 +1,14 @@
-
-
 /* HTML Stylers */
 
-.angle {
-	background: linear-gradient( -135deg, hsla(0, 0%, 8%, 1), hsla(0, 0%, 8%, 1) 25%, hsla(0, 0%, 8%, 0) 25% );
-}
-
-.glass {
-	background: linear-gradient(45deg, var(--clear), var(--clear) 20%, var(--glass) 20%, var(--glass) 90%, var(--clear) 90%);
-	border: none;
-	color: var(--white);
-	padding: 2em 6em 6vh;
-}
-.shokunin {
-	font-size: 16px;
-	font-weight: 100;
-	letter-spacing: 0.3em;
-	line-height: 1em;
-	margin: 20px 0;
-}
 .jpn {
-	writing-mode: vertical-rl;
-}
+	writing-mode: vertical-rl }
 
 .text-capitalize {
-	text-transform: capitalize;
-}
+	text-transform: capitalize }
+	
 .text-lowercase {
-	text-transform: lowercase;
-}
+	text-transform: lowercase }
+	
 .text-inherit {
 	border: inherit;
 	font-family: inherit;
@@ -37,35 +17,18 @@
 	letter-spacing: inherit;
 	line-height: inherit;
 	margin: inherit;
-	padding: inherit;
-}
+	padding: inherit }
+
 .text-reset {
 	font-family: initial;
 	font-size: inherit;
 	border: none;
 	letter-spacing: inherit;
-	text-transform: none;
-}
+	text-transform: none }
+	
 .text-uppercase {
-	text-transform: uppercase;
-}
+	text-transform: uppercase }
 
-#workflow {
-	background: linear-gradient(45deg, var(--clear), var(--clear) 33.3%, var(--dark) 33.4%, var(--dark) 66.7%, var(--clear) 66.8%);
-	height: 40vh;
-}
-.mark:before {
-	background: linear-gradient(to bottom right, hsla(0, 0%, 100%, 0.9), hsla(0, 0%, 100%, 0.9) 50%, hsla(0, 0%, 100%, 0) 50%);
-	content:'';
-	display: block;
-	height: 1em;
-	opacity: 0.8;
-	margin-right: 0.5em;
-	width: 1em;
-}
-body.invert .mark:before {
-	background: linear-gradient(to bottom right, hsla(0, 0%, 0%, 0.9), hsla(0, 0%, 0%, 0.9) 50%, hsla(0, 0%, 0%, 0) 50%);
-}
 .text-center { text-align: center }
 .text-right { text-align: right }
 

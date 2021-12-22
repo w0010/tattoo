@@ -1,9 +1,10 @@
 /* load fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+/* create variables */
 :root {
 	--empty:	hsla(0, 0%, 0%, 0);
-	--shade:	hsla(0, 0%, 6%, 0.5);
-	--fog:		hsla(0, 0%, 100%, 0.78);
+	--shade:	hsla(0, 0%, 6%, 0.33);
+	--fog:		hsla(0, 0%, 100%, 0.67);
 	--clear:	hsla(0, 0%, 100%, 0);
 	
 	--black:	hsla(0, 0%, 0%, 1);
@@ -21,5 +22,13 @@
 	--ease-io:	400ms ease-in-out;
 	--ease-o:	300ms ease-out;
 	--long:		2000ms ease;
-	--linear:	300ms linear;
-}
+	--linear:	300ms linear }
+
+*	{
+	border: 0 none;
+	margin: 0;
+	padding: 0 }
+
+html {
+	background-color: #333333;	
+	font-size: 16px }

@@ -1,9 +1,9 @@
 /* window box */
 .window {
 	background: var(--shade);
-	border: var(--lux) 1px outset;
-	border-top: var(--fog) 10px outset;
-	color: var(--lux);
+	border: var(--mood) 1px outset;
+	border-top: var(--mood) 10px outset;
+	color: var(--mood);
 	padding: calc(1vw + 1.5vh);
 	margin: 2em 0;
 	max-width: calc(22vh + 22vw);
