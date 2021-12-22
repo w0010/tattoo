@@ -33,9 +33,7 @@ h2 { /* true h1 */
 
 header {
 	background: var(--mood);
-	color: var(--black);
-	height: 2em;
-	width: 100% }
+	color: var(--black) }
 
 img {
 	display: block;
