@@ -3,7 +3,7 @@
 
 /* create variables */
 :root {
-	--type:		700 100%/1.25em larabiefont, monospace;
+	--type:		700 100%/1.25em Source Code Pro, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
@@ -46,7 +46,7 @@ body {
 	
 a 	{
 	background-color: var(--empty);
-	color: var(--mood);
+	color: var(--white);
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: var(--linear) }
@@ -59,7 +59,7 @@ footer { height: 2em }
 
 h1, h2, h3 {
 	font: var(--type);
-	letter-spacing: 0em;
+	letter-spacing: 1.25rem;
 	text-transform: uppercase }
 	
 h2 { font-size: 2em }
