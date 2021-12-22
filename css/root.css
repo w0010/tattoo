@@ -40,13 +40,14 @@ body {
 	overflow-x: hidden }
 
 a 	{
-	background: var(--fademood);
+	background: var(--mood);
 	color: var(--black);
+	font-weight: 700;
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: var(--ease) }
 	a:hover {
-	background: var(--dimmood);
+	background: var(--empty);
 	color: var(--mood) }
 
 footer { height: 2em }
