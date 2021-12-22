@@ -62,8 +62,7 @@ h1, h2, h3 {
 	line-height: 1.25em;
 	text-transform: uppercase }
 	
-h2 {
-	/* font-size: 2em */ }
+h2 { /* font-size: 2em */ }
 
 header {
 	background-color: var(--mood);
@@ -79,11 +78,10 @@ main { padding: var(--pad) }
 
 menu, ul { list-style:none } ol { padding-left:1em }
 
-nav { padding: var(--pad) }
-nav:after { content:"." }
+nav { padding: var(--pad) 0 }
 nav:before { content:"." }
 nav > a { display: block }
-nav > a:before { content:"- " }
+nav > a:before { content:"/ " }
 
 
 
