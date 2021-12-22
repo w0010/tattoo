@@ -131,13 +131,9 @@
 
 .crt { /* text */
   animation: textShadow 0.4s infinite }
-.crt:after { /* screen door */
-  animation: flicker 0.15s infinite;
-  background: rgba(18, 16, 16, 0.1);
+.crt:after, .crt:before {
   content: " ";
   display: block;
-
-  opacity: 0;
   pointer-events: none; /* negates z-index blockage */
   position: absolute;
   top: 0;
@@ -145,7 +141,11 @@
   bottom: 0;
   right: 0;
   z-index: 8 }
-.crt:before { /* flicker */
+.crt:after { /* flicker */
+  animation: flicker 0.15s infinite;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0 } 
+.crt:before { /* screenlines and rgb cells */
   background:
     linear-gradient(
       rgba(18, 16, 16, 0) 50%,
@@ -154,16 +154,7 @@
       90deg, rgba(255, 0, 0, 0.06),
       rgba(0, 255, 0, 0.02),
       rgba(0, 0, 255, 0.06) );
-  background-size: 100% 2px, 3px 100%;
-  content: '';
-  display: block;
-  pointer-events: none; /* negates z-index blockage */
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; 
-  z-index: 8 } 
+  background-size: 100% 2px, 3px 100% } 
 
 .glow {
   background: radial-gradient(circle, var(--lowmood) 0%, var(--nomood) 100%);
@@ -183,7 +174,7 @@
   5% { bottom: 100%; }
   100% { bottom: -100%; } }
 .scanline {
-  animation: scanline 15s linear infinite;
+  animation: scanline 15s infinite;
   background: -webkit-linear-gradient(
     90deg,
     var(--nomood) 0%,
