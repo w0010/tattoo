@@ -16,7 +16,7 @@
 	--white:	hsla(0, 0%, 100%, 1);
 	
 	--mood:		hsla(0, 0%, 100%, 1);
-	--fademood:	hsla(0, 0%, 100%, 0.8);
+	--fademood:	hsla(0, 0%, 100%, 0.75);
 	--lowmood:	hsla(0, 0%, 100%, 0.2);
 	
 	--crt-blue:	0 1px rgba(0,30,255,0.5);
@@ -81,8 +81,8 @@ main {
 	background:;
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
-	max-width: calc( 100vh - ( var(--sml) + 1.25em ) ;
-	min-height: calc( 100vh - ( var(--sml) + 1.25em ) );
+	max-width: ;
+	min-height: ;
 	padding: var(--sml) }
 
 menu, ul { list-style:none }
