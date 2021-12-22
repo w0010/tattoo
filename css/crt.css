@@ -155,7 +155,7 @@
 }
 /* flicker */
 .crt:before {
-  content: " ";
+  content: '';
   display: block;
   position: absolute;
   top: 0;
@@ -176,8 +176,8 @@
 .scanline {
   background: -webkit-linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.2) 10%, rgba(0,0,0,0.1) 100%);
   bottom: 100%;
+  content: '';
   height: 100px;
-  opacity: 0.1;
   position: absolute;
   width: 100%;
   z-index: 10;
