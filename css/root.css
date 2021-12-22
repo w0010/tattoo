@@ -1,17 +1,5 @@
 /* load fonts */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-
-@font-face { font-family: 'BDR-mono';
-	src: url('fonts/BDR-mono/bdrmono-webfont.woff2') format('woff2'),
-		 url('fonts/BDR-mono/bdrmono-webfont.woff') format('woff');
-	font-weight: normal;
-    font-style: normal
-}
-@font-face { font-family: 'Idler-Pro-Inner';
-	src: url('');
-	font-weight: normal;
-	font-style: normal
-}
 :root {
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.5);
@@ -24,26 +12,12 @@
 	--light:	hsla(0, 0%, 82%, 1);
 	--white:	hsla(0, 0%, 100%, 1);
 
+	--mood: 	;
+
 	--ease:		400ms ease;
 	--ease-i:	300ms ease-in;
 	--ease-io:	400ms ease-in-out;
 	--ease-o:	300ms ease-out;
 	--long:		2000ms ease;
 	--linear:	300ms linear;
-
-	--theme: ;
-	--themeX: ;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
