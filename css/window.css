@@ -1,5 +1,5 @@
 .window {
-	background: var(--dimmood);
+	background: var(--lowmood);
 	border: var(--mood) 1px outset;
 	border-top: var(--mood) 10px outset;
 	box-shadow: 0 0 20em var(--fademood);

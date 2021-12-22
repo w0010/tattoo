@@ -173,15 +173,16 @@
   background: -webkit-linear-gradient(
     90deg,
     var(--nomood) 0%,
-    var(--fademood) 3%,
+    var(--lowmood) 3%,
     var(--nomood) 100% );
   background-blend-mode: soft-light;
   bottom: 100%;
   content: '';
   height: 50vh;
+  pointer-events: none;
   position: absolute;
   width: 100%;
-  z-index: 10 }  
+  z-index: 999 }  
   
   
   
