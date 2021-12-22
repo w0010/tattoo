@@ -166,7 +166,7 @@
   z-index: 8 } 
 
 .glow {
-  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+  background: radial-gradient(circle, var(--lowmood) 0%, var(--nomood) 100%);
   content: '';
   display: block;
   pointer-events: none;
