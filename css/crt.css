@@ -135,7 +135,7 @@
   content: " ";
   display: block;
   pointer-events: none; /* negates z-index blockage */
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -161,7 +161,7 @@
   content: '';
   display: block;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -184,7 +184,8 @@
   bottom: 100%;
   content: '';
   height: 50vh;
+  opacity: 0.5;
   pointer-events: none; /* negates z-index blockage */
-  position: absolute;
+  position: fixed;
   width: 100%;
   z-index: 4}
