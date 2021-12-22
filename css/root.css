@@ -81,6 +81,8 @@ main {
 	background:;
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
+	max-width: 100vh;
+	min-height: calc(2vw + 2vh);
 	padding: var(--sml) }
 
 menu, ul { list-style:none }
