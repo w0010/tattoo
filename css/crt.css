@@ -132,7 +132,7 @@
 .crt { /* text */
   /* animation: textShadow 0.4s infinite */ }
 .crt:after, .crt:before {
-  content: " ";
+  content: '';
   display: block;
   pointer-events: none; /* negates z-index blockage */
   position: fixed;
