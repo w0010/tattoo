@@ -1,6 +1,6 @@
 /* create variables */
 :root {
-	--type:		400 100%/1.25em bdr-mono, monospace;
+	--type:		400 100%/1.25em ocr-a-std, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
@@ -107,10 +107,13 @@ nav { padding: 1em 0 }
 		
 /* classes */
 
-.shokunin { font: 900 100%/1.25em vdl-logojrblack, monospace }
+.shokunin {
+	font-family: vdl-logojrblack, sans-serif;
+	font-weight: 900;
+	font-style: normal }
 
 .window {
-	background: var(--lowmood);
+	background: var(--lowmood); 
 	border: var(--mood) 1px outset;
 	border-top: var(--mood) 10px outset;
 	box-shadow: 0 0 20em var(--fademood);
