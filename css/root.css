@@ -1,6 +1,6 @@
 /* create variables */
 :root {
-	--type:		400 100%/1.25em ocr-a-std, monospace;
+	--type:		400 100%/1.25em bd-kickrom-mono, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
@@ -37,7 +37,7 @@
 
 html {
 	background-color: #000000;
-	font-size: 18px }
+	font-size: 16px }
 
 body {
 	color: var(--mood);
