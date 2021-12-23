@@ -130,7 +130,7 @@
 }
 
 .crt { /* text */
-  animation: textShadow 0.4s infinite }
+  /* animation: textShadow 0.4s infinite */ }
 .crt:after, .crt:before {
   content: " ";
   display: block;
