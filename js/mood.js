@@ -8,8 +8,8 @@ $(document).ready(function() {
 
 document.documentElement.style.setProperty('--hue', hue);
 document.documentElement.style.setProperty('--mood', mood);
-document.documentElement.style.setProperty('--fademood', moodhue + ',0.85)');
-document.documentElement.style.setProperty('--lowmood', moodhue + ',0.15)');
+document.documentElement.style.setProperty('--fademood', moodhue + ',0.8)');
+document.documentElement.style.setProperty('--lowmood', moodhue + ',0.2)');
 document.documentElement.style.setProperty('--nomood', moodhue + ',0)');
 
 });
