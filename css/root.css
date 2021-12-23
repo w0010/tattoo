@@ -71,14 +71,15 @@ header {
 
 img {
 	display: block;
+	object-fit: cover;
 	max-height: 100%;
 	max-width: 100% }
 
 main {
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
-	min-width: ;
-	min-height: ;
+	max-width: 100vh;
+	min-height: 100vh;
 	padding: var(--sml) }
 
 menu, ul { list-style:none }
@@ -103,6 +104,8 @@ nav { padding: 1em 0 }
 		font-size: 0.5em;
 		font-weight: 400;
 		text-transform:lowercase }
+
+section { margin: var(--sml) 0 }
 		
 /* classes */
 
