@@ -75,8 +75,8 @@ img {
 	max-height: 100%;
 	max-width: 100% }
 	img:before {
-		background-color: var(--mood);
-		blend-mode: hue;
+		background: var(--mood);
+		mix-blend-mode: hue;
 		content: '';
 		display: block;
 		pointer-events: none;
@@ -85,7 +85,7 @@ img {
 		left: 0;
 		bottom: 0;
 		right: 0;
-		z-index: 6 }
+		z-index: 2 }
 
 main {
 	border: var(--mood) 1px outset;
