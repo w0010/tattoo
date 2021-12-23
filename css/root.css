@@ -90,8 +90,8 @@ img {
 main {
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
-	max-width: 80vh;
-	min-height: 80vh;
+	max-width: ;
+	min-height: ;
 	padding: var(--sml) }
 
 menu, ul { list-style:none }
