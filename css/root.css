@@ -1,6 +1,6 @@
 /* create variables */
 :root {
-	--type:		400 100%/1.25em bd-kickrom-mono, monospace;
+	--type:		400 100%/1.25em larabiefont, monospace;
 	--empty:	hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
@@ -57,11 +57,9 @@ a {
 
 h1, h2, h3 {
 	font: var(--type);
-	font-weight: 700;
 	letter-spacing: 0;
-	line-height: 1.25em;
 	text-transform: uppercase }
-	h2 { font-size: 2em }
+	h2 { font-family: bd-kickrom-mono; font-size: 2em }
 	h3 { font-weight: 400; text-transform: none }
 
 header {
