@@ -46,7 +46,7 @@ body {
 	overflow-x: hidden }
 
 a {
-	background-color: var(--empty);
+	background-color: var(--nomood);
 	color: var(--mood);
 	text-decoration: none;
 	text-transform: uppercase;
@@ -59,7 +59,7 @@ h1, h2, h3 {
 	font: var(--type);
 	letter-spacing: 0;
 	text-transform: uppercase }
-	h2 { font-family: bd-kickrom-mono; font-size: 2em }
+	h2 { font-family: tachyon; font-size: 2em }
 	h3 { font-weight: 400; text-transform: none }
 
 header {
