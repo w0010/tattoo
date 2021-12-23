@@ -72,7 +72,7 @@ header {
 
 img {
 	background: var(--mood);
-	background-blend-mode: hue;
+	blend-mode: hue;
 	object-fit: cover;
 	max-height: 100%;
 	max-width: 100% }
