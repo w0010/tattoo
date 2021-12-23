@@ -1,15 +1,15 @@
-var hues = [ '75', '195', '330' ];
+var hues = [ '75', '120', '195', '330' ];
 var hue = hues [ Math.floor ( Math.random() * hues.length ) ];
 
-var moodhue = [ 'hsla(' + hue + ',100%,65%' ];
-var mood = moodhue + ',1)';
+var moods = [ 'hsla(' + hue + ',100%,65%' ];
+var mood = moods + ',1)';
 
 $(document).ready(function() {
 
 document.documentElement.style.setProperty('--hue', hue);
 document.documentElement.style.setProperty('--mood', mood);
-document.documentElement.style.setProperty('--fademood', moodhue + ',0.8)');
-document.documentElement.style.setProperty('--lowmood', moodhue + ',0.2)');
-document.documentElement.style.setProperty('--nomood', moodhue + ',0)');
+document.documentElement.style.setProperty('--fademood', moods + ',0.8)');
+document.documentElement.style.setProperty('--lowmood', moods + ',0.2)');
+document.documentElement.style.setProperty('--nomood', moods + ',0)');
 
 });
