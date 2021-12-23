@@ -12,6 +12,7 @@
 	--light:	hsla(0, 0%, 82%, 1);
 	--white:	hsla(0, 0%, 100%, 1);
 	
+	--hue		0;
 	--mood:		hsla(0, 0%, 100%, 1);
 	--fademood:	hsla(0, 0%, 100%, 0.9);
 	--lowmood:	hsla(0, 0%, 100%, 0.1);
@@ -71,7 +72,7 @@ header {
 	padding: 0 var(--lrg) }
 
 img {
-	filter: grayscale(100%) sepia(100%) hue-rotate( var(--hue) );
+	filter: grayscale(100%) sepia(100%) hue-rotate(var(--hue));
 	object-fit: cover;
 	max-height: 100%;
 	max-width: 100% }
