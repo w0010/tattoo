@@ -72,7 +72,7 @@ header {
 
 img {
 	background: var(--mood);
-	blend-mode: hue;
+	background-blend-mode: color-burn;
 	object-fit: cover;
 	max-height: 100%;
 	max-width: 100% }
@@ -107,7 +107,9 @@ nav { }
 		font-weight: 400;
 		text-transform:lowercase }
 
-section, nav { margin: var(--sml) 0 }
+section, nav {
+	margin-top: var(--sml);
+	margin-bottom: var(--lrg) }
 		
 /* classes */
 
@@ -128,7 +130,7 @@ section, nav { margin: var(--sml) 0 }
 	.window:before { /* arrow */
 		background:
 		linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
-		content:'';
+		content: '';
 		display: block;
 		height: 1em;
 		margin-right: 0.5em;
