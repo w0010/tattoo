@@ -76,7 +76,6 @@ img {
 	max-width: 100% }
 	img:before {
 		background: var(--mood);
-		mix-blend-mode: hue;
 		content: '';
 		display: block;
 		pointer-events: none;
