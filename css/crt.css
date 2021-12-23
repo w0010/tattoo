@@ -158,7 +158,7 @@
   background-size: 100% 4px, 6px 100% } 
 
 .glow {
-  background: radial-gradient(circle, var(--lowmood) 0%, var(--nomood) 100%);
+  background: radial-gradient(circle, var(--fademood) 0%, var(--nomood) 100%);
   content: '';
   display: block;
   pointer-events: none;
