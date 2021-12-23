@@ -107,7 +107,7 @@ nav { }
 		font-weight: 400;
 		text-transform:lowercase }
 
-section, nav { margin-bottom: var(--sml) }
+section, nav { margin: var(--sml) 0 }
 		
 /* classes */
 
@@ -124,7 +124,6 @@ section, nav { margin-bottom: var(--sml) }
 	color: var(--mood);
 	font-size: 0.8em;
 	padding: calc(1vw + 1.5vh);
-	margin-bottom: var(--sml);
 	max-width: calc(22vh + 22vw) }
 	.window:before { /* arrow */
 		background:
