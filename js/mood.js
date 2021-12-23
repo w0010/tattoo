@@ -1,4 +1,4 @@
-var hues = [ '75', '120', '195', '330' ];
+var hues = [ '100', '210', '320' ];
 var hue = hues [ Math.floor ( Math.random() * hues.length ) ];
 
 var moods = [ 'hsla(' + hue + ',100%,65%' ];
