@@ -13,8 +13,9 @@
 	--white:	hsla(0, 0%, 100%, 1);
 	
 	--mood:		hsla(0, 0%, 100%, 1);
-	--fademood:	hsla(0, 0%, 100%, 0.75);
-	--lowmood:	hsla(0, 0%, 100%, 0.2);
+	--fademood:	hsla(0, 0%, 100%, 0.9);
+	--lowmood:	hsla(0, 0%, 100%, 0.1);
+	--nomood:	hsla(0, 0%, 100%, 0);
 	
 	--crt-blue:	0 1px rgba(0,30,255,0.5);
 	--crt-red:	0 1px rgba(255,0,80,0.3);
@@ -42,7 +43,7 @@ html {
 body {
 	color: var(--mood);
 	font: var(--type);
-	letter-spacing: 0.07em;
+	letter-spacing: 0.05em;
 	overflow-x: hidden }
 
 a {
@@ -66,11 +67,10 @@ h1, h2, h3 {
 header {
 	background-color: var(--mood);
 	color: var(--black);
-	margin: var(--sml) 0;
+	margin-top: var(--sml);
 	padding: 0 var(--lrg) }
 
 img {
-	display: block;
 	object-fit: cover;
 	max-height: 100%;
 	max-width: 100% }
@@ -79,7 +79,7 @@ img {
 		content: '';
 		display: block;
 		pointer-events: none;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		bottom: 0;
@@ -96,15 +96,15 @@ main {
 menu, ul { list-style:none }
 	ol { padding-left:1em }
 
-nav { padding: 1em 0 }
-	nav:before { 
+nav { }
+	nav:before { /* arrow */
 		background: linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
 		content:'';
 		display: block;
 		height: 1em;
 		margin-right: 0.5em;
 		width: 1em }
-	nav > a {
+	nav > a { /* nav links */
 		display: block;
 		font-weight: 700 }
 	nav > a:before {
@@ -116,7 +116,7 @@ nav { padding: 1em 0 }
 		font-weight: 400;
 		text-transform:lowercase }
 
-section { margin: var(--sml) 0 }
+section, nav { margin-bottom: var(--sml) }
 		
 /* classes */
 
@@ -129,13 +129,13 @@ section { margin: var(--sml) 0 }
 	background: var(--lowmood); 
 	border: var(--mood) 1px outset;
 	border-top: var(--mood) 10px outset;
-	box-shadow: 0 0 20em var(--fademood);
+	/*box-shadow: 0 0 20em var(--fademood);*/
 	color: var(--mood);
 	font-size: 0.8em;
 	padding: calc(1vw + 1.5vh);
-	margin: 2em 0;
+	margin-bottom: var(--sml);
 	max-width: calc(22vh + 22vw) }
-	.window:before {
+	.window:before { /* arrow */
 		background:
 		linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
 		content:'';
