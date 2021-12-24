@@ -1,7 +1,7 @@
-var hues = [ '100', '210', '320' ];
+var hues = [ '100', '220', '320' ];
 var hue = hues [ Math.floor ( Math.random() * hues.length ) ];
 
-var moods = [ 'hsla(' + hue + ',100%,65%' ];
+var moods = [ 'hsla(' + hue + ',100%,50%' ];
 var mood = moods + ',1)';
 
 $(document).ready(function() {
