@@ -79,7 +79,7 @@ img {
 	max-width: 100% }
 
 main {
-	border: var(--mood) 1px outset;
+	border: var(--mood) 3px outset;
 	margin: var(--sml);
 	max-width: ;
 	min-height: ;
@@ -121,7 +121,7 @@ section, nav {
 
 .window {
 	background: var(--lowmood); 
-	border: var(--mood) 1px outset;
+	border: var(--mood) 3px outset;
 	border-top: var(--mood) 10px outset;
 	/*box-shadow: 0 0 20em var(--fademood);*/
 	color: var(--mood);
