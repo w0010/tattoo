@@ -51,7 +51,7 @@ var mouseX = 0, mouseY = 0, scroll = 0;
 	var mat = new THREE.LineBasicMaterial( {
 		color: mood,
 		transparent: true,
-		opacity: 1,
+		opacity: 0.3,
 	} );
 	var wireframe = new THREE.LineSegments( geo, mat );
 	mesh.add( wireframe );
@@ -60,8 +60,8 @@ var mouseX = 0, mouseY = 0, scroll = 0;
 
 
 
-//movement
-$(window).scroll(function() { //smooth this out next
+// movement
+$(window).scroll(function() { // smooth this out next
 	var scroll = $(window).scrollTop();
 	var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
 	mesh.rotation.x = scroll * 0.002;
