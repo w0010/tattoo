@@ -129,8 +129,7 @@
   }
 }
 
-.crt { /* text */
-  text-shadow: 0 0 1px var(--mood);
+.crt {
   /* animation: textShadow 0.4s infinite */ }
 .crt:after, .crt:before {
   content: '';
