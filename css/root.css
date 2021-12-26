@@ -1,7 +1,7 @@
 /* create variables */
 :root {
 	--type:		700 1rem/1.25em larabiefont, monospace;
-	--empty:	hsla(0, 0%, 0%, 0);
+	--void:		hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
 	--clear:	hsla(0, 0%, 100%, 0);
@@ -55,8 +55,8 @@ a {
 	text-transform: uppercase;
 	transition: var(--linear) }
 	a:hover {
-	background-color: var(--mood);
-	color: var(--black) }
+		background-color: var(--mood);
+		color: var(--black) }
 
 h1, h2, h3 {
 	font: var(--type);
@@ -79,19 +79,16 @@ img {
 	max-width: 100% }
 
 main {
-	border: var(--mood) 3px outset;
-	border-top: var(--mood) 12px outset;
+	border: var(--mood) 1px outset;
 	margin: var(--sml);
-	max-width: ;
-	min-height: ;
 	padding: var(--sml) }
 
 menu, ul { list-style:none }
-	ol { padding-left:1em }
+ol { padding-left:1em }
 
 nav { }
 	nav:before { /* arrow */
-		background: linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
+		background: linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--nomood) 50%);
 		content:'';
 		display: block;
 		height: 1em;
@@ -100,14 +97,14 @@ nav { }
 	nav > a { /* nav links */
 		display: block;
 		font-weight: 700 }
-	nav > a:before {
-		content:'/';
-		font-weight: 400 }
-	nav > a:after {
-		content:'.html';
-		font-size: 0.5em;
-		font-weight: 400;
-		text-transform:lowercase }
+		nav > a:before {
+			content:'/';
+			font-weight: 400 }
+		nav > a:after {
+			content:'.html';
+			font-size: 0.5em;
+			font-weight: 400;
+			text-transform:lowercase }
 
 section, nav {
 	margin-top: var(--sml);
