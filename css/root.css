@@ -46,7 +46,7 @@ body {
 	font: var(--type);
 	letter-spacing: 0.05em;
 	overflow-x: hidden;
-	text-shadow: 2em var(--mood) }
+	text-shadow: 0 0 1em var(--mood) }
 
 a {
 	background-color: var(--nomood);
