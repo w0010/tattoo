@@ -82,8 +82,8 @@ img {
 	width: 200%; height: 200%;}
 
 main {
-	border: var(--mood) 7px outset;
-	border-top: var(--mood) 11px outset;
+	border: var(--mood) 3px outset;
+	border-top: var(--mood) 12px outset;
 	margin: var(--sml);
 	max-width: ;
 	min-height: ;
@@ -125,16 +125,19 @@ section, nav {
 
 .window {
 	background: var(--lowmood); 
-	border: var(--mood) 7px outset;
-	border-top: var(--mood) 11px outset;
+	border: var(--mood) 3px outset;
+	border-top: var(--mood) 12px outset;
 	/*box-shadow: 0 0 20em var(--fademood);*/
 	color: var(--mood);
 	font-size: 0.8em;
 	padding: calc(1vw + 1.5vh);
 	max-width: calc(22vh + 22vw) }
 	.window:before { /* arrow */
-		background:
-		linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
+		background: linear-gradient(
+			to bottom right,
+			var(--mood),
+			var(--mood) 50%,
+			var(--nomood) 50%);
 		content: '';
 		display: block;
 		height: 1em;
