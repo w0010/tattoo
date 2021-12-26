@@ -73,6 +73,7 @@ header {
 	padding: 0 var(--lrg) }
 
 img {
+	border: var(--mood) 1px outset;
 	filter: grayscale(100%) sepia(100%) hue-rotate(var(--hue));
 	object-fit: cover;
 	max-height: 100%;
