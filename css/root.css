@@ -75,11 +75,9 @@ header {
 img {
 	filter: grayscale(100%) sepia(100%) hue-rotate(var(--hue));
 	object-fit: cover;
-/*	max-height: 100%;
-	max-width: 100%; */
-	image-rendering:pixelated;
-	transform: scale(0.5);
-	width: 200%; height: 200%;}
+	margin: 1px;
+	max-height: 100%;
+	max-width: 100% }
 
 main {
 	border: var(--mood) 3px outset;
