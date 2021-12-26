@@ -75,7 +75,6 @@ header {
 img {
 	filter: grayscale(100%) sepia(100%) hue-rotate(var(--hue));
 	object-fit: cover;
-	margin: 1px;
 	max-height: 100%;
 	max-width: 100% }
 
