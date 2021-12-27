@@ -76,9 +76,8 @@ img {
 	border: var(--mood) 1px outset;
 	filter: grayscale(100%) sepia(100%) hue-rotate(var(--hue));
 	object-fit: cover;
-	margin: 3px;
-	max-height: calc( 100% - 12px ); /* not working */
-	max-width: calc( 100% - 12px ) } /* not working */
+	max-height: calc( 100% - 12px ); /* calc not working */
+	max-width: calc( 100% - 12px ) } /* calc not working */
 
 main {
 	border: var(--mood) 1px outset;
