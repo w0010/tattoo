@@ -1,4 +1,5 @@
 /* create variables */
+
 :root {
 	--type:		700 1rem/1.25em larabiefont, monospace;
 	--void:		hsla(0, 0%, 0%, 0);
@@ -73,7 +74,7 @@ header {
 	padding: 0 var(--lrg) }
 
 img {
-	border: var(--mood) 1px outset;
+	border-top: var(--mood) 1px outset;
 	filter: grayscale(100%) sepia(100%) hue-rotate(var(--hue));
 	object-fit: cover;
 	max-height: calc( 100% - 12px ); /* calc not working */
