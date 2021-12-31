@@ -83,22 +83,24 @@ img {
 main {
 	border: var(--mood) 1px outset;
 	margin: var(--sml);
+	max-width: 1vh;
 	padding: var(--sml) }
 
 menu, ul { list-style:none }
 ol { padding-left:1em }
 
 nav { }
-	nav:before { /* arrow */
+	 /* arrow */
+	nav:before {
 		background: linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--nomood) 50%);
 		content:'';
 		display: block;
 		height: 1em;
 		margin-right: 0.5em;
 		width: 1em }
-	nav > a { /* nav links */
-		display: block;
-		font-weight: 700 }
+	/* nav links */
+	nav > a {
+		display: block;}
 		nav > a:before {
 			content:'/';
 			font-weight: 400 }

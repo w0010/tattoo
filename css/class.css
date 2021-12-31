@@ -1,7 +1,6 @@
 /* HTML Stylers */
 
-.jpn {
-	writing-mode: vertical-rl }
+.fixed { position: fixed }
 
 .text-capitalize {
 	text-transform: capitalize }
@@ -32,7 +31,8 @@
 .text-center { text-align: center }
 .text-right { text-align: right }
 
-.fixed { position: fixed }
+.vert {
+	writing-mode: vertical-rl }
 
 .wrapper { padding: var(--pad) }
 .z-index { z-index: 1 }
