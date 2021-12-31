@@ -83,7 +83,7 @@ img {
 
 main {
 	border: var(--mood) 1px outset;
-	margin: var(--sml) auto;
+	margin: var(--sml);
 	max-width: 100vh;
 	padding: var(--sml) }
 
