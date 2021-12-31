@@ -29,8 +29,8 @@
 	--long:		2000ms ease;
 	--linear:	200ms linear;
 	
-	--sml:		calc(1vw + 1vh);
-	--lrg:		calc(2vw + 2vh) }
+	--sml:		calc(3vw + 1vh);
+	--lrg:		calc(6vw + 2vh) }
 	
 /* elements */
 
@@ -45,6 +45,7 @@ html {
 body {
 	color: var(--mood);
 	font: var(--type);
+	height: 100vh;
 	letter-spacing: 0.05em;
 	overflow-x: hidden;
 	text-shadow: 0 0 1px var(--mood) }
@@ -82,7 +83,7 @@ img {
 
 main {
 	border: var(--mood) 1px outset;
-	margin: var(--sml);
+	margin: var(--sml) auto;
 	max-width: 100vh;
 	padding: var(--sml) }
 
