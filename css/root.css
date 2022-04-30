@@ -1,7 +1,8 @@
 /* create variables */
+
 :root {
 	--type:		700 1rem/1.25em larabiefont, monospace;
-	--empty:	hsla(0, 0%, 0%, 0);
+	--void:		hsla(0, 0%, 0%, 0);
 	--shade:	hsla(0, 0%, 6%, 0.33);
 	--fog:		hsla(0, 0%, 100%, 0.67);
 	--clear:	hsla(0, 0%, 100%, 0);
@@ -28,8 +29,8 @@
 	--long:		2000ms ease;
 	--linear:	200ms linear;
 	
-	--sml:		calc(1vw + 1vh);
-	--lrg:		calc(2vw + 2vh) }
+	--sml:		calc(3vw + 1vh);
+	--lrg:		calc(6vw + 2vh) }
 	
 /* elements */
 
@@ -39,14 +40,15 @@
 
 html {
 	background-color: #000000;
-	font-size: 32px }
+	font-size: 24px }
 
 body {
 	color: var(--mood);
 	font: var(--type);
+	height: 100vh;
 	letter-spacing: 0.05em;
 	overflow-x: hidden;
-	text-shadow: 2em var(--mood) }
+	text-shadow: 0 0 1px var(--mood) }
 
 a {
 	background-color: var(--nomood);
@@ -55,8 +57,8 @@ a {
 	text-transform: uppercase;
 	transition: var(--linear) }
 	a:hover {
-	background-color: var(--mood);
-	color: var(--black) }
+		background-color: var(--mood);
+		color: var(--black) }
 
 h1, h2, h3 {
 	font: var(--type);
@@ -73,44 +75,41 @@ header {
 	padding: 0 var(--lrg) }
 
 img {
+	border-top: var(--mood) 1px outset;
 	filter: grayscale(100%) sepia(100%) hue-rotate(var(--hue));
 	object-fit: cover;
-	max-height: 100%;
-	max-width: 100%;
-	image-rendering:pixelated;
-	transform: scale(0.5);
-	width: 200%; height: 200%;}
+	max-height: calc( 100% - 12px ); /* calc not working */
+	max-width: calc( 100% - 12px ) } /* calc not working */
 
 main {
-	border: var(--mood) 7px outset;
-	border-top: var(--mood) 11px outset;
+	border: var(--mood) 1px outset;
 	margin: var(--sml);
-	max-width: ;
-	min-height: ;
+	max-width: 100vh;
 	padding: var(--sml) }
 
 menu, ul { list-style:none }
-	ol { padding-left:1em }
+ol { padding-left:1em }
 
 nav { }
-	nav:before { /* arrow */
-		background: linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
+	 /* arrow */
+	nav:before {
+		background: linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--nomood) 50%);
 		content:'';
 		display: block;
 		height: 1em;
 		margin-right: 0.5em;
 		width: 1em }
-	nav > a { /* nav links */
-		display: block;
-		font-weight: 700 }
-	nav > a:before {
-		content:'/';
-		font-weight: 400 }
-	nav > a:after {
-		content:'.html';
-		font-size: 0.5em;
-		font-weight: 400;
-		text-transform:lowercase }
+	/* nav links */
+	nav > a {
+		display: block;}
+		nav > a:before {
+			content:'/';
+			font-weight: 400 }
+		nav > a:after {
+			content:'.html';
+			font-size: 0.5em;
+			font-weight: 400;
+			text-transform:lowercase }
 
 section, nav {
 	margin-top: var(--sml);
@@ -125,16 +124,19 @@ section, nav {
 
 .window {
 	background: var(--lowmood); 
-	border: var(--mood) 7px outset;
-	border-top: var(--mood) 11px outset;
+	border: var(--mood) 3px outset;
+	border-top: var(--mood) 12px outset;
 	/*box-shadow: 0 0 20em var(--fademood);*/
 	color: var(--mood);
 	font-size: 0.8em;
 	padding: calc(1vw + 1.5vh);
 	max-width: calc(22vh + 22vw) }
 	.window:before { /* arrow */
-		background:
-		linear-gradient(to bottom right, var(--mood), var(--mood) 50%, var(--empty) 50%);
+		background: linear-gradient(
+			to bottom right,
+			var(--mood),
+			var(--mood) 50%,
+			var(--nomood) 50%);
 		content: '';
 		display: block;
 		height: 1em;

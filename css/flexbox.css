@@ -8,18 +8,18 @@
 .flex-even		{ justify-content: space-evenly }
 .flex-start		{ justify-content: flex-start }
 .reverse		{ flex-direction: row-reverse }
-.flex-column 	{ flex-direction: column; justify-content: center }
-.flex-column-r	{ flex-direction: column-reverse; justify-content: center }
+.flex-col 	    { flex-direction: column; justify-content: center }
+.flex-col-r	    { flex-direction: column-reverse; justify-content: center }
 .align-start	{ align-items: flex-start }
 .align-end		{ align-items: flex-end }
 .wrap 			{ flex-wrap: wrap }
 
 /* Width Controls */
-[class*='column-'] > img { box-sizing: border-box; padding: 4px }
-.column-33w 	{ width: 33.33% }
-.column-50w 	{ width: 50% }
-.column-66w 	{ width: 66.67% }
-.column-100w 	{ width: 100% }
+[class*='col-'] > img { box-sizing: border-box; padding: 4px }
+.col-33 	{ width: 33.33% }
+.col-50 	{ width: 50% }
+.col-66 	{ width: 66.67% }
+.col-100 	{ width: 100% }
 
 /* Supplemental */
 .spacer { height: 1em }

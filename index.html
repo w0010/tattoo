@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en-US, ja">
+<html lang="en-US">
 <head>
-	<title>XenoLab</title>
-	<meta name="keywords" content="cyberpunk, tattoo, brad wooten, bodysuit, black">
+	<title>XenoLab Tattoo Solutions</title>
+	<meta name="keywords" content=" cyberpunk, tattoo, brad wooten, bodysuit, black tattoo, minimal tattoo, cyberpunk tattoo ">
 	<meta name="description" content="Modern Tattoo">
 	<meta name="author" content="Brad Wooten">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,22 +10,26 @@
 	<link rel="stylesheet" href="https://use.typekit.net/pts4mui.css">
 	<link rel="stylesheet" href="css/root.css">
 	<link rel="stylesheet" href="css/flexbox.css">
-	<link rel="stylesheet" href="css/window.css">
 	<link rel="stylesheet" href="css/crt.css">
 	<link rel="stylesheet" href="css/threejs.css">
-	<!-- js -->
+	<style>
+		main { display:none }
+	</style>
+	<!-- js library -->
 	<script src="js/jquery.js"></script>
 	<script src="js/adobefonts.js"></script>
 	<script src="js/three.js"></script>
-	<!-- custom js -->
+	<!-- js -->
 	<script src="js/mood.js"></script>
 	<script src="js/polyspace.js"></script>
+	<script src="js/jquerytypewriter.js"></script>
+	<!-- default to off, add js to allow fade -->
 	<script>
 		$(document).ready(function() {
 			$('#polyspace').fadeIn(500);
 			setTimeout(function(){
-				$('main').fadeIn(250);
-			}, 500);
+				$('main').fadeIn(1500);
+			}, 750);
 			
 			$('a').click(function(event) {
 				event.preventDefault();
@@ -43,30 +47,30 @@
 	<div class="glow"></div>
 	<div class="scanline"></div>
 	<header class="flex-between">
-		<h1>Brad Wooten</h1>
+		<h1>XenoLab</h1>
 		<p class='shokunin'>職人気質</p>
 	</header>
 	
 	<main>
 		<section class="flex-center">
-			<div class="window"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-				sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			<div class="window">
+				<p>Lorem ipsum dolor sit amet.</p>
 			</div>
 		</section>
-		<section class="flex-between wrap">
-			<img class="column-33w" src="img/tt/geowraith.jpg">
-			<img class="column-33w" src="img/tt/seraph.jpg">
-			<img class="column-33w" src="img/tt/viper-ii.jpg">
+		<section class="flex- wrap">
+			<img class="col-33" src="img/tt/geowraith.jpg">
+			<img class="col-33" src="img/tt/seraph.jpg">
+			<img class="col-33" src="img/tt/viper-ii.jpg">
 		</section>
 		<nav>
-			<h2>XenoLabs</h2>
-			<h3>Tech-Noir Biomechanica</h3>
+			<h2>XenoLab</h2>
+			<h3>Technical Tattoo Solutions</h3>
 			<div class="spacer"></div>
-			<a href="tattoo.html">Tattoo</a>
-			<a href="NFT.html">NFT</a>
-			<a href="readme.html">Readme</a>			<a href="appointments.html">Appointments</a>
+			<a href="hardware.html">Hardware</a>
+			<a href="software.html">Software</a>
+			<a href="mission.html">Mission</a>			<a href="contact.html">Contact</a>
 		</nav>
-		<a href="tattoo.html">></a>
+		<a href="tattoo.html"></a>
 	</main>
 	
 	<div id="polyspace"></div>
