@@ -1,0 +1,43 @@
+/* HTML Stylers */
+
+.fixed { position: fixed }
+
+.text-capitalize {
+	text-transform: capitalize }
+	
+.text-lowercase {
+	text-transform: lowercase }
+	
+.text-inherit {
+	border: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	margin: inherit;
+	padding: inherit }
+
+.text-reset {
+	font-family: initial;
+	font-size: inherit;
+	border: none;
+	letter-spacing: inherit;
+	text-transform: none }
+	
+.text-uppercase {
+	text-transform: uppercase }
+
+.text-center { text-align: center }
+.text-right { text-align: right }
+
+.vert {
+	writing-mode: vertical-rl }
+
+.wrapper { padding: var(--pad) }
+.z-index { z-index: 1 }
+
+
+
+
+

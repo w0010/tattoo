@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>XenoLab Tattoo Solutions</title>
+	<meta name="keywords" content=" cyberpunk, tattoo, brad wooten, bodysuit, black tattoo, minimal tattoo, cyberpunk tattoo ">
+	<meta name="description" content="Modern Tattoo">
+	<meta name="author" content="Brad Wooten">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- css -->
+	<link rel="stylesheet" href="https://use.typekit.net/pts4mui.css">
+	<link rel="stylesheet" href="css/root.css">
+	<link rel="stylesheet" href="css/flexbox.css">
+	<link rel="stylesheet" href="css/class.css">
+	<link rel="stylesheet" href="css/crt.css">
+	<link rel="stylesheet" href="css/threejs.css">
+	<link rel="stylesheet" href="//embed.typeform.com/next/css/sidetab.css">
+	<style>
+		main { }
+	</style>
+	<!-- js library -->
+	<script src="js/jquery.js"></script>
+	<script src="js/adobefonts.js"></script>
+	<script src="js/three.js"></script>
+	<!-- js -->
+	<script src="js/mood.js"></script>
+	<script src="js/polyspace.js"></script>
+	<script src="js/jquerytypewriter.js"></script>
+	<!-- default to off, add js to allow fade -->
+	<script>
+		$(document).ready(function() {
+			$('#polyspace').fadeIn(500);
+			setTimeout(function(){
+				$('main').fadeIn(1500);
+			}, 750);
+			
+			$('a').click(function(event) {
+				event.preventDefault();
+				newLocation = this.href;
+				$('body').fadeOut(250, newpage);
+			});
+			function newpage() {
+				window.location = newLocation;
+			}
+		});
+	</script>
+</head>
+
+<body class="crt">
+	<div class="glow"></div>
+	<div class="scanline"></div>
+	<header class="flex-between">
+		<h1 class=".center">XenoLab</h1>
+		<p class='shokunin'>職人気質</p>
+	</header>
+	<nav class="flex-between">
+		<h2>XenoLab</h2>
+		<h3>Technical Tattoo Solutions</h3>
+		<div class="spacer"></div>
+		<a href="hardware.html">Hardware</a>
+		<a href="software.html">Software</a>
+		<a href="mission.html">Mission</a>		<a href="contact.html">Contact</a>
+	</nav>
+	
+	<main>
+		<section class="flex-center">
+			<div class="window">
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+		</section>
+		<section class="flex- wrap">
+			<img class="col-33" src="img/tt/geowraith.jpg">
+			<img class="col-33" src="img/tt/seraph.jpg">
+			<img class="col-33" src="img/tt/viper-ii.jpg">
+		</section>
+		<nav>
+			<h2>XenoLab</h2>
+			<h3>Technical Tattoo Solutions</h3>
+			<div class="spacer"></div>
+			<a href="hardware.html">Hardware</a>
+			<a href="software.html">Software</a>
+			<a href="mission.html">Mission</a>			<a href="contact.html">Contact</a>
+		</nav>
+		<a href="tattoo.html"></a>
+	</main>
+	
+	<div id="polyspace"></div>
+	<div data-tf-widget="<Ov6ioB7j>"></div>
+	<script src="//embed.typeform.com/next/embed.js"></script>
+</body>
+</html>

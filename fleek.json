@@ -8,4 +8,11 @@
       "SOME_ENV": "Build finished!"
     }
   }
+  "build": {
+   "image": "",
+   "command": "",
+   "publicDir": "",
+   "baseDir": "",
+   "environment": { "SOME_ENV": "" }
+ }
 }

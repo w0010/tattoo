@@ -1,0 +1,25 @@
+/* GRID SYSTEM */
+
+/* Flex-Box Controls */
+[class*='flex-'] { align-items: center; display: flex }
+.flex-between	{ justify-content: space-between }
+.flex-center	{ justify-content: center }
+.flex-end		{ justify-content: flex-end }
+.flex-even		{ justify-content: space-evenly }
+.flex-start		{ justify-content: flex-start }
+.reverse		{ flex-direction: row-reverse }
+.flex-col 	    { flex-direction: column; justify-content: center }
+.flex-col-r	    { flex-direction: column-reverse; justify-content: center }
+.align-start	{ align-items: flex-start }
+.align-end		{ align-items: flex-end }
+.wrap 			{ flex-wrap: wrap }
+
+/* Width Controls */
+[class*='col-'] > img { box-sizing: border-box; padding: 4px }
+.col-33 	{ width: 33.33% }
+.col-50 	{ width: 50% }
+.col-66 	{ width: 66.67% }
+.col-100 	{ width: 100% }
+
+/* Supplemental */
+.spacer { height: 1em }
