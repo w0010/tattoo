@@ -2,6 +2,11 @@
 
 .fixed { position: fixed }
 
+.shokunin {
+	font-family: var(--japanese) ;
+	font-weight: 900;
+	font-style: normal }
+
 .text-capitalize {
 	text-transform: capitalize }
 	
@@ -34,10 +39,29 @@
 .vert {
 	writing-mode: vertical-rl }
 
+.window {
+	background: var(--lowmood); 
+	border: var(--mood) 3px outset;
+	border-top: var(--mood) 12px outset;
+	/*box-shadow: 0 0 20em var(--fademood);*/
+	color: var(--mood);
+	font-size: 0.8em;
+	padding: calc(1vw + 1.5vh);
+	max-width: calc(22vh + 22vw);
+}
+	.window:before { /* arrow */
+		background: linear-gradient(
+			to bottom right,
+			var(--mood),
+			var(--mood) 50%,
+			var(--nomood) 50%);
+		content: '';
+		display: block;
+		height: 1em;
+		margin-right: 0.5em;
+		width: 1em;
+	}
 .wrapper { padding: var(--pad) }
 .z-index { z-index: 1 }
-
-
-
-
-
+		
+		
