@@ -8,7 +8,7 @@ var mouseX = 0, mouseY = 0, scroll = 0;
 	var scene = new THREE.Scene();
 	scene.background = new THREE.Color('hsl(0, 0%, 11%)');
 	scene.fog = new THREE.Fog( mood, 1, 1000 );
-	var camera = new THREE.PerspectiveCamera(150, window.innerWidth / window.innerHeight, 0.01, 10000);
+	var camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 0.01, 10000);
 	camera.position.z = ZOOM;
 	var renderer = new THREE.WebGLRenderer( { antialias: true } );
 	renderer.setSize( window.innerWidth, window.innerHeight );
@@ -32,7 +32,7 @@ var mouseX = 0, mouseY = 0, scroll = 0;
 
 
 // geometry
-	var geometry = new THREE.TetrahedronBufferGeometry( 1000, 0 );
+	var geometry = new THREE.IcosahedronBufferGeometry( 1200, 1 );
 	var material = new THREE.MeshPhongMaterial( {
 		color: mood,
 		flatShading: true,
@@ -60,11 +60,14 @@ var mouseX = 0, mouseY = 0, scroll = 0;
 
 
 
+
+
+
 // movement
 $(window).scroll(function() { // smooth this out next
 	var scroll = $(window).scrollTop();
 	var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
-	mesh.rotation.x = scroll * 0.002;
+	mesh.rotation.x = scroll * 0.001;
 } );
 function MouseMove(event) {
 	mouseX = event.clientX - window.innerWidth / 2;
