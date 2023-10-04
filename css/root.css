@@ -181,7 +181,7 @@ h3, h3 span {
 
 header {
 	height: 128px;
-	width: 10\0%;
+	width: 100%;
 }	header > div {
 	min-width: var(--margin);
 }	header > div > div {
@@ -203,7 +203,7 @@ img {
 main {
 	margin: auto;
 }	main > section:first-of-type {
-	height: /*67vh*/;
+	height: 50vh;
 }
 
 menu {	
