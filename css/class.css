@@ -3,9 +3,10 @@
 .fixed { position: fixed }
 
 .shokunin {
-	font-family: var(--japanese) ;
-	font-weight: 900;
-	font-style: normal }
+	font-family: var(--japanese);
+	font-size: 24px;
+	letter-spacing: 0.12em;
+}
 
 .text-capitalize {
 	text-transform: capitalize }
@@ -48,20 +49,19 @@
 	font-size: 0.8em;
 	padding: calc(1vw + 1.5vh);
 	max-width: calc(22vh + 22vw);
+}	.window:before { /* arrow */
+	background: linear-gradient(
+		to bottom right,
+		var(--mood),
+		var(--mood) 50%,
+		var(--nomood) 50%);
+	content: '';
+	display: block;
+	height: 1em;
+	margin-right: 0.5em;
+	width: 1em;
 }
-	.window:before { /* arrow */
-		background: linear-gradient(
-			to bottom right,
-			var(--mood),
-			var(--mood) 50%,
-			var(--nomood) 50%);
-		content: '';
-		display: block;
-		height: 1em;
-		margin-right: 0.5em;
-		width: 1em;
-	}
-.wrapper { padding: var(--pad) }
+
 .z-index { z-index: 1 }
 		
 		
