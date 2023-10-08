@@ -6,59 +6,85 @@
 	<meta name="description" content="Procedural, cyberpunk, and blackwork tattoo artist">
 	<meta name="author" content="Brad Wooten">
 	<meta name="keywords" content=" cyberpunk, tattoo, brad wooten, bodysuit, black tattoo, minimal tattoo, cyberpunk tattoo ">
-	<!-- css -->
+<!-- css -->
 	<link rel="stylesheet" href="https://use.typekit.net/pha7yfy.css">
 	<link rel="stylesheet" href="css/root.css">
-	<link rel="stylesheet" href="css/flexbox.css">
-	<link rel="stylesheet" href="css/class.css">
-	<link rel="stylesheet" href="css/id.css">
 	<link rel="stylesheet" href="css/threejs.css">
 	<link rel="stylesheet" href="//embed.typeform.com/next/css/sidetab.css">
-	<!-- js libraries -->
-	<script src="js/jquery.js"></script>
-	<script src="js/adobefonts.js"></script>
+<!-- js libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/three.js"></script>
-	<!-- custom js -->
+<!-- custom js -->
 	<script src="js/polyspace.js"></script>
-	<!-- default to off, add js to allow fade -->
 	<script>
-		$(document).ready(function() {
-			$('#polyspace').fadeIn(500);
-			setTimeout(function(){
-				$('main').fadeIn(1500);
-			}, 750);
-			
-			$('a').click(function(event) {
-				event.preventDefault();
-				newLocation = this.href;
-				$('body').fadeOut(250, newpage);
+		$(document).ready(function(){
+			$("#menu-toggle").change(function(){
+				if(this.checked) {
+					$("#burger p").text("Close");
+				} else {
+					$("#burger p").text("Menu");
+				}
 			});
-			function newpage() {
-				window.location = newLocation;
-			}
 		});
 	</script>
 </head>
 
-<body>
+<body class="">
 
-	<main>
+	<main class="dark">
+<!-- Header -->
 		<header class="flex-between">
-			<div class="flex-center">
+<!-- Dash -->
+			<div class="dash flex-center">
 				<div></div>
 			</div>
+<!-- Nav bar -->
 			<nav class="flex-between-center">
-				<!-- Home -->
-				<a href="/index.html">
-					<h1>
-						Wooten
-						<span>Tattoo</span>
-					</h1>
-				</a>
-				<!-- Navigation -->
-				<menu class="flex-between-center">
+	<!-- Title & avatar -->
+				<div class="flex-center" id="title">
+					<div id="ava"><img src="/img/ava/ava_2020.jpg" alt="Avatar"></div>
+					<a href="/index.html">
+						<h1>
+							Wooten
+							<span>Tattoo</span>
+						</h1>
+					</a>
+				</div>
+	<!-- Navigation -->
+				<menu>
 					<li>
-						<button>
+						<a href="/tattoos.html">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<p>Portfolio</p>
+						</a>
+					</li>
+					<li>
+						<a href="/workflow.html">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<p>Workflow</p>
+						</a>
+					</li>
+					<li>
+						<a href="/appointments.html">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<p>Appointments</p>
+						</a>
+					</li>
+				</menu>
+	<!-- Mobile burger-->
+				<input type="checkbox" id="menu-toggle">
+				<div class="popout-menu">
+					<ul>
+						<li>
 							<a href="/tattoos.html">
 								<span></span>
 								<span></span>
@@ -66,10 +92,8 @@
 								<span></span>
 								<p>Portfolio</p>
 							</a>
-						</button>
-					</li>
-					<li>
-						<button>
+						</li>
+						<li>
 							<a href="/workflow.html">
 								<span></span>
 								<span></span>
@@ -77,10 +101,8 @@
 								<span></span>
 								<p>Workflow</p>
 							</a>
-						</button>
-					</li>
-					<li>
-						<button>
+						</li>
+						<li>
 							<a href="/appointments.html">
 								<span></span>
 								<span></span>
@@ -88,42 +110,50 @@
 								<span></span>
 								<p>Appointments</p>
 							</a>
-						</button>
-					</li>
-				</menu>
+						</li>
+					</ul>
+				</div>
+				<label for="menu-toggle" id="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<p>Menu</p>
+				</label>
 			</nav>
-			<div class="flex-center">
+<!-- Dash -->
+			<div class="dash flex-center">
 				<div></div>
 			</div>
 		</header>
-				<!-- Styles -->
-		<section class="flex-col dark">
+<!-- Styles -->
+		<section class="flex-col">
 			<h2>Styles</h2>
-			<div class="flex-between">
-				<h3>
-					<span>Procedural</span>
-					<span>Cyberpunk</span>
-					<span>Blackout</span>
-				</h3>
-				<div><img src="img/tt/01 Brad Wooten Tattoo.jpg"></div>
-			</div>
-			
-			<div id="block"></div>
+			<h3>
+				<span>Procedural</span>
+				<span>Cyberpunk</span>
+				<span>Blackout</span>
+			</h3>
+			<div class="flex-">
+				<div id="block"></div>
+				<div class="flex-center"style="flex-grow: 1;">
+				<button>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<p>contact</p>
+				</button>
+				</div>
 			</div>
 		</section>
-		<button>
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-			<p>Make contact</p>
-		</button>
 	</main>
 	
-	<!-- Artist's process -->
+<!-- Artist's process -->
 	<section class="flex-col">
 		<h2>Artist's process</h2>
-		<article class="flex-between">
+		<article class="flex-">
+			<!-- text -->
 			<div class="flex-col">
 				<h3>A design you can be close to.</h3>
 				<p>Tailored measurements, live video designing, and deep collaboration create a fertile environment to develop a transformative tattoo that speaks to you.</p>
@@ -135,14 +165,17 @@
 					<p>Learn about my workflow</p>
 				</button>
 			</div>
-			<div><img src="img/tt/00 Brad Wooten Portrait.jpg"></div>
+			<!-- image -->
+			<div>
+				<img src="img/misc/TT design.png">
+			</div>
 		</article>
 	</section>
 
-	<!-- Recent work -->
+<!-- Recent work -->
 	<section class="flex-col">
 		<h2>Recent work</h2>
-		<div class="flex-end recent-work">
+		<div class="flex-end" id="recent-work">
 			<div class="flex-col">
 				<img src="img/tt/01 Brad Wooten Tattoo.jpg">
 				<img src="img/tt/02 Brad Wooten Tattoo.jpg">
@@ -167,21 +200,21 @@
 	</section>
 
 	<footer class="flex-col">
-		<!-- Inquire -->
+	<!-- Inquire -->
 		<section class="flex-col">
 			 <h2>Inquire</h2>
-			 <hgroup>
-				<p>W10-T2</p>
-				<p>Tech-Noir Biomechanica</p>
-			 </hgroup>
+			 <div>
+				<abbr title="Wooten Tattoo">W10-T2</abbr>
+			 	<p>Tech-Noir Biomechanica</p>
+			 </div>
 			<div class="flex-center"><button>Contact</button></div>
 		</section>
-		<!-- Have a tattoo in mind? -->
+	<!-- Have a tattoo in mind? -->
 		<div class="flex-col-center">
 			<p>&#9650</p>
 			<p>Have a tattoo in mind?</p>
 		</div>
-		<!-- Shokunin -->
+	<!-- Shokunin -->
 		<div class="flex-center">
 			<p class="shokunin">職人気質</p>
 		</div>
