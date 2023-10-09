@@ -9,13 +9,16 @@
 <!-- css -->
 	<link rel="stylesheet" href="https://use.typekit.net/pha7yfy.css">
 	<link rel="stylesheet" href="css/root.css">
-	<link rel="stylesheet" href="css/threejs.css">
-	<link rel="stylesheet" href="//embed.typeform.com/next/css/sidetab.css">
 <!-- js libraries -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="js/three.js"></script>
+	<script type="module">
+	    import * as THREE from '/node_modules/three/build/three.module.js';
+	    import { OBJLoader } from '/node_modules/three/examples/jsm/loaders/OBJLoader.js';
+	    // Your custom code here
+	</script>
+
 <!-- custom js -->
-	<script src="js/polyspace.js"></script>
+	<script type="module" src="js/polyspace.js"></script>
 	<script>
 		$(document).ready(function(){
 			$("#menu-toggle").change(function(){
@@ -31,7 +34,7 @@
 
 <body class="">
 
-	<main class="dark">
+	<main class="">
 <!-- Header -->
 		<header class="flex-between">
 <!-- Dash -->
@@ -41,15 +44,15 @@
 <!-- Nav bar -->
 			<nav class="flex-between-center">
 	<!-- Title & avatar -->
-				<div class="flex-center" id="title">
+				<a href="/index.html" class="flex" id="title">
 					<div id="ava"><img src="/img/ava/ava_2020.jpg" alt="Avatar"></div>
-					<a href="/index.html">
+					<div>
 						<h1>
 							Wooten
 							<span>Tattoo</span>
 						</h1>
-					</a>
-				</div>
+					</div>
+				</a>
 	<!-- Navigation -->
 				<menu>
 					<li>
@@ -134,16 +137,16 @@
 				<span>Cyberpunk</span>
 				<span>Blackout</span>
 			</h3>
-			<div class="flex-">
+			<div class="flex">
 				<div id="block"></div>
-				<div class="flex-center"style="flex-grow: 1;">
-				<button>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<p>contact</p>
-				</button>
+				<div class="flex-center" style="flex-grow: 1;">
+					<button>
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						<p>contact</p>
+					</button>
 				</div>
 			</div>
 		</section>
@@ -152,7 +155,7 @@
 <!-- Artist's process -->
 	<section class="flex-col">
 		<h2>Artist's process</h2>
-		<article class="flex-">
+		<article class="flex">
 			<!-- text -->
 			<div class="flex-col">
 				<h3>A design you can be close to.</h3>
@@ -202,16 +205,16 @@
 	<footer class="flex-col">
 	<!-- Inquire -->
 		<section class="flex-col">
-			 <h2>Inquire</h2>
-			 <div>
+			<h2>Inquire</h2>
+			<div>
 				<abbr title="Wooten Tattoo">W10-T2</abbr>
-			 	<p>Tech-Noir Biomechanica</p>
-			 </div>
-			<div class="flex-center"><button>Contact</button></div>
+				<p>Tech-Noir Biomechanica</p>
+			</div>
+			<div id="big-contact" class="flex-center"><button>Contact</button></div>
 		</section>
 	<!-- Have a tattoo in mind? -->
 		<div class="flex-col-center">
-			<p>&#9650</p>
+			<p>&#9650;</p>
 			<p>Have a tattoo in mind?</p>
 		</div>
 	<!-- Shokunin -->
@@ -219,7 +222,6 @@
 			<p class="shokunin">職人気質</p>
 		</div>
 	</footer>
-
 	<div id="polyspace"></div>
 </body>
 </html>
