@@ -1,5 +1,10 @@
 //polyspace.js
+import * as THREE from '/node_modules/three/build/three.module.min.js';
+import { OBJLoader } from '/node_modules/three/examples/jsm/loaders/OBJLoader.js';
+
 $(document).ready(function() {
+	async function init() {
+
 var mood = 0x1F2123;
 var ZOOM = 350;
 var scene, camera, renderer, spotLight;
@@ -70,24 +75,24 @@ var mouseX = 0, mouseY = 0, scroll = 0;
 	sceneB.add( skull );
 
  //Add the OBJLoader to load the skull model
-//	var loader = new THREE.OBJLoader();
-//	loader.load(
-//	    './models/SKull2021_1.obj', // replace this with the path to your OBJ file
-//	    function (object) {
-//	        object.traverse(function (child) {
-//	            if (child instanceof THREE.Mesh) {
-//	                child.material.color.setHex(0xff0000); // Set the color of the skull
-//	            }
-//	        });
-//	        sceneB.add(object); // Add the loaded object to sceneB
-//	    },
-//	    function (xhr) {
-//	        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-//	    },
-//	    function (error) {
-//	        console.error('An error occurred while loading the model');
-//	    }
-//	);
+	var loader = new THREE.OBJLoader();
+	loader.load(
+	    '/models/Skull2021_1.obj', // replace this with the path to your OBJ file
+	    function (object) {
+	        object.traverse(function (child) {
+	            if (child instanceof THREE.Mesh) {
+	                child.material.color.setHex(0xff0000); // Set the color of the skull
+	            }
+	        });
+	        sceneB.add(object); // Add the loaded object to sceneB
+	    },
+	    function (xhr) {
+	        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+	    },
+	    function (error) {
+	        console.error('An error occurred while loading the model');
+	    }
+	);
 	
 
 // movement
@@ -145,6 +150,8 @@ function animate() {
 };
 animate();
 
+	}
+	init().catch(error => console.error(error));
 });
 
 
