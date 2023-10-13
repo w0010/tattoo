@@ -1,35 +1,36 @@
 //polyspace.js
+import $ from "jquery"
 import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
-const hardMixShader = {
-    uniforms: {
-        tDiffuse: { value: null },  // The texture of the rendered scene
-        tSubstrate: { value: new THREE.TextureLoader().load('../img/misc/concentric.png') },  // The substrate texture
-    },
-    vertexShader: `
-        varying vec2 vUv;
-        void main() {
-            vUv = uv;
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-        }
-    `,
-    fragmentShader: `
-        uniform sampler2D tDiffuse;
-        uniform sampler2D tSubstrate;
-        varying vec2 vUv;
-
-        void main() {
-            vec4 shadingColor = texture2D(tDiffuse, vUv);
-            vec4 substrateColor = texture2D(tSubstrate, vUv);
-
-            // Implement the Hard Mix blending mode here
-            vec4 hardMixColor = vec4((shadingColor.rgb + substrateColor.rgb < vec3(1.0)) ? vec3(0.0) : vec3(1.0), 1.0);
-
-            gl_FragColor = hardMixColor;
-        }
-    `
-};
+//	const hardMixShader = {
+//    uniforms: {
+//        tDiffuse: { value: null },  // The texture of the rendered scene
+//        tSubstrate: { value: new THREE.TextureLoader().load('../img/misc/concentric.png') },  // The substrate texture
+//    },
+//    vertexShader: `
+//        varying vec2 vUv;
+//        void main() {
+//            vUv = uv;
+//            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+//        }
+//    `,
+//    fragmentShader: `
+//        uniform sampler2D tDiffuse;
+//        uniform sampler2D tSubstrate;
+//        varying vec2 vUv;
+//
+//        void main() {
+//            vec4 shadingColor = texture2D(tDiffuse, vUv);
+//            vec4 substrateColor = texture2D(tSubstrate, vUv);
+//
+//            // Implement the Hard Mix blending mode here
+//            vec4 hardMixColor = vec4((shadingColor.rgb + substrateColor.rgb < vec3(1.0)) ? vec3(0.0) : vec3(1.0), 1.0);
+//
+//            gl_FragColor = hardMixColor;
+//        }
+//    `
+//	};
 
 
 $(document).ready(function() {
@@ -131,39 +132,39 @@ var cameraB = new THREE.OrthographicCamera(
 
 
 //skull
-	const loader = new OBJLoader();
-	loader.load(
-	    '/models/Skull2021_1.obj', // replace this with the path to your OBJ file
-	    function (skull) {
-	        skull.traverse(function (child) {
-	            if (child instanceof THREE.Mesh) {
-					child.position.set( 50, 10, 0 );
-					child.scale.set( 1.3, 1.3, 1.3 );
-					child.rotation.x = THREE.MathUtils.degToRad( 28 );
-					child.rotation.y = THREE.MathUtils.degToRad( -65 );
-					child.rotation.z = THREE.MathUtils.degToRad( 40 );
-					skullMesh = child;
-
-					const shaderMaterial = new THREE.ShaderMaterial({
-						uniforms: hardMixShader.uniforms,
-						vertexShader: hardMixShader.vertexShader,
-						fragmentShader: hardMixShader.fragmentShader
-					});
-					// Apply the shader material to your mesh
-					skullMesh.material = shaderMaterial;
-
-	            }
-	        });
-	        sceneB.add(skull); // Add the loaded object to sceneB
-	    },
-	    function (xhr) {
-	        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-	    },
-		
-	    function (error) {
-	        console.error('An error occurred while loading the model');
-	    }
-	);
+//	const loader = new OBJLoader();
+//	loader.load(
+//	    '/models/Skull2021_1.obj', // replace this with the path to your OBJ file
+//	    function (skull) {
+//	        skull.traverse(function (child) {
+//	            if (child instanceof THREE.Mesh) {
+//					child.position.set( 50, 10, 0 );
+//					child.scale.set( 1.3, 1.3, 1.3 );
+//					child.rotation.x = THREE.MathUtils.degToRad( 28 );
+//					child.rotation.y = THREE.MathUtils.degToRad( -65 );
+//					child.rotation.z = THREE.MathUtils.degToRad( 40 );
+//					skullMesh = child;
+//
+//					const shaderMaterial = new THREE.ShaderMaterial({
+//						uniforms: hardMixShader.uniforms,
+//						vertexShader: hardMixShader.vertexShader,
+//						fragmentShader: hardMixShader.fragmentShader
+//					});
+//					// Apply the shader material to your mesh
+//					skullMesh.material = shaderMaterial;
+//
+//	            }
+//	        });
+//	        sceneB.add(skull); // Add the loaded object to sceneB
+//	    },
+//	    function (xhr) {
+//	        console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+//	    },
+//		
+//	    function (error) {
+//	        console.error('An error occurred while loading the model');
+//	    }
+//	);
 	
 
 // movement
@@ -203,18 +204,18 @@ function update() {
     camera.position.x += (mouseX - camera.position.x) * 0.2;
     camera.position.y += (-mouseY - camera.position.y) * 0.2;
 	
-	if (skullMesh) { // Check if skullMesh is defined
-  	skullMesh.rotation.x += (targetMouseY - mouseY) * 0.0003; // Adjust the factor as needed
-  	skullMesh.rotation.y += (targetMouseX - mouseX) * 0.0003; // Adjust the factor as needed
-  	}
+//	if (skullMesh) { // Check if skullMesh is defined
+//  	skullMesh.rotation.x += (targetMouseY - mouseY) * 0.0003; // Adjust the factor as needed
+//  	skullMesh.rotation.y += (targetMouseX - mouseX) * 0.0003; // Adjust the factor as needed
+//  	}
 	
 }
 function render() {
 	renderer.clear();
 	renderer.render(scene, camera);
-	renderer.clearDepth();
+//	renderer.clearDepth();
 //	sceneB.overrideMaterial = new THREE.MeshBasicMaterial({color: 0x000000, visible: false});
-	renderer.render(sceneB, cameraB);
+//	renderer.render(sceneB, cameraB);
 	
     scene.overrideMaterial = null;
 };

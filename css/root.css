@@ -1,16 +1,12 @@
 /* root.css */
 :root {
-	--transducer: 400 22px "transducer-variable", sans-serif;
-	--japanese:	400 "Noto Sans JP", sans-serif;
-	
+	--transducer: 22px "transducer-variable", sans-serif;
 	--black:	hsla(198, 7%, 6%, 1);
 	--dark:		hsla(216, 7%, 11%, 1);
 	--grey:		hsla(202, 5%, 61%, 1);
 	--light:	hsla(0, 0%, 85%, 1);
 	--white:	hsla(0, 0%, 96%, 1);
-
 	--ease:		200ms ease;
-
 	--margin:	128px;
 	--padding:	32px;
 }
@@ -20,14 +16,7 @@
 	border: 0;
 	font: var(--transducer);
 	margin: 0;
-	padding: 0;
 	transition: var(--ease);
-}
-
-p {
-	bottom: -0.06em;
-	clip-path: inset(0px 0.06em 0.12em 0.06em);
-	position: relative;
 }
 
 body, html {
@@ -36,7 +25,7 @@ body, html {
 }
 
 html {
-/*	background-color: var(--light); */
+	background-color: var(--light);
 	color: var(--dark);
 }
 
@@ -65,6 +54,10 @@ article p {
 	font-variation-settings: "wght" 700, "wdth" 75, "slnt" 0;
 	letter-spacing: 0.03em;
 	padding: 8px;
+	/* next three are for centering p in button (issue with font's built-in line height) */
+	bottom: -0.06em;
+	clip-path: inset(0px 0.06em 0.12em 0.06em);
+	position: relative;
 }	:is(a, button, label) > p:hover {
 	background: var(--dark);
 	color: var(--white);
@@ -80,7 +73,12 @@ article p {
 	position: absolute;
 	width: 8px;
 }	:is(a, button, label) > span:first-of-type {
-	border-left-width: 2px;
+	border-left-width: 2px; 
+    border-top-width: 2px;
+    left: -2px;
+    top: -2px;
+}	:is(a, button, label) > span:first-of-type:hover {
+	border-left-width: 2px; 
     border-top-width: 2px;
     left: -2px;
     top: -2px;
