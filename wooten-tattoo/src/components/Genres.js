@@ -1,24 +1,23 @@
 //Genres.js
 import React from 'react';
-import '../styles/Genres.css';
 
 const Genres = () => {
     return (
-        <section class="flex-col">
+        <section className="flex-col">
 			<h2>Styles</h2>
 			<h3>
 				<span>Procedural</span>
 				<span>Cyberpunk</span>
 				<span>Blackout</span>
 			</h3>
-			<div class="flex">
-				<div id="block"></div>
-				<div class="flex-center" style="flex-grow: 1;">
+			<div className="flex">
+				<div id="block" />
+				<div className="flex-center" style={{ flexGrow: 1 }}>
 					<button>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
+						<span />
+						<span />
+						<span />
+						<span />
 						<p>contact</p>
 					</button>
 				</div>
@@ -26,3 +25,5 @@ const Genres = () => {
 		</section>
     );
 }
+
+export default Genres;

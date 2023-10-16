@@ -1,0 +1,47 @@
+footer {
+	height: calc(100vh - 128px);
+}
+
+footer > section {
+	flex-grow: 1;
+}
+
+footer #big-contact {
+	height: 100%;
+}
+
+footer abbr {
+	font-size: 96px;
+	font-variation-settings: "wght" 900, "wdth" 200, "slnt" 0;
+	text-decoration: none;
+}	
+
+footer button {
+	background-color: var(--light);
+	border: var(--dark) 1px solid;
+	border-radius: 100%; 
+	font-size: 36px;
+	font-variation-settings: "wght" 900, "wdth" 100, "slnt" -10;
+	height: 278px;
+	width: 278px;
+}
+
+footer button:hover {
+	font-variation-settings: "wght" 900, "wdth" 200, "slnt" -10;
+}
+
+footer > div:first-of-type {
+	background: var(--white);
+	height: 208px;
+}
+
+footer > div:first-of-type > p {
+	font-variation-settings: "wght" 500, "slnt" -10;
+	padding: 4px;
+}
+
+footer > div:nth-of-type(2) {
+	background: var(--dark);
+	color: var(--white);
+	padding: 16px 0 32px 0;
+}

@@ -1,0 +1,14 @@
+header {
+	height: 128px;
+	width: 100%;
+}	
+
+header > .dash {
+	min-width: var(--margin);
+}	
+
+header > .dash div {
+	background: var(--light);
+	height: 1px;
+	width: 16px;
+}

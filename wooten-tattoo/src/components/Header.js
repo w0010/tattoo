@@ -1,15 +1,16 @@
 // Header.js
 import React from 'react';
 import '../styles/Header.css';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header class="flex-between">
-			<div class="dash flex-center">
+        <header className="flex-between">
+			<div className="dash flex-center">
 				<div></div>
 			</div>
-			<nav class="flex-between-center">
-				<a href="/index.html" class="flex" id="title">
+			<nav className="flex-between-center">
+				<Link to="/" className="flex" id="title">
 					<div id="ava"><img src="/img/ava/ava_2020.jpg" alt="Avatar"></img></div>
 					<div>
 						<h1>
@@ -17,65 +18,65 @@ const Header = () => {
 							<span>Tattoo</span>
 						</h1>
 					</div>
-				</a>
+				</Link>
 				<menu>
 					<li>
-						<a href="/tattoos.html">
+						<NavLink to="/pages/Portfolio">
 							<span></span>
 							<span></span>
 							<span></span>
 							<span></span>
 							<p>Portfolio</p>
-						</a>
+						</NavLink>
 					</li>
 					<li>
-						<a href="/workflow.html">
+						<NavLink to="/pages/Workflow">
 							<span></span>
 							<span></span>
 							<span></span>
 							<span></span>
 							<p>Workflow</p>
-						</a>
+						</NavLink>
 					</li>
 					<li>
-						<a href="/appointments.html">
+						<NavLink to="/pages/Appointments">
 							<span></span>
 							<span></span>
 							<span></span>
 							<span></span>
 							<p>Appointments</p>
-						</a>
+						</NavLink>
 					</li>
 				</menu>
 				<input type="checkbox" id="menu-toggle"></input>
-				<div class="popout-menu">
+				<div className="popout-menu">
 					<ul>
 						<li>
-							<a href="/tattoos.html">
+							<NavLink to="/pages/Portfolio">
 								<span></span>
 								<span></span>
 								<span></span>
 								<span></span>
 								<p>Portfolio</p>
-							</a>
+							</NavLink>
 						</li>
 						<li>
-							<a href="/workflow.html">
+							<NavLink to="/pages/Workflow">
 								<span></span>
 								<span></span>
 								<span></span>
 								<span></span>
 								<p>Workflow</p>
-							</a>
+							</NavLink>
 						</li>
 						<li>
-							<a href="/appointments.html">
+							<NavLink to="/pages/Appointments">
 								<span></span>
 								<span></span>
 								<span></span>
 								<span></span>
 								<p>Appointments</p>
-							</a>
+							</NavLink>
 						</li>
 					</ul>
 				</div>
@@ -87,7 +88,7 @@ const Header = () => {
 					<p>Menu</p>
 				</label>
 			</nav>
-			<div class="dash flex-center">
+			<div className="dash flex-center">
 				<div></div>
 			</div>
 		</header>
