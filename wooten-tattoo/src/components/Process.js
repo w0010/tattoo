@@ -1,5 +1,6 @@
 //Process.js
 import React from 'react';
+import ttdesign from '../assets/images/misc/TT design.png';
 
 const Process = () => {
     return (
@@ -18,7 +19,7 @@ const Process = () => {
 		    		</button>
 		    	</div>
 		    	<div>
-		    		<img src="./assets/images/misc/TT design.png" alt="Customizing a design" />
+		    		<img src={ttdesign} alt="Customizing a design" />
 		    	</div>
 		    </article>
 	    </section>

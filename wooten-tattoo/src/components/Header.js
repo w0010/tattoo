@@ -1,5 +1,6 @@
 // Header.js
 import React from 'react';
+import ava2020 from '../assets/images/ava/ava_2020.jpg';
 import '../styles/Header.css';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -11,7 +12,7 @@ const Header = () => {
 			</div>
 			<nav className="flex-between-center">
 				<Link to="/" className="flex" id="title">
-					<div id="ava"><img src="/img/ava/ava_2020.jpg" alt="Avatar"></img></div>
+					<div id="ava"><img src={ava2020} alt="W10" /></div>
 					<div>
 						<h1>
 							Wooten

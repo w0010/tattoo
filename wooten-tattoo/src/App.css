@@ -85,7 +85,7 @@ h3 span {
 
 img {
 	height: 100%;
-    object-fit: cover;
+  object-fit: cover;
 	width: 100%;
 }
 
@@ -151,20 +151,8 @@ main {
 	background-size: cover;
 }
 
-menu {
-	justify-content: flex-end;
-	display: flex;
-	gap: 24px;
-	width: 100%;
-}	
-
 menu, ul {
 	list-style: none;
-}
-nav {
-	background: var(--light);
-	padding: 0 var(--padding);
-	width: 100%;
 }
 
 section {
@@ -176,10 +164,6 @@ section {
 section > :is(h1, h2, h3, abbr, article, hgroup, div) {
 	margin: 0 var(--margin);
 }
-/* for footer */ 
-section > :is(h1, h3, abbr), section > article > div:first-of-type, section > div > :is(abbr, p) {
-	padding: 0 var(--padding);
-}
 
 video {
     height: 100%;
@@ -187,7 +171,9 @@ video {
 }
 
 /* flexbox */
-[class*='flex'] { display: flex; }
+[class*='flex'] {
+  display: flex;
+}
 
 .flex-between	        { justify-content: space-between }
 .flex-between-center    { align-items: center; justify-content: space-between }
@@ -236,43 +222,7 @@ body.dark > section {
 	color: var(--black);
 }
 
-.popout-menu {
-    background-color: var(--light);
-	left: 100%;
-    position: fixed;
-	top: 128px;
-	transition: var(--ease); /* Add a transition for smooth sliding */
-    width: 256px;
-	z-index: 1;
-}
-
-.popout-menu li {
-    padding: 10px;
-    border-bottom: 1px solid var(--dark); /* Adjust color as needed */
-}
-
-.popout-menu li:last-child {
-    border-bottom: none;
-}
-
-.popout-menu a {
-    color: var(--dark); /* Adjust color as needed */
-    text-decoration: none;
-}
-
-.shokunin {
-	font-family: var(--japanese);
-	font-size: 24px;
-	letter-spacing: 0.12em;
-}
-
 /* ID */
-#ava {
-	border-radius: 100%;
-	height: 55px;
-	width: 55px;
-	overflow: hidden;
-}
 
 #block {
 	background: var(--light);
@@ -282,26 +232,7 @@ body.dark > section {
 	width: 128px;
 }
 
-#burger {
-	display: none;
-}
 
-#menu-toggle {
-	display: none;
-}
-
-#menu-toggle:checked ~ .popout-menu {
-    left: calc(100% - 256px - var(--margin)); /* Adjust the left property to show the menu */
-}
-
-#recent-work, #recent-work div {
-	gap: 4px;
-}
-
-#title {
-	border: none;
-	gap: 8px;
-}
 
 /* for mobile */
 @media (max-width: 1200px) {

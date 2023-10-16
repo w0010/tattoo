@@ -6,11 +6,11 @@ import RecentWork from '../components/RecentWork';
 
 const Home = () => {
     return (
-        <div>
+        <main>
             <Genres />
             <Process />
             <RecentWork />
-        </div>
+        </main>
     );
 }
 

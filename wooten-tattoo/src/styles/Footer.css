@@ -45,3 +45,13 @@ footer > div:nth-of-type(2) {
 	color: var(--white);
 	padding: 16px 0 32px 0;
 }
+
+section > :is(h1, h3, abbr), section > article > div:first-of-type, section > div > :is(abbr, p) {
+	padding: 0 var(--padding);
+}
+
+.shokunin {
+	font-family: var(--japanese);
+	font-size: 24px;
+	letter-spacing: 0.12em;
+}

@@ -1,3 +1,14 @@
+#ava {
+	border-radius: 100%;
+	height: 55px;
+	width: 55px;
+	overflow: hidden;
+}
+
+#burger {
+	display: none;
+}
+
 header {
 	height: 128px;
 	width: 100%;
@@ -11,4 +22,54 @@ header > .dash div {
 	background: var(--light);
 	height: 1px;
 	width: 16px;
+}
+
+menu {
+	justify-content: flex-end;
+	display: flex;
+	gap: 24px;
+	width: 100%;
+}	
+
+#menu-toggle {
+	display: none;
+}
+
+#menu-toggle:checked ~ .popout-menu {
+    left: calc(100% - 256px - var(--margin)); /* Adjust the left property to show the menu */
+}
+
+nav {
+	background: var(--light);
+	padding: 0 var(--padding);
+	width: 100%;
+}
+
+.popout-menu {
+    background-color: var(--light);
+	left: 100%;
+    position: fixed;
+	top: 128px;
+	transition: var(--ease); /* Add a transition for smooth sliding */
+    width: 256px;
+	z-index: 1;
+}
+
+.popout-menu li {
+    padding: 10px;
+    border-bottom: 1px solid var(--dark); /* Adjust color as needed */
+}
+
+.popout-menu li:last-child {
+    border-bottom: none;
+}
+
+.popout-menu a {
+    color: var(--dark); /* Adjust color as needed */
+    text-decoration: none;
+}
+
+#title {
+	border: none;
+	gap: 8px;
 }
