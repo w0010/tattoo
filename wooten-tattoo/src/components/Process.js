@@ -11,10 +11,7 @@ const Process = () => {
 		    		<h3>A design you can be close to.</h3>
 		    		<p>Tailored measurements, live video designing, and deep collaboration create a fertile environment to develop a transformative tattoo that speaks to you.</p>
 		    		<button>
-		    			<span></span>
-		    			<span></span>
-		    			<span></span>
-		    			<span></span>
+						{[...Array(4)].map((_, i) => <span key={i} />)}
 		    			<p>Learn about my workflow</p>
 		    		</button>
 		    	</div>

@@ -1,4 +1,4 @@
-/* root.css */
+/* App.css */
 :root {
 	--transducer: 22px "transducer-variable", sans-serif;
 	--black:	hsla(198, 7%, 6%, 1);
@@ -30,11 +30,15 @@ a {
 }
 
 article > div {
-	gap: 40px;
+	gap: 32px;
 }
 
 article p {
 	line-height: 1.4em;
+}
+
+body {
+	margin: 0;
 }
 
 body > section {
@@ -48,6 +52,27 @@ canvas {
 	z-index: -1;
 }
 
+[class*='flex'] {
+	display: flex;
+  }
+  
+  .flex-between	        { justify-content: space-between }
+  .flex-align-between	{ align-items: center; justify-content: space-between }
+  .flex-align-end		{ align-items: center; justify-content: flex-end }
+  .flex-end-between		{ align-items: flex-end; justify-content: flex-end }
+  .flex-center	        { align-items: center; justify-content: center }
+  .flex-end		        { align-items: flex-end; justify-content: flex-end }
+  .flex-even		        { align-items: center; justify-content: space-evenly }
+  .flex-start		        { align-items: center; justify-content: flex-start }
+  .reverse		        { flex-direction: row-reverse }
+  .flex-col 	            { flex-direction: column; }
+  .flex-col-align         { flex-direction: column; align-items: center; }
+  .flex-col-center        { flex-direction: column; align-items: center; justify-content: center }
+  .align-start            { align-items: flex-start }
+  .align-end	            { align-items: flex-end }
+  .wrap 		            { flex-wrap: wrap }
+  .wrap-r					{ flex-wrap: wrap-reverse }
+
 h1 {
 	font-size: 36px;
 	font-variation-settings: "wght" 900, "wdth" 200;
@@ -55,6 +80,7 @@ h1 {
 	letter-spacing: 0.015em;
 	text-transform: uppercase;
 }
+
 h1 span {
 	display: block;
 	font-size: 20px;
@@ -100,6 +126,7 @@ img {
 	background: var(--light);
 	font-variation-settings: "wght" 700, "wdth" 75, "slnt" 0;
 	letter-spacing: 0.03em;
+	margin: 0;
 	padding: 8px;
 	/* next three are for centering p in button (issue with font's built-in line height) */
 	bottom: -0.06em;
@@ -155,6 +182,10 @@ menu, ul {
 	list-style: none;
 }
 
+p {
+	margin: revert;
+}
+
 section {
 	gap: 32px;
 	padding-bottom: 150px;
@@ -170,25 +201,7 @@ video {
     width: 100%;
 }
 
-/* flexbox */
-[class*='flex'] {
-  display: flex;
-}
 
-.flex-between	        { justify-content: space-between }
-.flex-between-center    { align-items: center; justify-content: space-between }
-.flex-center	        { align-items: center; justify-content: center }
-.flex-end		        { align-items: flex-end; justify-content: flex-end }
-.flex-even		        { align-items: center; justify-content: space-evenly }
-.flex-start		        { align-items: center; justify-content: flex-start }
-.reverse		        { flex-direction: row-reverse }
-.flex-col 	            { flex-direction: column; }
-.flex-col-align         { flex-direction: column; align-items: center; }
-.flex-col-center        { flex-direction: column; align-items: center; justify-content: center }
-.align-start            { align-items: flex-start }
-.align-end	            { align-items: flex-end }
-.wrap 		            { flex-wrap: wrap }
-.wrap-r					{ flex-wrap: wrap-reverse }
 
 /* classes */
 body.dark > section {
@@ -222,6 +235,10 @@ body.dark > section {
 	color: var(--black);
 }
 
+.spacer {
+	height: 192px;
+}
+
 /* ID */
 
 #block {
@@ -230,64 +247,4 @@ body.dark > section {
 	position: relative;
 	left: -128px;
 	width: 128px;
-}
-
-
-
-/* for mobile */
-@media (max-width: 1200px) {
-	:root {
-		--margin: 16px;
-		--padding: 16px;
-	}
-
-	article {
-		flex-direction: column;
-		gap: 32px;
-	}
-
-	h1 {
-		font-variation-settings: "wght" 700, "wdth" 50;
-		letter-spacing: 0.03em;
-	}
-	h1 span {
-		font-variation-settings: "wght" 800, "wdth" 75;
-		letter-spacing: 0.03em;
-	}	
-	
-	h2 {
-		letter-spacing: 0.1em;
-		padding-left: var(--padding);
-		text-transform: uppercase;
-	}
-
-	h3, h3 span {
-		font-size: 32px;
-	}
-
-	header {
-		position: fixed;
-		z-index: 1;
-	}
-
-	footer abbr {
-		font-variation-settings: "wght" 500, "wdth" 50, "slnt" 0;
-	}	
-
-	main > section {
-		padding-top: calc(128px + 96px);
-	}
-
-	menu {
-		display: none;
-	}
-
-	* {
-		font-size: 18px;
-	}
-	#burger {
-		cursor: pointer;
-		display: block;
-	}
-
 }

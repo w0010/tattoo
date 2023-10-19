@@ -3,49 +3,52 @@ import * as THREE from 'three';
 
 const Polyspace = () => {
     useEffect(() => {
-        const mood = 0x1F2123;
-        const ZOOM = 350;
-        const ZOOMER = 0.05;
-        const easeFactor = 0.05;
+        const dark = 0x1F2123;
+        const light = 0xD9D9D9;
 
+        //scene
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color('hsl(0, 0%, 85%)');
-        scene.fog = new THREE.Fog('hsl(0, 0%, 55%)', 1, 2400);
+        scene.background = new THREE.Color(light);
+        //scene.fog = new THREE.Fog(light, 1, 1000);
 
         const camera = new THREE.PerspectiveCamera(150, window.innerWidth / window.innerHeight, 0.01, 10000);
-        camera.position.z = ZOOM;
+        const zoom = camera.position.z = 350;
 
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setClearColor(0x000000, 0);
 
         document.getElementById('polyspace').appendChild(renderer.domElement);
 
-        const spotLight = new THREE.SpotLight(mood);
-        spotLight.position.set(0, -10000, 10000);
+        const spotLight = new THREE.SpotLight(light);
+        spotLight.position.set(0, -900, 900);
         scene.add(spotLight);
 
-        const geometry = new THREE.TetrahedronGeometry(4800);
+
+        //geometry
+        const geometry = new THREE.TetrahedronGeometry(1000);
         const material = new THREE.MeshPhongMaterial({
-            color: mood,
+            color: light,
             flatShading: true,
             transparent: true,
-            opacity: 0.1,
-            shininess: 20,
+            opacity: 0.05,
+            shininess: 30,
             polygonOffset: true,
             polygonOffsetFactor: 300,
             polygonOffsetUnits: 1,
             side: THREE.BackSide
         });
-
         const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
+        const meshRotator = new THREE.Group();
+        meshRotator.add(mesh);
+        scene.add(meshRotator);
 
         mesh.add(new THREE.LineSegments(
             new THREE.EdgesGeometry(geometry),
-            new THREE.LineBasicMaterial({ color: mood, transparent: true, opacity: 0.3 })
+            new THREE.LineBasicMaterial({ color: dark, transparent: true, opacity: 0.5 })
         ));
 
+
+        //movement
         let mouseX = 0, mouseY = 0, scroll = 0;
         let targetMouseX = 0, targetMouseY = 0, targetScroll = 0;
 
@@ -54,22 +57,32 @@ const Polyspace = () => {
         const onMouseMove = ({ clientX, clientY }) => {
             targetMouseX = clientX - window.innerWidth / 2;
             targetMouseY = clientY - window.innerHeight / 2;
-            camera.position.z = ZOOM - Math.abs(window.innerWidth / 2 - clientX) * ZOOMER;
+            
+            const zoomer = 0.1;
+            camera.position.z = zoom - Math.abs(window.innerWidth / 2 - clientX) * zoomer;
         };
 
         document.addEventListener('mousemove', onMouseMove);
 
         const update = () => {
+            const easeFactor = 0.01;
             const ease = (target, current) => current + (target - current) * easeFactor;
             mouseX = ease(targetMouseX, mouseX);
             mouseY = ease(targetMouseY, mouseY);
             scroll = ease(targetScroll, scroll);
+            
+            const mouseQuaternion = new THREE.Quaternion()
+                .multiplyQuaternions(
+                    new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), mouseX * 0.0006),
+                    new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), mouseY * 0.0003)
+                );
+            const scrollQuaternion = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), scroll * 0.001);
+            meshRotator.quaternion.multiplyQuaternions(mouseQuaternion, scrollQuaternion);
 
-            mesh.rotation.x = scroll * 0.001;
-            mesh.rotation.y += 0.002;
+            mesh.rotation.x += 0.0003;
 
-            camera.position.x = ease(mouseX, camera.position.x) * 0.2;
-            camera.position.y = ease(-mouseY, camera.position.y) * 0.2;
+            //camera.position.x = ease(mouseX, camera.position.x) * 1;
+            //camera.position.y = ease(-mouseY, camera.position.y) * 1;
         };
 
         const animate = () => {
@@ -93,7 +106,7 @@ const Polyspace = () => {
         };
     }, []);
 
-    return <div id="polyspace"></div>;
+    return <div id="polyspace" />;
 };
 
 export default Polyspace;

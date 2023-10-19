@@ -24,6 +24,9 @@ header > .dash div {
 	width: 16px;
 }
 
+input[type="checkbox"]:checked ~ .popout-menu {
+    transform: translateX(0);
+}
 menu {
 	justify-content: flex-end;
 	display: flex;
@@ -43,6 +46,13 @@ nav {
 	background: var(--light);
 	padding: 0 var(--padding);
 	width: 100%;
+}
+
+nav.portfolio {
+    background-image: url('../assets/images/poster/EmptyName_5.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .popout-menu {

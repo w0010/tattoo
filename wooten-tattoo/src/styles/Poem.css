@@ -1,0 +1,14 @@
+#poem {
+	background: var(--light);
+    clip-path: polygon(
+		20% 15%, 
+		35% 0, 
+		calc(100% - var(--margin)) 0, 
+		calc(100% - var(--margin)) 100%, 
+		75% 100%, 
+		70% calc(100% - 5%), 
+		var(--margin) calc(100% - 5%), 
+		var(--margin) 15%
+	);
+	height: 100%;
+}

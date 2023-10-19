@@ -1,0 +1,57 @@
+/* for mobile */
+@media (max-width: 1200px) {
+	:root {
+		--margin: 16px;
+		--padding: 16px;
+	}
+
+	article {
+		flex-direction: column;
+		gap: 32px;
+	}
+
+	h1 {
+		font-variation-settings: "wght" 700, "wdth" 50;
+		letter-spacing: 0.03em;
+	}
+	h1 span {
+		font-variation-settings: "wght" 800, "wdth" 75;
+		letter-spacing: 0.03em;
+	}	
+	
+	h2 {
+		letter-spacing: 0.1em;
+		padding-left: var(--padding);
+		text-transform: uppercase;
+	}
+
+	h3, h3 span {
+		font-size: 32px;
+	}
+
+	header {
+		position: fixed;
+		z-index: 1;
+	}
+
+	footer abbr {
+		font-variation-settings: "wght" 500, "wdth" 50, "slnt" 0;
+	}	
+
+	main > section {
+		padding-top: calc(128px + 96px);
+	}
+
+	menu {
+		display: none;
+	}
+
+	* {
+		font-size: 18px;
+	}
+	#burger {
+		cursor: pointer;
+		display: block;
+	}
+
+}

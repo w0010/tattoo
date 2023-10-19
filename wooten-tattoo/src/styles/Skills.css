@@ -1,0 +1,7 @@
+#skills > article > div {
+    flex-shrink: 1;
+}
+
+.skill-block {
+    padding: 0 64px;
+}

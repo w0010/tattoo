@@ -11,7 +11,7 @@ const Home = () => {
             <Process />
             <RecentWork />
         </main>
-    );
+    )
 }
 
 export default Home;
