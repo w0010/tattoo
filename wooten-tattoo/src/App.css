@@ -1,14 +1,19 @@
 /* App.css */
 :root {
 	--transducer: 22px "transducer-variable", sans-serif;
+
 	--black:	hsla(198, 7%, 6%, 1);
 	--dark:		hsla(216, 7%, 11%, 1);
 	--grey:		hsla(202, 5%, 61%, 1);
 	--light:	hsla(0, 0%, 85%, 1);
 	--white:	hsla(0, 0%, 96%, 1);
+
 	--ease:		200ms ease;
+
 	--margin:	128px;
 	--padding:	32px;
+
+	--header-height:	128px;
 }
 
 
@@ -27,6 +32,15 @@ html {
 a {
 	color: initial;
 	text-decoration: none;
+}
+
+.App, main, section, footer {
+	display: flex;
+	flex-direction: column;
+}	.App, main {
+	gap: 64px;
+}	section {
+	gap: 32px;
 }
 
 article > div {
@@ -57,6 +71,7 @@ canvas {
   }
   
   .flex-between	        { justify-content: space-between }
+  .flex-around			{ justify-content: space-around }
   .flex-align-between	{ align-items: center; justify-content: space-between }
   .flex-align-end		{ align-items: center; justify-content: flex-end }
   .flex-end-between		{ align-items: flex-end; justify-content: flex-end }
@@ -174,8 +189,8 @@ img {
 }
 
 main {
-	background: none;
-	background-size: cover;
+	margin-top: var(--header-height);
+	padding: 64px 0;
 }
 
 menu, ul {
@@ -186,22 +201,17 @@ p {
 	margin: revert;
 }
 
-section {
-	gap: 32px;
-	padding-bottom: 150px;
-	padding-top: 96px;
-}	
 
-section > :is(h1, h2, h3, abbr, article, hgroup, div) {
+section > :is( abbr, article, div, h1, h2, h3, hgroup, p ) {
 	margin: 0 var(--margin);
 }
-
+section > :is(h1, h3, abbr), section > article > div:first-of-type, section > div > :is(abbr, p) {
+	padding: 0 var(--padding);
+}
 video {
     height: 100%;
     width: 100%;
 }
-
-
 
 /* classes */
 body.dark > section {

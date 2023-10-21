@@ -29,19 +29,20 @@
 		font-size: 32px;
 	}
 
-	header {
-		position: fixed;
-		z-index: 1;
-	}
+	
 
 	footer abbr {
 		font-variation-settings: "wght" 500, "wdth" 50, "slnt" 0;
 	}	
 
-	main > section {
-		padding-top: calc(128px + 96px);
+	header {
+		height: calc( var(--header-height) * 0.67 );
 	}
 
+	main {
+		margin-top: calc( var(--header-height) * 0.67 );
+	}
+	
 	menu {
 		display: none;
 	}

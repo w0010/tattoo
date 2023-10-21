@@ -30,28 +30,24 @@ footer button:hover {
 	font-variation-settings: "wght" 900, "wdth" 200, "slnt" -10;
 }
 
-footer > div:first-of-type {
+footer section div:last-child {
 	background: var(--white);
-	height: 208px;
+	padding-top: 32px;
+	margin: 0 calc( var(--margin) / 2 );
+	text-align: center;
 }
 
-footer > div:first-of-type > p {
-	font-variation-settings: "wght" 500, "slnt" -10;
-	padding: 4px;
-}
-
-footer > div:nth-of-type(2) {
-	background: var(--dark);
-	color: var(--white);
-	padding: 16px 0 32px 0;
-}
-
-section > :is(h1, h3, abbr), section > article > div:first-of-type, section > div > :is(abbr, p) {
-	padding: 0 var(--padding);
+footer > div > p {
+	font-variation-settings: "wght" 600, "slnt" -10;
 }
 
 .shokunin {
+	background: var(--dark);
+	color: var(--white);
 	font-family: var(--japanese);
-	font-size: 24px;
+	font-size: 16px;
 	letter-spacing: 0.12em;
+	padding: 1em 0;
+	margin: 0;
+	text-align: center;
 }

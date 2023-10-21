@@ -13,11 +13,8 @@ const Header = () => {
 
 
     return (
-        <header className="flex-between">
-			<div className="dash flex-center">
-				<div></div>
-			</div>
-			<nav className={`flex-align-between ${location.pathname === '/pages/Portfolio' ? 'portfolio' : ''}`}>
+        <header>
+			<nav className={ `${ location.pathname === '/pages/Portfolio' ? 'portfolio' : '' }` }>
 				{location.pathname !== '/pages/Portfolio' && (
 					<Link to="/" className="flex" id="title">
 						<div id="ava"><img src={ava2020} alt="W10" /></div>
@@ -78,9 +75,6 @@ const Header = () => {
 					</div>
 				</label>
 			</nav>
-			<div className="dash flex-center">
-				<div></div>
-			</div>
 		</header>
     );
 }

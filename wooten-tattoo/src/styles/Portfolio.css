@@ -7,10 +7,26 @@
     overflow: hidden;
 }
 
+#portfolio {
+    gap: 64px;
+}
+
 #portfolio h1 {
     font-size: 128px;
 }
 
 #portfolio h1 span {
     font-size: 64px;
+}
+
+#portfolio section {
+    padding: 0;
+}
+
+#portfolio section:first-of-type > div {
+    margin: 0 0 0 var(--margin);
+}
+
+#portfolio-display, #portfolio-display div {
+	gap: 4px;
 }
