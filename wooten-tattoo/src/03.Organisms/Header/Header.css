@@ -1,0 +1,78 @@
+/* Header.css */
+header {
+	align-items: center;
+	display: flex;
+	height: var(--header-height);
+	justify-content: center;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+header::before, header::after {
+	--dash-width: 16px;
+	background-color: var(--light);
+	content: "";
+	height: 1px;
+	margin: 0 calc(  var(--margin)/2 - var(--dash-width)/2 );
+	width: var(--dash-width);
+}
+
+header.portfolio {
+    position: static; /* or whatever style you want to override `position: fixed` */
+}
+
+header.portfolio::before, header.portfolio::after {
+	background-color: var(--dark);
+}
+
+#burger {
+	display: none;
+}
+
+#desktop-nav-list {
+	justify-content: flex-end;
+	display: flex;
+	gap: 24px;
+	width: 100%;
+}	
+
+nav { /* controls header background */
+	align-items: center;
+	background: var(--light);
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	padding: 0 var(--padding);
+	width: 100%;
+}	
+header.portfolio nav {
+    background-image: url('../../01.Atoms/Images/poster/EmptyName_5.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.popout-menu {
+    background-color: var(--light);
+    position: fixed;
+	top: var(--header-height);
+	transition: var(--ease); /* Add a transition for smooth sliding */
+    width: 256px;
+	z-index: 1;
+
+}
+
+.popout-menu a {
+    color: var(--dark); /* Adjust color as needed */
+    text-decoration: none;
+}
+
+.popout-menu li {
+    padding: 10px;
+    border-bottom: 1px solid var(--dark); /* Adjust color as needed */
+}
+
+.popout-menu li:last-child {
+    border-bottom: none;
+}

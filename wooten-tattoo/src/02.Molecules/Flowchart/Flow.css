@@ -1,0 +1,20 @@
+/* Flow.css */
+.react-flow__node p {
+    border-radius: 0px;
+}
+
+
+.react-flow__node h4 {
+	font-size: 1.4rem ;
+	font-variation-settings: "wght" 700, "wdth" 80, "slnt" 0;
+	letter-spacing: 0.02em;
+}
+.react-flow__node p {
+    font-size: 1em;
+    font-variation-settings: "wght" 400, "wdth" 90, "slnt" 0;
+}
+
+.circle-node {
+    background: var(--white);
+    border-radius: 50%;
+}

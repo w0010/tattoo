@@ -2,22 +2,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import ScrollToTop from './01.Atoms/ScrollToTop';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Polyspace from './components/Polyspace';
+import Header from './03.Organisms/Header/Header';
+import Footer from './03.Organisms/Footer/Footer';
+import Polyspace from './03.Organisms/Polyspace/Polyspace';
 
-import Home from './pages/Home';
-import Portfolio from './pages/Portfolio';
-import Workflow from './pages/Workflow';
-import Appointments from './pages/Appointments';
+import Home from './05.Pages/Home';
+import Portfolio from './05.Pages/Portfolio/Portfolio';
+import Workflow from './05.Pages/Workflow/Workflow';
+import Appointments from './05.Pages/Appointments';
+
 import './App.css';
-import './styles/Mobile.css';
+import './Responsive.css';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={ <Home /> } />
