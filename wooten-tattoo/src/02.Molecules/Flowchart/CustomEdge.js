@@ -18,8 +18,8 @@ const CustomEdge = ({
     `;
   return (
     <path d={path} fill="none" style={{
-        stroke: 'var(--dark)',
-        strokeWidth: '2px',
+        stroke: 'var(--white)',
+        strokeWidth: '4px',
     }} />
   );
 };

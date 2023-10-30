@@ -2,7 +2,7 @@
 import React from 'react';
 import SkillBar from '../../01.Atoms/SkillBar';
 
-const Skills = (props) => {
+const Assets = (props) => {
     return (
         <section id="skills" className="number" data-number={props['data-number']}>
             <h2>Tools to create with</h2>
@@ -10,7 +10,7 @@ const Skills = (props) => {
             <article>
 
                 <div>
-                    <h3>Skills</h3>
+                    <h3>Assets</h3>
                     <div style={{
                         background: 'var(--light)',
                         clipPath: `polygon(
@@ -45,4 +45,4 @@ const Skills = (props) => {
     );
 }
 
-export default Skills;
+export default Assets;

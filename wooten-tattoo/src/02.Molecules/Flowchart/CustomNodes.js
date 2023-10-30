@@ -7,10 +7,11 @@ import './CustomNodes.css';
 const baseStyles = {
     background: 'var(--white)',
     display: 'flex',
-    maxWidth: '50%',
-    padding: '32px',
+    maxWidth: '70vw',
+    padding: '16px',
 };  
 const circleStyles = {
+    alignItems: 'center',
     aspectRatio: '1 / 1',
     borderRadius: '50%',
 };
@@ -57,9 +58,9 @@ const WavyNode = ({ data }) => (
 // Diamond (using CSS transform rotate)
 const DiamondNode = ({ data }) => (
     <div style={{
+        alignItems: 'center',
         ...baseStyles,
         ...angularStyles,
-        alignItems: 'center',
         clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}>
         {data.label}
         <Handle type="target" position={Position.Top} />
