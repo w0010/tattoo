@@ -1,3 +1,4 @@
+// Collide.js (this is line 1)
 import { quadtree } from 'd3-quadtree';
 
 export function collide() {

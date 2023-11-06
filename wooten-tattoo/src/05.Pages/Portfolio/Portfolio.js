@@ -30,25 +30,23 @@ const Portfolio = () => {
 
 				<h2>Portfolio</h2>
 
-	        	<div id="portfolio-display" className="flex-end">
+	        	<div id="portfolio-display" className="flex-start">
 	        		<div className="flex-col">
 	        			<img src={tt01} alt="" />
 	        			<img src={tt02} alt="" />
 		    			<img src={tt03} alt="" />
+		    			<img src={tt10} alt="" />
 	        		</div>
 	        		<div className="flex-col">
 		    			<img src={tt04} alt="" />
 	        			<img src={tt05} alt="" />
 		    			<img src={tt06} alt="" />
+	        			<img src={tt11} alt="" />
 	        		</div>
 	        		<div className="flex-col">
 	        			<img src={tt07} alt="" />
 	        			<img src={tt08} alt="" />
 		    			<img src={tt09} alt="" />
-	        		</div>
-	        		<div className="flex-col">
-		    			<img src={tt10} alt="" />
-	        			<img src={tt11} alt="" />
 		    			<img src={tt12} alt="" />
 	        		</div>
 	        	</div>

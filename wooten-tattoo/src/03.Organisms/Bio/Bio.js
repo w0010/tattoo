@@ -4,17 +4,12 @@ import '../Bio/Bio.css';
 
 const Bio = (props) => {
     return (
-        <div id="bio" className="bio-modal" onClick={props.closeBio}>
-            <button onClick={props.closeBio}>
-                <span>Close</span>
-                {[...Array(4)].map((_, i) => <span key={i} />)}
-            </button>
-
+        <section id="bio" className="number" data-number={props['data-number']}>
             
             <h2>Biography</h2>
 
-            <article className="bio-content">
-                <div>
+            <article>
+                <div className="article-content">
                     <p>
                         I've been drawing for about as long as I have been speaking. In my youth, I focused on illustrating anatomy, robotic design, and architecture with various mediums. I initially planned to make a career in worldbuilding and game design, and this led me to consider tattoos through the lens of character design. As such, I make considerations far beyond the immediate project and help develop the client's end game to future-proof the work into the context of their "character."
                     </p>
@@ -22,7 +17,7 @@ const Bio = (props) => {
                         In 2007, I began tattooing in New Orleans. 2015, I went to the Gage Academy of Art in Seattle under Michael Magrath for figurative sculpture. I have been professionally tattooing for over fifteen years now. I find great joy in using procedural techniques with computers combined with live observation of the body's natural shape and tendencies to achieve novel styles of tattoo design that fit the body's anatomy.
                     </p>
                 </div>
-                <div>
+                <div className="article-content">
                     <p>
                         The three-dimensionality of tattoos and their living nature put them in an exceedingly unique place among other mediums. It can change the body's appearance like sculpting can, creating an illusion of angularity or curvature. It can make anew or reclaim the body for the client.
                     </p>
@@ -34,7 +29,7 @@ const Bio = (props) => {
                     </p>
                 </div>
             </article>
-        </div>
+        </section>
     );
 }
 

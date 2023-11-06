@@ -1,51 +1,72 @@
-import React, { useEffect } from 'react';
+// Polyspace.js
+import React, { useContext, useEffect } from 'react';
 import * as THREE from 'three';
+import { ThemeContext } from '../../01.Atoms/ThemeProvider';
 
 const Polyspace = () => {
+    const { theme, themeColors } = useContext(ThemeContext);
+
+
     useEffect(() => {
-        const dark = 0x1F2123;
-        const light = 0xD9D9D9;
+        if (!themeColors || !themeColors[theme]) {
+            return;
+        }
 
-        //scene
+        const { background, foreground } = themeColors[theme];
+
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(light);
-        //scene.fog = new THREE.Fog(light, 1, 1000);
-
+        scene.background = new THREE.Color(background);
+        scene.fog = new THREE.Fog(foreground, 1, 1000);
         const camera = new THREE.PerspectiveCamera(150, window.innerWidth / window.innerHeight, 0.01, 10000);
         const zoom = camera.position.z = 350;
 
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
-
         document.getElementById('polyspace').appendChild(renderer.domElement);
 
-        const spotLight = new THREE.SpotLight(light);
-        spotLight.position.set(0, -900, 900);
-        scene.add(spotLight);
-
-
-        //geometry
         const geometry = new THREE.TetrahedronGeometry(1000);
         const material = new THREE.MeshPhongMaterial({
-            color: light,
             flatShading: true,
             transparent: true,
-            opacity: 0.05,
-            shininess: 30,
+            opacity: 0.1,
+            shininess: 20,
             polygonOffset: true,
             polygonOffsetFactor: 300,
             polygonOffsetUnits: 1,
             side: THREE.BackSide
         });
+
+        const lineMaterial = new THREE.LineBasicMaterial({
+            transparent: true,
+            opacity: 0.5
+        });
+
         const mesh = new THREE.Mesh(geometry, material);
+        mesh.add(new THREE.LineSegments(
+            new THREE.EdgesGeometry(geometry),
+            lineMaterial)
+        );
+
         const meshRotator = new THREE.Group();
+        
         meshRotator.add(mesh);
         scene.add(meshRotator);
 
-        mesh.add(new THREE.LineSegments(
-            new THREE.EdgesGeometry(geometry),
-            new THREE.LineBasicMaterial({ color: dark, transparent: true, opacity: 0.5 })
-        ));
+
+
+
+
+
+        const updateColors = () => {
+            scene.background = new THREE.Color(background);
+            scene.fog.color = new THREE.Color(foreground);
+            material.color.set(background);
+            lineMaterial.color.set(foreground);
+        };
+        
+        updateColors();
+
+
 
 
         //movement
@@ -57,7 +78,7 @@ const Polyspace = () => {
         const onMouseMove = ({ clientX, clientY }) => {
             targetMouseX = clientX - window.innerWidth / 2;
             targetMouseY = clientY - window.innerHeight / 2;
-            
+
             const zoomer = 0.1;
             camera.position.z = zoom - Math.abs(window.innerWidth / 2 - clientX) * zoomer;
         };
@@ -70,7 +91,7 @@ const Polyspace = () => {
             mouseX = ease(targetMouseX, mouseX);
             mouseY = ease(targetMouseY, mouseY);
             scroll = ease(targetScroll, scroll);
-            
+
             const mouseQuaternion = new THREE.Quaternion()
                 .multiplyQuaternions(
                     new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), mouseX * 0.0006),
@@ -101,10 +122,11 @@ const Polyspace = () => {
         });
 
         return () => {
+            //Cleanup
             document.removeEventListener('mousemove', onMouseMove);
             window.onscroll = null;
         };
-    }, []);
+    }, [theme, themeColors]);
 
     return <div id="polyspace" />;
 };

@@ -20,9 +20,9 @@ import tt12 from '../../01.Atoms/Images/tt/12 Brad Wooten Tattoo.jpg';
 
 const RecentWork = () => {
     return (
-        <section className="flex-col">
+        <section id="recent-work">
 	    	<h2>Recent work</h2>
-	    	<div className="flex-end" id="recent-work">
+	    	<div className="flex-between">
 				
 	    		<div className="flex-col">
 	    			<img src={tt01} alt="" />

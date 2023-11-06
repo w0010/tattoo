@@ -6,9 +6,9 @@ import RecentWork from '../03.Organisms/RecentWork/RecentWork';
 
 const Home = () => {
     return (
-        <main>
+        <main id="home">
             <Genres />
-            <Process />
+            <Process data-number="W10"/>
             <RecentWork />
         </main>
     )

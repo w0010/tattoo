@@ -1,5 +1,6 @@
 //Poem.js
 import React from 'react';
+import './Poem.css';
 
 const Poem = (props) => {
     return (

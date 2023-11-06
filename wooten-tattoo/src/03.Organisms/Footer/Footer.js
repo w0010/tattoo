@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer>
 
-	    	<section>
+	    	<section className="theme">
 
 	    		<h2>Inquire</h2>
 

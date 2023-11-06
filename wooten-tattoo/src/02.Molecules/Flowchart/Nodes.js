@@ -15,7 +15,7 @@ const nodes = [
             <div>
                 <h4>Reference</h4>
             </div> }, 
-        position: { x: 100, y: 300 },
+        position: { x: 150, y: 175 },
         type: 'wavy',
     },
     {
@@ -25,8 +25,8 @@ const nodes = [
                 <h4>Consultation</h4>
                 <p>Goals and reference exchange.</p>
             </div> }, 
-        position: { x: 0, y: 550 },
-        type: 'rectangle',
+        position: { x: -100, y: 500 },
+        type: 'basic',
     },
     {
         id: 'sil',
@@ -40,8 +40,8 @@ const nodes = [
                 It is rough, and raw.
             </p>
         </div> }, 
-        position: { x: 0, y: 700 },
-        type: 'rectangle',
+        position: { x: -300, y: 700 },
+        type: 'basic',
     },
     {
         id: 'var1',
@@ -49,7 +49,7 @@ const nodes = [
             <div>
                 <h4>Variant 01</h4>
             </div> }, 
-        position: { x: -200, y: 1000 },
+        position: { x: -250, y: 1050 },
         type: 'wavy',
     },
     {
@@ -58,7 +58,7 @@ const nodes = [
             <div>
                 <h4>Variant 02</h4>
             </div> }, 
-        position: { x: 0, y: 1000 },
+        position: { x: 0, y: 1050 },
         type: 'wavy',
     },
     {
@@ -67,57 +67,112 @@ const nodes = [
             <div>
                <h4>Variant 03</h4>
             </div> }, 
-        position: { x: 200, y: 1000 },
+        position: { x: 250, y: 1050 },
         type: 'wavy',
     },
     {
-        id: 'renA',
+        id: 'rA',
         data: { label: 
         <div>
             <h4>Render A</h4>
-            <p>description</p>
+            <p>
+                After finding a dominant flow, the design is brought to life either as a draft or a final design that can be tattooed/
+                Precise drawing, pattern sampling, and value painting takes place here.
+            </p>
         </div> }, 
-        position: { x: 0, y: 1300 },
-        type: 'rectangle',
+        position: { x: -300, y: 1350 },
+        type: 'basic',
+    },
+    {
+        id: 'rAv1',
+        data: { label: 
+            <div>
+               <h4>Variant 01</h4>
+            </div> }, 
+        position: { x: -150, y: 1600 },
+        type: 'wavy',
+    },
+    {
+        id: 'rAv2',
+        data: { label: 
+            <div>
+               <h4>Variant 02</h4>
+            </div> }, 
+        position: { x: 150, y: 1600 },
+        type: 'wavy',
+    },
+    {
+        id: 'stn',
+        data: { label: 
+            <div>
+               <h4>Stencil</h4>
+            </div> }, 
+        position: { x: -200, y: 2000 },
+        type: 'wavy',
     },
     {
         id: 'fit',
         data: { label: 
         <div>
             <h4>Fitment</h4>
-            <p>description</p>
+            <p>Design is brought to the skin to test for fitment and overall impression.</p>
         </div> }, 
-        position: { x: 0, y: 1500 },
-        type: 'rectangle',
+        position: { x: 50, y: 2000 },
+        type: 'basic',
     },
     {
         id: 'aprv',
         data: { label: 
             <div>
-                <h4>Approve</h4>
+                <h4>Approve?</h4>
             </div> }, 
-        position: { x: 200, y: 1500 },
+        position: { x: 0, y: 2200 },
         type: 'diamond',
+    },
+    {
+        id: 'ana',
+        data: { label: 
+            <div>
+                <h4>Anatomical map</h4>
+                <p>
+                    The design is simplified down to its basic structure with marker directly onto the body to create a kind of UV map.
+                    This body map is copied to a flat surface and then digitized.
+                    Mapping is a critical stage for meshins designs to morphically complex areas of the body, e.g. elbows, waist, and neck.
+                </p>
+            </div> }, 
+        position: { x: -300, y: 2500 },
+        type: 'basic',
     },
     {
         id: 'map',
         data: { label: 
             <div>
-                <h4>Anatomical map</h4>
-                <p>description</p>
+               <h4>Map</h4>
             </div> }, 
-        position: { x: 0, y: 1700 },
-        type: 'rectangle',
+        position: { x: 0, y: 2800 },
+        type: 'wavy',
     },
     {
-        id: 'renB',
+        id: 'rBf',
+        data: { label: 
+            <div>
+               <h4>Render-B final</h4>
+            </div> }, 
+        position: { x: -150, y: 3000 },
+        type: 'wavy',
+    },
+    {
+        id: 'rB',
         data: { label: 
             <div>
                 <h4>Render B</h4>
-                <p>description</p>
+                <p>
+                    Precise drawing, pattern sampling, and value painting take palce again but to the specific flow of the client's body map rather than a two-dimensional photo of the body part.
+                    The design will appear too wide and distorted, due to the flattening of cylindrical body. This technique allows high control, producing a very tight fit.
+                </p>
             </div> }, 
-        position: { x: 200, y: 2000 },
-        type: 'rectangle',
+        position: { x: -300, y: 3400 },
+        type: 'basic',
     },
     {
         id: 'tattoo',
@@ -125,7 +180,7 @@ const nodes = [
             <div>
                 <h4>Tattoo</h4>
             </div> }, 
-        position: { x: 100, y: 2300 },
+        position: { x: 0, y: 4000 },
         type: 'end',
     },
 ];

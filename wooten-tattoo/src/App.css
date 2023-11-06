@@ -1,49 +1,58 @@
 /* App.css */
 :root {
 	--transducer: 22px "transducer-variable", sans-serif;
-
-	--black:	hsla(198, 7%, 6%, 1);
-	--dark:		hsla(216, 7%, 11%, 1);
-	--grey:		hsla(202, 5%, 61%, 1);
-	--light:	hsla(0, 0%, 85%, 1);
-	--white:	hsla(0, 0%, 96%, 1);
-	--cyan:		hsla(190, 100%, 40%, 1);
-	--magenta:	hsla(320, 100%, 40%, 1);
-
-	--ease:		180ms linear;
-
-	--margin:	128px;
-	--padding:	32px;
-
+	--margin: 128px;
+	--padding: 32px;
 	--header-height: 128px;
 
-	--h:		1.4em;
-	--hs: 		0.8rem;
-	--h1-lrg: 	calc( 5vw + 5vmin );
-	--h1s-lrg: 	calc( 2.5vw + 2.5vmin );
-	--h2: 		1em;
-	--h3: 		2.5em;
-	--h3s:	 	2.25rem;
+	--black: hsla(198, 7%, 6%, 1);
+	--dark: hsla(216, 7%, 11%, 1);
+	--grey: hsla(202, 5%, 61%, 1);
+	--light: hsla(0, 0%, 85%, 1);
+	--white: hsla(0, 0%, 96%, 1);
+	--sqrup: #eff2f5;
+	--cyan: hsla(190, 100%, 40%, 1);
+	--magenta: hsla(320, 100%, 40%, 1);
+
+	--ease: 300ms ease;
+
+	--h: 1.4em;
+	--hs: 0.8rem;
+	--h1-lrg: calc(5vw + 5vmin);
+	--h1s-lrg: calc(2.5vw + 2.5vmin);
+
+	--bg-color: var(--light);
+	--text-color: var(--dark);
+
+	--glass: radial-gradient( ellipse at top left, hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 100%, 0) );
+	--blur: blur(24px);
 }
 
-*	{
+[data-theme='light'] {
+	--bg-color: var(--light);
+	--text-color: var(--dark); /* Light theme text color */
+}
+
+[data-theme='dark'] {
+	--bg-color: var(--dark);
+    --text-color: var(--light); /* Dark theme text color */
+}
+
+* {
 	border: 0;
 	font: var(--transducer);
 	font-size: calc(10px + 1vmin);
-	margin: 0;
-}
-
-html {
-	background-color: var(--light);
-	color: var(--dark);
 }
 
 a {
-	color: initial;
+	color: var(--text-color);
 	text-decoration: none;
 }
 
-.App, footer, main, section {
+.App,
+footer,
+main,
+section {
 	display: flex;
 	flex-direction: column;
 }
@@ -54,37 +63,44 @@ a {
 
 article {
 	display: flex;
-	gap: 64px;
+	gap: 0px;
 }
 
-article :is(div, figure) {
+article :is(a, button) {
+	margin: auto;
+}
+
+article > * {
 	display: flex;
-	flex: 1;
+	flex: 1 1;
+}
+
+.article-content {
 	flex-direction: column;
-	justify-content: center;
-}
-
-article div:first-of-type {
-/*	background: var(--light); */
 	padding: 0 var(--padding);
+	
 }
 
-article div p {
+.article-content p {
+	line-height: 1.66em;
+}
 
-	font-size: 1.05em;
-	line-height: 1.5em;
+.article-image {
+	align-self: stretch;
+	object-fit: cover;
+	width: 100%;
+	height: 50vh;
 }
-/*
-article div :is( h3, p ) {
-	padding: 0;
-}
-*/
+
+
 body {
 	margin: 0;
+	color: var(--text-color);
+
 }
 
-body > section {
-	background-color: var(--light);
+button {
+	color: var(--text-color);
 }
 
 canvas {
@@ -94,24 +110,100 @@ canvas {
 	z-index: -9999;
 }
 
-[class*='flex'] { display: flex; }
-.flex-between	        { justify-content: space-between }
-.flex-around			{ justify-content: space-around }
-.flex-align-between		{ align-items: center; justify-content: space-between }
-.flex-align-end			{ align-items: center; justify-content: flex-end }
-.flex-end-between		{ align-items: flex-end; justify-content: flex-end }
-.flex-center	        { align-items: center; justify-content: center }
-.flex-end		        { align-items: flex-end; justify-content: flex-end }
-.flex-even		        { align-items: center; justify-content: space-evenly }
-.flex-start		        { align-items: center; justify-content: flex-start }
-.reverse		        { flex-direction: row-reverse }
-.flex-col 	            { flex-direction: column; }
-.flex-col-align         { flex-direction: column; align-items: center; }
-.flex-col-center        { flex-direction: column; align-items: center; justify-content: center }
-.align-start            { align-items: flex-start }
-.align-end	            { align-items: flex-end }
-.wrap 		            { flex-wrap: wrap }
-.wrap-r					{ flex-wrap: wrap-reverse }
+figure {
+	margin: 0;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	margin: auto;
+}
+
+form > input {
+	padding: 0.5em;
+}
+
+[class*="flex"] { display: flex; }
+
+.flex-between {
+	justify-content: space-between
+}
+
+.flex-around {
+	justify-content: space-around
+}
+
+.flex-align-between {
+	align-items: center;
+	justify-content: space-between
+}
+
+.flex-align-end {
+	align-items: center;
+	justify-content: flex-end
+}
+
+.flex-end-between {
+	align-items: flex-end;
+	justify-content: flex-end
+}
+
+.flex-center {
+	align-items: center;
+	justify-content: center
+}
+
+.flex-end {
+	align-items: flex-end;
+	justify-content: flex-end
+}
+
+.flex-even {
+	align-items: center;
+	justify-content: space-evenly
+}
+
+.flex-start {
+	align-items: center;
+	justify-content: flex-start
+}
+
+.reverse {
+	flex-direction: row-reverse
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.flex-col-align {
+	flex-direction: column;
+	align-items: center;
+}
+
+.flex-col-center {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center
+}
+
+.align-start {
+	align-items: flex-start
+}
+
+.align-end {
+	align-items: flex-end
+}
+
+.wrap {
+	flex-wrap: wrap
+}
+
+.wrap-r {
+	flex-wrap: wrap-reverse
+}
 
 h1 {
 	font-size: var(--h);
@@ -125,69 +217,80 @@ h1 span {
 	font-size: var(--hs);
 	font-variation-settings: "wght" 700, "wdth" 200;
 	letter-spacing: 0.62em;
-}	
+}
 
 h2 {
-	border-left: var(--dark) 1px solid;
-	font-size: var(--h2);
+	border-left: var(--text-color) 1px solid;
+	font-size: 2em;
+	font-variation-settings: "wght" 400, "wdth" 100;
 	letter-spacing: 0.33vw;
-	
+
 	text-transform: uppercase;
 }
 
 h3 {
-	font-size: var(--h3);
-	font-variation-settings: "wght" 770, "wdth" 50, "slnt" -6.6;
+	font-size: 1.75em;
+	font-variation-settings: "wght" 700, "wdth" 70, "slnt" -10;
 	letter-spacing: 0.05em;
 }
+
 h3 span {
 	display: block;
-	font-size: var(--h3s);
-	font-variation-settings: "wght" 700, "wdth" 100, "slnt" -10;
-	letter-spacing: 0.1em;
+	font-size: calc(1.5rem + 4vmin);
+	font-variation-settings: "wght" 100, "wdth" 100, "slnt" -10;
+	letter-spacing: 0.0rem;
 	text-transform: uppercase;
 }
 
+h4 {
+	font-size: 1.5em;
+	font-variation-settings: "wght" 700, "wdth" 75, "slnt" -10;
+}
+
+.hidden {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
 img {
-	height: 100%;
-  object-fit: cover;
+	object-fit: cover;
 	width: 100%;
+	height: 100%;
 }
 
-main {
-	gap: 128px;
-}
-
-main > :first-child {
-	padding-top: calc( var(--header-height) * 1.5 );
+main> :first-child {
+	padding-top: calc(var(--header-height) * 1.5);
 	padding-bottom: var(--header-height);
 }
 
 .number {
-	--wdth-value: calc(50 + (150 * (1 - clamp(0, (100vw - 100vh) / 100vw, 1)))); /* adjust width according to aspect ratio */
+	--wdth-value: calc(50 + (150 * (1 - clamp(0, (100vw - 100vh) / 100vw, 1))));
+	/* adjust width according to aspect ratio */
 	position: relative;
 }
 
 .number::before {
-	color: var(--light);
-    content: attr(data-number); /* Retrieve the value from the data-number attribute */
+	color: var(--text-color);
+	content: attr(data-number);
+	/* Retrieve the value from the data-number attribute */
 	left: var(--padding);
-    letter-spacing: -0.05em;
-    opacity: .5;
-    font-size: calc(10vw + 14vmin);
+	letter-spacing: -0.05em;
+	opacity: .075;
+	font-size: calc(12vw + 16vmin);
 	font-variation-settings: "wght" 800, "wdth" 100, "slnt" 0;
 	position: absolute;
-	top: calc( -1 * var(--margin) );
+	top: calc(0.25 * var(--margin));
 	transform: rotate(180deg);
 	writing-mode: vertical-lr;
-    z-index: -1;
+	z-index: -1;
 }
 
-main#workflow > :first-child {
-	padding-bottom: 0;
-}
 
-main#portfolio > :first-child {
+
+main#portfolio> :first-child {
 	padding-top: 0;
 }
 
@@ -197,164 +300,45 @@ ul {
 }
 
 p {
-	font-variation-settings: "wght" 430, "wdth" 98, "slnt" 0;
+	font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
 	margin: revert;
 }
 
 section {
 	gap: 48px;
+	padding: 64px 0;
 }
 
-section > :is( h2, h3, abbr, article ) {
+section> :is(a, h2, h3, abbr, article, div) {
 	margin: 0 var(--margin);
 }
 
-section > :is( h2, h3, abbr ) {
+section> :is(h2, h3, abbr) {
 	padding: 0 var(--padding);
 }
 
 video {
-    height: 100%;
-    width: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 /* classes */
 
 .block::after {
-    background-color: var(--light);
-    content: "";
-    display: block;
-    height: 128px;
-    left: calc( -128px - var(--padding) );
-    position: relative;
-    width: 128px;
-}
-
-body.dark > section {
-	background: var(--dark);
-}
-
-.dark {
-	border-color: var(--light);
-	color: var(--light);
-}
-
-.dark h2 {
-	border-left: var(--light) 1px solid;
-}
-
-.dark button span:first-of-type {
-	background: var(--dark);
-	color: var(--white);
-}
-
-.dark button span:first-of-type:hover {
-	background: var(--light);
-	color: var(--black);
-}
-
-.dark button :is(
-	span:nth-of-type(2),
-	span:nth-of-type(3),
-	span:nth-of-type(4), 
-	span:nth-of-type(5)) {
-	border-color: var(--white);
-}
-
-/* button style */
-:is(a, button, label) {
-	background: none;
-	border: var(--grey) 1px solid;
-	display: flex;
-	padding: 2px;
-	position: relative;
-	text-transform: uppercase;
-}
-:is(a, button, label) > span:first-of-type {
-	background: var(--light);
-	font-variation-settings: "wght" 700, "wdth" 75, "slnt" 0;
-	letter-spacing: 0.03em;
-	margin: 0;
-	padding: 8px;
-	/* next three are for centering p in button (issue with font's built-in line height) */
-	bottom: -0.06em;
-	clip-path: inset(0px 0.06em 0.12em 0.06em);
-	position: relative;
-	width: 100%;
-}
-:is(a, button, label) > span:first-of-type:hover {
-	background: var(--dark);
-	color: var(--white);
-	font-variation-settings: "wght" 700, "wdth" 75, "slnt" 0;
-}
-:is(a, button, label) >
-	:is(
-		span:nth-of-type(2),
-		span:nth-of-type(3),
-		span:nth-of-type(4), 
-		span:nth-of-type(5), 
-	) {
-	background: none;
-	border-collapse: collapse;
-    border-color: var(--dark);
-    border-style: solid;
-	box-sizing: border-box;
+	background: var(--bg-color);
+	content: "";
 	display: block;
-	height: 8px;
-	position: absolute;
-	width: 8px;
-}
-:is(a, button, label) > span:nth-of-type(2) {
-	border-left-width: 2px; 
-    border-top-width: 2px;
-    left: -2px;
-    top: -2px;
-}
-:is(a, button, label) > span:nth-of-type(3) {
-	border-right-width: 2px;
-    border-top-width: 2px;
-    right: -2px;
-    top: -2px;
-}
-:is(a, button, label) > span:nth-of-type(4) {
-	border-bottom-width: 2px;
-    border-left-width: 2px;
-    bottom: -2px;
-    left: -2px;
-}
-:is(a, button, label) > span:nth-of-type(5) {
-    border-bottom-width: 2px;
-    border-right-width: 2px;
-    bottom: -2px;
-    right: -2px;
+	height: 128px;
+	left: calc(-128px - var(--padding));
+	position: relative;
+	width: 128px;
 }
 
 .ava {
 	aspect-ratio: 1 / 1;
 	border-radius: 50%;
-	max-height: calc( var(--h) + var(--hs));
+	max-height: calc(var(--h) + var(--hs));
 	overflow: hidden;
-}
-
-.button {
-	border: none;
-	align-self: center;
-	padding: 2px;
-	text-transform: uppercase;
-}
-.button span:first-of-type {
-	background: var(--light);
-	font-size: 1.67em;
-	font-variation-settings: "wght" 700, "wdth" 75, "slnt" 0;
-	letter-spacing: 0.03em;
-	margin: 0;
-	padding: 16px;
-	/* next three are for centering p in button (issue with font's built-in line height) */
-
-}
-
-.button span:first-of-type:hover {
-	font-variation-settings: "wght" 700, "wdth" 75, "slnt" 0;
 }
 
 .title {
@@ -364,35 +348,21 @@ body.dark > section {
 	gap: var(--padding);
 }
 
-#portfolio .ava {
-    max-height: calc( var(--h1-lrg) + var(--h1s-lrg) );
-}
-#portfolio h1 {
-    font-size: var(--h1-lrg);
-}
-
-#portfolio h1 span {
-    font-size: var(--h1s-lrg);
-}
-
-#portfolio-display, #portfolio-display div {
-	gap: 4px;
-}
-
 .polygon-card {
-	--pA: calc( 5vmin + 5vw );
-	--pB: calc( 5vmin + 10vw );
+	--pA: calc(5vmin + 5vw);
+	--pB: calc(5vmin + 10vw);
 	align-self: center;
-	background: var(--light);
-	clip-path: polygon(
-		0 0,
-		70% 0,
-		80% 10%,
-		100% 10%,
-		100% 92%,
-		32% 92%,
-		24% 100%,
-		0 100%);
+	backdrop-filter: blur(2px);
+	background: var(--glass);
+	border-image: var(--bg-color);
+	clip-path: polygon(0 0,
+			70% 0,
+			80% 10%,
+			100% 10%,
+			100% 92%,
+			32% 92%,
+			24% 100%,
+			0 100%);
 	padding: var(--pA) var(--pB);
 }
 

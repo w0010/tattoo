@@ -33,11 +33,12 @@ const SkillBar = ({ knowledge, interest, children }) => {
     return (
         <div style={{
             alignItems: 'flex-end',
-            background: 'var(--dark)',
+            background: 'var(--text-color)',
             boxSizing: 'border-box',
-            color: 'var(--light)',
+            color: 'var(--bg-color)',
             display: 'flex',
-            fontVariationSettings: '"wght" 700, "wdth" 120, "slnt" -10',
+            fontSize: '0.8em',
+            fontVariationSettings: '"wght" 500, "wdth" 100, "slnt" -10',
             letterSpacing: '0em',
             margin: '5px 0',
             opacity: opacity,

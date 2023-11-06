@@ -1,3 +1,7 @@
-#recent-work, #recent-work div {
-	gap: 4px;
+#recent-work > div {
+	margin: 0 var(--margin);
+}
+
+#recent-work div {
+	gap: 1px;
 }
