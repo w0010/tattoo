@@ -8,7 +8,6 @@ import './Header.css';
 const Header = () => {
 	const { toggleTheme } = useContext(ThemeContext); // Use useContext to consume the ThemeContext
 
-
 	const location = useLocation();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const menuRef = useRef(null); // Ref for the popout menu
