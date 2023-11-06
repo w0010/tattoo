@@ -1,0 +1,100 @@
+/* Footer.jss */
+footer {
+	height: calc( 100vh - var(--header-height) - 32px );
+}
+
+footer section {
+	backdrop-filter: unset;
+	flex-grow: 1;
+	padding: unset;
+}
+
+footer abbr {
+	font-size: 3.5em;
+	font-variation-settings: "wght" 900, "wdth" 200, "slnt" 0;
+	text-decoration: none;
+}	
+footer abbr span {
+	display: block;
+	font-size: 1rem;
+	font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0;
+	letter-spacing: 0.2vw;
+	text-transform: uppercase;
+}
+
+footer section > button {
+	all: unset;
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+
+footer button span:first-of-type {
+	all: unset;
+	align-items: center;
+	aspect-ratio: 1 / 1;
+	background-color: var(--light);
+	border: var(--dark) 1px solid;
+	border-radius: 50%;
+	color: var(--dark);
+	display: flex;
+	font-size: 1.5em;
+	font-variation-settings: "wght" 900, "wdth" 100, "slnt" -10;
+	padding: 1em;
+	text-transform: uppercase;
+	transition: var(--ease);
+}
+
+footer button span:first-of-type:hover {
+	all: unset;
+	align-items: center;
+	aspect-ratio: 1 / 1;
+	background-color: var(--dark);
+	border: var(--dark) 1px solid;
+	border-radius: 50%;
+	color: var(--light);
+	display: flex;
+	font-size: 1.5em;
+	font-variation-settings: "wght" 900, "wdth" 100, "slnt" -10;
+	padding: 1em;
+	text-transform: uppercase;
+	transition: var(--ease);
+}
+
+
+
+
+
+footer > section > div:last-child {
+	background: var(--bg-color);
+	clip-path: polygon(
+		0% 0%,	
+		30% 0%, 
+		calc( 30% + 32px ) 32px, 
+		calc( 70% - 32px ) 32px, 
+		70% 0%,
+		100% 0%, 
+		100% 100%, 
+		0% 100%
+	);
+	padding-top: 32px;
+	padding-bottom: 12px;
+	margin: 0;
+	text-align: center;
+}
+footer section > div:last-child p {
+	font-variation-settings: "wght" 600, "slnt" -10;
+	padding: 0;
+}
+.shokunin {
+	background: var(--text-color);
+	color: var(--bg-color);
+	font-family: var(--japanese);
+	font-size: 16px;
+	letter-spacing: 0.12em;
+	padding: 1em 0;
+	margin: 0;
+	text-align: center;
+}

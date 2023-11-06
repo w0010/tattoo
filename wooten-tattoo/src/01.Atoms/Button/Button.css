@@ -1,0 +1,67 @@
+/* Button.css */
+
+button,
+.button {
+    align-self: center;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    overflow: visible;
+    padding: 8px;
+    position: relative;
+}
+
+:is(button, .button) span {
+    --mood: rgb(255, 30, 50);
+    backdrop-filter: blur(1.5px);
+    border: 1.25px solid rgb(253, 100, 150);
+    border-radius: 4px;
+    box-shadow:
+        0 -0.5em 2.5em rgba(255, 30, 50, 0.5),
+        0 0 0.5em var(--mood),
+        0 0 0.1em var(--mood),
+        inset 0 0.5em 1.75em rgba(255, 30, 50, 0.3),
+        inset 0 0 0.5em var(--mood),
+        inset 0 0 0.1em var(--mood);
+    color: var(--text-color);
+    font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0;
+    letter-spacing: 0.03em;
+    padding:
+        0.65em
+        0.75em
+        0.50em
+        0.75em;
+    transition: var(--ease);
+}
+
+:is(button, .button) span:hover {
+    background: rgba(255, 30, 50, 0.2);
+    font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0;
+}
+
+svg.corner {
+    position: absolute;
+    overflow: visible; /* makes sure the glow is not cut-off */
+    width: 7px;
+    height: 7px;
+}
+
+:is(button, .button) .corner:nth-of-type(1) {
+    top: 0;
+    left: 0;
+}
+
+:is(button, .button) .corner:nth-of-type(2) {
+    top: 0;
+    right: 0;
+}
+
+:is(button, .button) .corner:nth-of-type(3) {
+    bottom: 0;
+    left: 0;
+}
+
+:is(button, .button) .corner:nth-of-type(4) {
+    bottom: 0;
+    right: 0;
+}

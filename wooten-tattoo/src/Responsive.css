@@ -10,7 +10,7 @@
 }
 */
 
-@media (max-width: 1200px) {
+@media (max-width: 1440px) {
 	:root {
 		--margin: 			48px;
 		--padding: 			24px;
@@ -26,11 +26,15 @@
 	}
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	:root {
 		--margin: 			12px;
 		--padding: 			12px;
 		--header-height:	96px;
+	}
+
+	.App {
+		gap: 48px;
 	}
 
 	article {
@@ -38,7 +42,8 @@
 		gap: 16px;
 	}
 
+
 	section {
-		gap: 48px;
+		gap: 24px;
 	}
 }
