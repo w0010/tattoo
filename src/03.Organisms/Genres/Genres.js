@@ -15,7 +15,6 @@ const Genres = () => {
 				<span>Cyberpunk</span>
 				<span>Blackout</span>
 			</h3>
-
             
 			<PopupButton id="Ov6ioB7j">
         	    <span>Request Consult</span>

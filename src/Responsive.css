@@ -16,14 +16,7 @@
 		--padding: 			24px;
 		--header-height:	96px;
 	}
-	#desktop-nav-list {
-		display: none;
-	}
 
-	#burger {
-		cursor: pointer;
-		display: flex;
-	}
 }
 
 @media (max-width: 768px) {
@@ -42,6 +35,14 @@
 		gap: 16px;
 	}
 
+	#burger {
+		cursor: pointer;
+		display: flex;
+	}
+	
+	#desktop-nav-list {
+		display: none;
+	}
 
 	section {
 		gap: 24px;
