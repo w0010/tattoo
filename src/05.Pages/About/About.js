@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-
+import BradWooten from '../../03.Organisms/BradWooten/BradWooten';
+import Bio from '../../03.Organisms/Bio/Bio'; 
+import Assets from '../../03.Organisms/Assets/Assets';
 import Poem from '../../03.Organisms/Poem/Poem';
 
-import BradWooten from '../../03.Organisms/BradWooten/BradWooten';
-import Bio from '../../03.Organisms/Bio/Bio';
-
-import { Button } from '../../01.Atoms/Button/Buttons';
 import './About.css';
 
 
@@ -15,6 +12,7 @@ const About = () => {
         <main id="about">
             <BradWooten />
             <Bio data-number="BIO" />
+            <Assets data-number="02" />
             <Poem />
         </main>
     )

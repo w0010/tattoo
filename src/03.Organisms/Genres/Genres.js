@@ -15,7 +15,9 @@ const Genres = () => {
 				<span>Cyberpunk</span>
 				<span>Blackout</span>
 			</h3>
-			<PopupButton id="<Ov6ioB7j>">
+
+            
+			<PopupButton id="Ov6ioB7j">
         	    <span>Request Consult</span>
 				<svg className="corner">
                     <path d="M0,7 L0,0 L7,0" stroke="var(--text-color)" strokeWidth="1" fill="none" filter="url(#glow)" />
@@ -30,7 +32,8 @@ const Genres = () => {
                     <path d="M0,7 L7,7 L7,0" stroke="var(--text-color)" strokeWidth="1" fill="none" filter="url(#glow)" />
                 </svg>
         	</PopupButton>
-		</section>
+		
+        </section>
     );
 }
 
