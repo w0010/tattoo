@@ -32,22 +32,22 @@ const Portfolio = () => {
 
 	        	<div id="portfolio-display" className="flex-start">
 	        		<div className="flex-col">
-	        			<img src={tt01} alt="" />
-	        			<img src={tt02} alt="" />
-		    			<img src={tt03} alt="" />
-		    			<img src={tt10} alt="" />
+	        			<img src={tt01} alt="tattoo" />
+	        			<img src={tt02} alt="tattoo" />
+		    			<img src={tt03} alt="tattoo" />
+		    			<img src={tt10} alt="tattoo" />
 	        		</div>
 	        		<div className="flex-col">
-		    			<img src={tt04} alt="" />
-	        			<img src={tt05} alt="" />
-		    			<img src={tt06} alt="" />
-	        			<img src={tt11} alt="" />
+		    			<img src={tt04} alt="tattoo" />
+	        			<img src={tt05} alt="tattoo" />
+		    			<img src={tt06} alt="tattoo" />
+	        			<img src={tt11} alt="tattoo" />
 	        		</div>
 	        		<div className="flex-col">
-	        			<img src={tt07} alt="" />
-	        			<img src={tt08} alt="" />
-		    			<img src={tt09} alt="" />
-		    			<img src={tt12} alt="" />
+	        			<img src={tt07} alt="tattoo" />
+	        			<img src={tt08} alt="tattoo" />
+		    			<img src={tt09} alt="tattoo" />
+		    			<img src={tt12} alt="tattoo" />
 	        		</div>
 	        	</div>
 
