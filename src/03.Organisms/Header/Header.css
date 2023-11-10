@@ -48,6 +48,11 @@ nav a {
 	text-transform: uppercase;
 }
 
+nav a span {
+	font-variation-settings: "wght" 400, "wdth" 80, "slnt" 0;
+	letter-spacing: 0.03rem;
+}
+
 .nav-bar {
 	align-items: center;
 	display: flex;

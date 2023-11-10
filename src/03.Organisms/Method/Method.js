@@ -5,18 +5,18 @@ const articles = [
     {
         title: "What's on your mind?",
         content: `Whether you know exactly what you want, or don't have a clue, we begin with a simple phone call. 
-                  In it, we'll discuss what's on your mind, no commitment necessary. 
-                  I wish only to help people find their ideal solution, even if that means taking a different direction.`
+        In it, we'll discuss what's on your mind, no commitment necessary. 
+        I wish only to help people find their ideal solution, even if that means taking a different direction.`
     },
     {
         title: "See or even participate in the design",
         content: `Not only will you see the design long before you get tattooed, but many pieces of potential design along the way. 
-                  I design by process of elimination, leaving no stone unturned.`
+        I design by process of elimination, leaving no stone unturned.`
     },
     {
         title: "Collaborate or just watch",
         content: `The design process is digitally simulated over photos of the client, and in person via freehand. 
-                  The entire process is visible, and you can help guide the outcome.`
+        The entire process is visible, and you can help guide the outcome.`
     },
     {
         title: "Local or long distance",

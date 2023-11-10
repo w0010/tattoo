@@ -31,7 +31,7 @@
 	}
 
 	article {
-		flex-direction: column;
+		flex-direction: column-reverse;
 		gap: 16px;
 	}
 
@@ -39,7 +39,7 @@
 		cursor: pointer;
 		display: flex;
 	}
-	
+
 	#desktop-nav-list {
 		display: none;
 	}

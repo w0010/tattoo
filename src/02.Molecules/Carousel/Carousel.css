@@ -1,19 +1,12 @@
-
+/* Carousel.css */
 
 .carousel {
-    height: 40vh;
     overflow: hidden;
-}
-
-.carousel-inner {
-    transition: transform 0.5s ease;
-    will-change: transform;
+    padding-bottom: calc(1.5em + 24px);
 }
 
 .slide {
-    position: absolute;
-    width: 100%;
-    /* Each slide is the full width of the container */
+    flex-shrink: 0;
 }
 
 button.prev,
@@ -22,7 +15,8 @@ button.next {
     color: var(--text-color);
     cursor: pointer;
     font-size: 1.5em;
-    padding: 12px;
+	font-variation-settings: "wght" 100, "wdth" 100, "slnt" -10;
+    padding: 6px var(--padding);
     position: absolute;
     z-index: 10;
 }

@@ -8,8 +8,8 @@ const Home = () => {
     return (
         <main id="home">
             <Genres />
-            <Process data-number="W10"/>
             <RecentWork />
+            <Process data-number="W10"/>
         </main>
     )
 }
