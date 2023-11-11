@@ -6,54 +6,70 @@ import { Burger } from '../../01.Atoms/Button/Buttons';
 import Title from '../../02.Molecules/Title/Title';
 import './Header.css';
 
-const Header = () => {
-
-
-
-	const { toggleTheme } = useContext(ThemeContext); // Use useContext to consume the ThemeContext
-
-	const location = useLocation();
-	const [menuOpen, setMenuOpen] = useState(false);
-	const menuRef = useRef(null); // Ref for the popout menu
-
-	const toggleMenu = () => setMenuOpen(!menuOpen);
-	const closeMenu = () => setMenuOpen(false);
-
+// Custom hook for handling click outside of ref element
+function useClickOutside(ref, handler) {
 	useEffect(() => {
-		const handleClickOutside = (event) => {
-			if (menuRef.current && !menuRef.current.contains(event.target)) {
-				closeMenu();
+		const listener = (event) => {
+			if (!ref.current || ref.current.contains(event.target)) {
+				return;
 			}
-		}
-		document.addEventListener("mousedown", handleClickOutside);
-		return () => document.removeEventListener("mousedown", handleClickOutside);
-	}, []);
+			handler(event);
+		};
 
+		document.addEventListener('mousedown', listener);
+		return () => {
+			document.removeEventListener('mousedown', listener);
+		};
+	}, [ref, handler]);
+}
+
+// Custom hook for handling scroll event and determining if the page has been scrolled
+function useScroll() {
 	const [isScrolled, setIsScrolled] = useState(false);
 
-	const handleScroll = () => {
-		// Check if the page has been scrolled down
-		const scrolled = window.scrollY > 0;
-		setIsScrolled(scrolled);
-	};
-
 	useEffect(() => {
-		// Add scroll event listener when the component mounts
-		window.addEventListener('scroll', handleScroll);
+		const handleScroll = () => {
+			setIsScrolled(window.scrollY > 0);
+		};
 
-		// Clean up the event listener when the component unmounts
+		window.addEventListener('scroll', handleScroll);
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	}, []);
 
+	return isScrolled;
+}
+
+const Header = () => {
+	const { toggleTheme } = useContext(ThemeContext);
+	const location = useLocation();
+	const [menuOpen, setMenuOpen] = useState(false);
+	const menuRef = useRef(null);
+
+	const toggleMenu = () => {
+		setMenuOpen(prev => !prev);
+	};
+
+	const closeMenu = () => {
+		setMenuOpen(false);
+	};
+
+	// Detects when the route changes (navigation event)
+	useEffect(() => {
+		closeMenu(); // Close the menu whenever the location changes
+	  }, [location]);
+
+	// Use custom hook to close menu when clicking outside
+	useClickOutside(menuRef, closeMenu);
+
+	// Use custom hook to change nav bar style on scroll
+	const isScrolled = useScroll();
+
 	return (
 		<header className={`${location.pathname === '/pages/Portfolio' ? 'portfolio' : ''}`}>
-
 			<nav className={isScrolled ? 'scrolled' : ''}>
-				{location.pathname !== '/pages/Portfolio'
-					? <Title /> : <span />
-				}
+				{location.pathname !== '/pages/Portfolio' ? <Title /> : <span />}
 				<div className="nav-bar">
 					<ul id="desktop-nav-list">
 						<li><NavLink to="/pages/Portfolio">Portfolio</NavLink></li>
@@ -67,14 +83,14 @@ const Header = () => {
 						<div className="slider"></div>
 					</label>
 
-					<Burger id="burger" onClick={toggleMenu} label="Toggle navigation menu">
-						Menu
+					<Burger id="burger" onClick={toggleMenu} label={menuOpen ? "Close navigation menu" : "Open navigation menu"}>
+						{menuOpen ? 'Close' : 'Menu'}
 					</Burger>
-					<ul className={`popout-menu ${menuOpen ? 'open' : ''}`} ref={menuRef} onClick={closeMenu}>
-						<li><NavLink to="/pages/Portfolio" onClick={closeMenu}>Portfolio</NavLink></li>
-						<li><NavLink to="/pages/About" onClick={closeMenu}>About</NavLink></li>
-						<li><NavLink to="/pages/Workflow" onClick={closeMenu}>Workflow</NavLink></li>
-						<li><NavLink to="/pages/Appointments" onClick={closeMenu}>Appointments</NavLink></li>
+					<ul className={`popout-menu ${menuOpen ? 'open' : ''}`} ref={menuRef}>
+						<li><NavLink to="/pages/Portfolio">Portfolio</NavLink></li>
+						<li><NavLink to="/pages/About">About</NavLink></li>
+						<li><NavLink to="/pages/Workflow">Workflow</NavLink></li>
+						<li><NavLink to="/pages/Appointments">Appointments</NavLink></li>
 					</ul>
 				</div>
 			</nav>
