@@ -8,7 +8,7 @@ const Process = (props) => {
 	return (
 		<section id="process" className="number" data-number={props['data-number']}>
 			<h2>Design process</h2>
-			<article>
+			<article className="flip">
 
 				<div className="article-content">
 					<h3>Full customizability</h3>

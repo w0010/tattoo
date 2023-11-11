@@ -10,7 +10,7 @@ const Genres = () => {
         <section id="genres" className="dark">
 
 			<h2>Styles</h2>
-			<h3 className="block">
+			<h3>
 				<span>Procedural</span>
 				<span>Cyberpunk</span>
 				<span>Blackout</span>

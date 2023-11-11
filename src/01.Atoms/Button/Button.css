@@ -1,11 +1,20 @@
 /* Button.css */
+.burger {
+	display: none;
+    text-transform: uppercase;
+}
 
 button,
 .button {
     align-self: center;
     background: none;
+	border: none;
+	color: var(--text-color);
     cursor: pointer;
     display: flex;
+    font: var(--transducer);
+    font-size: 1rem;
+    font-variation-settings: "wght" 600, "wdth" 100, "slnt" 0;
     overflow: visible;
     padding: 8px;
     position: relative;

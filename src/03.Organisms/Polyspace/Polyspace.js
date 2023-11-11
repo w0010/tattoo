@@ -30,9 +30,6 @@ const Polyspace = () => {
             transparent: true,
             opacity: 0.1,
             shininess: 20,
-            polygonOffset: true,
-            polygonOffsetFactor: 300,
-            polygonOffsetUnits: 1,
             side: THREE.BackSide
         });
 

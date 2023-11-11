@@ -12,18 +12,30 @@
 
 @media (max-width: 1440px) {
 	:root {
-		--margin: 			48px;
-		--padding: 			24px;
-		--header-height:	96px;
+		--margin: 48px;
+		--padding: 24px;
+		--header-height: 96px;
 	}
 
+	#desktop-nav-list {
+		gap: 26px;
+	}
+
+	#desktop-nav-list a {
+		font-variation-settings: "wght" 400, "wdth" 60, "slnt" 0;
+		letter-spacing: 0;
+	}
+
+	.nav-bar {
+		gap: 32px;
+	}
 }
 
 @media (max-width: 768px) {
 	:root {
-		--margin: 			12px;
-		--padding: 			12px;
-		--header-height:	96px;
+		--margin: 12px;
+		--padding: 12px;
+		--header-height: 96px;
 	}
 
 	.App {
@@ -31,19 +43,26 @@
 	}
 
 	article {
-		flex-direction: column-reverse;
+		flex-direction: column;
 		gap: 16px;
 	}
 
-	#burger {
+	article.flip {
+		flex-direction: column-reverse;
+	}
+
+	.burger {
 		cursor: pointer;
-		display: flex;
+		display: block;
 	}
 
 	#desktop-nav-list {
 		display: none;
 	}
 
+	.nav-bar {
+		gap: calc(var(--gap) / 3);
+	}
 	section {
 		gap: 24px;
 	}

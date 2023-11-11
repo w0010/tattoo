@@ -1,7 +1,7 @@
 //Title.js
 import { Link } from 'react-router-dom';
-import ava from '../01.Atoms/Images/ava/ava_2020.jpg';
-
+import './Title.css';
+import ava from '../../01.Atoms/Images/ava/ava_2020.jpg';
 
 const Title = () => {
     return (

@@ -1,6 +1,6 @@
 //Portfolio.js
 import React from 'react';
-import Title from '../../02.Molecules/Title';
+import Title from '../../02.Molecules//Title/Title';
 
 import tt01 from '../../01.Atoms/Images/tt/01 Brad Wooten Tattoo.jpg';
 import tt02 from '../../01.Atoms/Images/tt/02 Brad Wooten Tattoo.jpg';

@@ -16,13 +16,13 @@ const Footer = () => {
 				<PopupButton id="Ov6ioB7j">
 					<span>Contact</span>
 				</PopupButton>
-
+				
 				<div>
 					<p>&#9650;</p>
 					<p>Have a tattoo in mind?</p>
 				</div>
 			</section>
-			
+
 			<p className="shokunin">職人気質</p>
 		</footer>
 	);

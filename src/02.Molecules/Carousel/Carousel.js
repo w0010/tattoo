@@ -6,7 +6,7 @@ const Carousel = ({ articles }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const getSlideStyle = () => ({
-            width: `${100 / articles.length}%`,
+        width: `${100 / articles.length}%`,
     });
 
     const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % articles.length);
@@ -33,7 +33,7 @@ const Carousel = ({ articles }) => {
                     </article>
                 ))}
             </div>
-            
+
             <button onClick={prevSlide} className="prev">&lt; prev</button>
             <button onClick={nextSlide} className="next">next &gt;</button>
         </div>

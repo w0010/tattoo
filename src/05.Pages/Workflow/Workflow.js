@@ -7,7 +7,7 @@ const Workflow = () => {
     return (
         <main id="workflow">
             <Method data-number="01" />
-            <Madness data-number="03" />
+            <Madness data-number="02" />
         </main>
     );
 }

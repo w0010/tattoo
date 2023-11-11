@@ -1,8 +1,9 @@
 /* App.css */
 :root {
-	--transducer: 22px "transducer-variable", sans-serif;
+	--transducer: 20px "transducer-variable", sans-serif;
 	--margin: 128px;
 	--padding: 32px;
+	--gap: 64px;
 	--header-height: 128px;
 
 	--black: hsla(198, 7%, 6%, 1);
@@ -16,8 +17,8 @@
 
 	--ease: 300ms ease;
 
-	--h: 1.4em;
-	--hs: 0.8rem;
+	--h1-size: 1.4em;
+	--h1span-size: 0.57em;
 	--h1-lrg: calc(5vw + 5vmin);
 	--h1s-lrg: calc(2.5vw + 2.5vmin);
 
@@ -39,9 +40,7 @@
 }
 
 * {
-	border: 0;
-	font: var(--transducer);
-	font-size: calc(10px + 1vmin);
+	box-sizing: border-box;
 }
 
 a {
@@ -96,11 +95,10 @@ article > * {
 body {
 	margin: 0;
 	color: var(--text-color);
+	font: var(--transducer);
+	font-size: calc(10px + 1vmin);
+	font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
 
-}
-
-button {
-	color: var(--text-color);
 }
 
 canvas {
@@ -206,15 +204,17 @@ form > input {
 }
 
 h1 {
-	font-size: var(--h);
+	font-size: var(--h1-size);
 	font-variation-settings: "wght" 900, "wdth" 200;
 	letter-spacing: 0.015em;
+	margin: 0;
 	text-transform: uppercase;
 }
 
 h1 span {
 	display: block;
-	font-size: var(--hs);
+	font: var(--transducer);
+	font-size: var(--h1span-size);
 	font-variation-settings: "wght" 700, "wdth" 200;
 	letter-spacing: 0.62em;
 }
@@ -289,13 +289,9 @@ main> :first-child {
 }
 
 
-
-main#portfolio> :first-child {
-	padding-top: 0;
-}
-
 ul {
 	list-style: none;
+	margin: 0;
 	padding: 0;
 }
 
@@ -320,32 +316,6 @@ section> :is(h2, h3, abbr) {
 video {
 	height: 100%;
 	width: 100%;
-}
-
-/* classes */
-
-.block::after {
-	background: var(--bg-color);
-	content: "";
-	display: block;
-	height: 128px;
-	left: calc(-128px - var(--padding));
-	position: relative;
-	width: 128px;
-}
-
-.ava {
-	aspect-ratio: 1 / 1;
-	border-radius: 50%;
-	max-height: calc(var(--h) + var(--hs));
-	overflow: hidden;
-}
-
-.title {
-	align-items: center;
-	border: none;
-	display: flex;
-	gap: var(--padding);
 }
 
 .polygon-card {
