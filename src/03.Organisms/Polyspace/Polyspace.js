@@ -28,9 +28,10 @@ const Polyspace = () => {
         const material = new THREE.MeshPhongMaterial({
             flatShading: true,
             transparent: true,
-            opacity: 0.1,
+            opacity: 0.2,
             shininess: 20,
-            side: THREE.BackSide
+            side: THREE.BackSide,
+        //  wireframe: true
         });
 
         const lineMaterial = new THREE.LineBasicMaterial({

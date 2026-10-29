@@ -19,7 +19,6 @@ import './App.css';
 import './Responsive.css';
 
 function App() {
-
   return (
     <ThemeProvider>
       <Router>
